@@ -15,7 +15,7 @@ All content is **open-source, non-classified**.
   git stash pop`. Push with `--force-with-lease`.
 - **Always open a PR AND squash-merge it** (via `mcp__github__create_pull_request` +
   `merge_pull_request`). No merge prompts — the user wants it auto-merged.
-- **Bump `sw.js` `CACHE` version every change** (currently `csi-insights-v104`) or users
+- **Bump `sw.js` `CACHE` version every change** (currently `csi-insights-v105`) or users
   get a stale cached build.
 - Writing style: see `STYLE.md` — plain but credible analytical register (ISW/RUSI),
   third person only (no "our/we/I"), action-first, keep precise terms, no jargon soup,
@@ -46,7 +46,8 @@ All content is **open-source, non-classified**.
   footer lists earlier biweekly editions (`.ft-biweekly`) plus the weekly archive. The app's
   "Biweekly Brief" tab shows biweekly pages in a full-width iframe (`biweeklyEmbed`), sized
   by `csi-brief-height` postMessages from the brief page (origin-checked), with the text
-  view `biweeklyView` as a 12 s fallback. Weekly archive pages are still reflowed
+  view `biweeklyView` as a 12 s fallback. The frame follows the app theme: `?theme=dark` on
+  load and a `csi-theme` postMessage on toggle (`_bwTheme`); the brief page applies its dark palette. Weekly archive pages are still reflowed
   (`reflowBrief`). Nothing from the brief site is stored in this repo.
 
 ## Ask assistant (the AI)
