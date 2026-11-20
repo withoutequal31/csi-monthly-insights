@@ -809,7 +809,7 @@ textarea.fb-input{resize:vertical;min-height:64px}
     <!-- ABOUT -->
     <div class="pane" id="pane-about">
       <h2 class="ph">About</h2>
-      <p class="pintro">Conflict Studies &amp; Insights — the <b>monthly digest</b>. Edition Sep 2026 — three packages: Manoeuvre &amp; Expeditionary, Sense &amp; Strike, and CS &amp; CSS.</p>
+      <p class="pintro">Conflict Studies &amp; Insights — the <b>monthly digest</b>. Edition Oct 2026 — three packages: Manoeuvre &amp; Expeditionary, Sense &amp; Strike, and CS &amp; CSS.</p>
       <div class="about-block">
         <div class="ab-h">Assistant gaps</div>
         <p>Questions the Ask assistant couldn't answer. These are sent to the editors automatically (non-classified questions only) to shape the next edition, and listed here so you can review, copy or clear them.</p>
@@ -838,6 +838,7 @@ textarea.fb-input{resize:vertical;min-height:64px}
         <div class="ab-h">Past monthly editions</div>
         <p>Earlier editions stay available to read, exactly as published.</p>
         <div class="src-feed">
+          <a href="/archive/2026-09/" target="_blank" rel="noopener"><span>September 2026 edition<small>Archived · read-only</small></span><span class="arr">↗</span></a>
           <a href="/archive/2026-08/" target="_blank" rel="noopener"><span>August 2026 edition<small>Archived · read-only</small></span><span class="arr">↗</span></a>
           <a href="/archive/2026-07/" target="_blank" rel="noopener"><span>July 2026 edition<small>Archived · read-only</small></span><span class="arr">↗</span></a>
           <a href="/archive/2026-06/" target="_blank" rel="noopener"><span>June 2026 edition<small>Archived · read-only</small></span><span class="arr">↗</span></a>
@@ -858,7 +859,7 @@ textarea.fb-input{resize:vertical;min-height:64px}
       </div>
       <div class="about-block">
         <div class="ab-h">The five theatres</div>
-        <p>The weekly brief tracks <b>Russia–Ukraine</b>, <b>Israel–Lebanon</b>, <b>Israel–Gaza</b>, <b>Israel–US–Iran</b> and <b>Thailand–Cambodia</b>. This edition's serials, across all three packages, draw from Russia–Ukraine, Israel–Lebanon, Israel–Gaza, Thailand–Cambodia and Sudan; Israel–US–Iran is tracked weekly but yielded no serial this edition.</p>
+        <p>The weekly brief tracks <b>Russia–Ukraine</b>, <b>Israel–Lebanon</b>, <b>Israel–Gaza</b>, <b>Israel–US–Iran</b> and <b>Thailand–Cambodia</b>. This edition's serials, across all three packages, draw from Russia–Ukraine, Israel–Lebanon and Israel–Gaza; Israel–US–Iran and Thailand–Cambodia are tracked but yielded no serial this edition.</p>
       </div>
       <div class="caveat-box">
         <p><b>Analyst review required before promulgation.</b> Outcome verdicts reflect open-source reporting at time of writing and may revise as events develop. Verify against current staff assessments and apply judgement before use.</p>
@@ -922,7 +923,7 @@ textarea.fb-input{resize:vertical;min-height:64px}
   <!-- bell popover lives here (sibling of the scrim) so it stacks above it and its button is tappable -->
   <div class="pop" id="bellPop">
     <div id="bellNew" class="bell-new" style="display:none"></div>
-    <h4>Edition · Sep 2026</h4>
+    <h4>Edition · Oct 2026</h4>
     <p><b id="popCount">… serials</b> <span id="popScope">across all three packages.</span></p>
     <p>Handling: <b>Open source · training use</b>.</p>
     <p style="color:var(--text-3);margin-bottom:9px">AI-distilled — analyst review required before promulgation.</p>
@@ -1141,7 +1142,7 @@ function synthAll(a){
     return `<div class="lead">I answer mainly from the <b>weekly-brief archive</b>, distilled through June's <b>14 serials</b> and <b>pack overviews</b>. Try a <b>tactic</b> (drones, fibre-optic FPV, double-tap, saturation), an <b>outcome</b> (what worked / what to fix), a <b>theatre</b> (${th}), or ask <b>what to rehearse</b> or for the <b>bottom line</b>.</div>`;
   }
   if(a.type==='bluf'){
-    return `<div class="lead">Bottom line — <b>${_pkgLabel(a.pkg)}</b>, September 2026:</div><div class="msg-bluf">${PKG[a.pkg].BLUF}</div>`
+    return `<div class="lead">Bottom line — <b>${_pkgLabel(a.pkg)}</b>, October 2026:</div><div class="msg-bluf">${PKG[a.pkg].BLUF}</div>`
       + a.items.map(s=>_ansCard(s,'serials')).join('')
       + `<div class="closing">Tap any serial for the full breakdown.</div>`;
   }
@@ -1342,7 +1343,7 @@ function copyAnswer(i, btn){
   const clone=el.cloneNode(true);
   clone.querySelectorAll('.ans-tools,.ans-next').forEach(x=>x.remove());
   document.body.appendChild(clone); const body=clone.innerText.trim(); clone.remove();
-  const text=(m.q?`Q: ${m.q}\n\n`:'')+body+`\n\n— Conflict Studies & Insights · September 2026 digest · first-cut analysis from open sources, calibrate before adoption`;
+  const text=(m.q?`Q: ${m.q}\n\n`:'')+body+`\n\n— Conflict Studies & Insights · October 2026 digest · first-cut analysis from open sources, calibrate before adoption`;
   const done=()=>{ const t=btn.textContent; btn.textContent='Copied ✓'; setTimeout(()=>{ btn.textContent=t; },1400); };
   if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done).catch(()=>{}); }
   else { const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); done(); }catch(e){} ta.remove(); }
@@ -1368,7 +1369,7 @@ function askAbout(sid, kind){
     const e=_echCard(sid);
     html=`<div class="lead"><b>Ownership</b> — ${s.title}:</div><div class="ans-frow" data-open="${sid}"><p>${e.card.o||''} <span class="cite">SER ${sid} · ${e.ech}</span></p><p style="margin-top:6px">${e.card.d||''}</p></div>`;
   } else {
-    html=`<div class="lead"><b>Sources</b> — ${s.title} (${s.dates||'Sep 2026'}):</div>`
+    html=`<div class="lead"><b>Sources</b> — ${s.title} (${s.dates||'Oct 2026'}):</div>`
       + s.sources.map((x,i)=>`<div class="pl-row">• <a href="${x.u}" target="_blank" rel="noopener">[${i+1}] ${x.n}</a></div>`).join('')
       + `<div class="closing">Open-source reporting — calibrate before adoption.</div>`;
   }
@@ -1747,7 +1748,7 @@ function ictHTML(id){
     <div class="ict-fmt">${t.fmt}</div>
     <div class="ict-set">${t.set}</div>
     <div class="ict-run"><div class="ict-lbl">Run it</div><ol>${t.run.map(s=>`<li>${s}</li>`).join('')}</ol></div>
-    <div class="ict-dec"><div class="ict-lbl">Decision forced</div><p>${t.dec}</p><p class="ict-twist"><span>Free-play</span> ${t.twist}</p></div>
+    ${t.dec||t.twist?`<div class="ict-dec">${t.dec?`<div class="ict-lbl">Decision forced</div><p>${t.dec}</p>`:''}${t.twist?`<p class="ict-twist"><span>Free-play</span> ${t.twist}</p>`:''}</div>`:''}
     <div class="ict-std"><div class="ict-lbl">Standard</div><p>${t.std}</p></div>
   </div>`;
 }
@@ -1756,11 +1757,7 @@ function decisionCard(ech, c, cls){
     <div class="dc-ech">${ech}</div>
     <div class="dc-dec">${c.d}</div>
     <div class="dc-rows">
-      <div class="dc-row"><span class="dc-k">Owner</span><span class="dc-v">${c.o}</span></div>
-      <div class="dc-row"><span class="dc-k">Changes</span><span class="dc-v">${c.a}</span></div>
-      <div class="dc-row"><span class="dc-k">Trigger</span><span class="dc-v">${c.t}</span></div>
-      <div class="dc-row"><span class="dc-k">Trade-off</span><span class="dc-v">${c.x}</span></div>
-      <div class="dc-row"><span class="dc-k">Measure</span><span class="dc-v">${c.m}</span></div>
+      ${[["Owner",c.o],["Changes",c.a],["Trigger",c.t],["Trade-off",c.x],["Measure",c.m]].filter(r=>r[1]).map(r=>`<div class="dc-row"><span class="dc-k">${r[0]}</span><span class="dc-v">${r[1]}</span></div>`).join('')}
     </div>
   </div>`;
 }
@@ -1854,18 +1851,19 @@ function showSection(sec){
    brief the user has not yet acknowledged. No push, no server, no
    permission — a freshness signal that shows when the app is opened.
    Bump EDITION_ID with each monthly edition to notify installed users. */
-const EDITION_ID = "2026-09";
+const EDITION_ID = "2026-10";
 /* Monthly editions for the edition dropdown. When publishing a new edition:
    drop the `current` flag from the outgoing one and give it its archive `url`
    (/archive/<yyyy-mm>/), then prepend the new edition with `current:true`. */
 const EDITIONS = [
-  { label:"September 2026", current:true },
+  { label:"October 2026", current:true },
+  { label:"September 2026", url:"/archive/2026-09/" },
   { label:"August 2026", url:"/archive/2026-08/" },
   { label:"July 2026", url:"/archive/2026-07/" },
   { label:"June 2026", url:"/archive/2026-06/" }
 ];
 const CUR_EDITION = EDITIONS.find(e=>e.current) || EDITIONS[0];
-const EDITION_LABEL = "September 2026";
+const EDITION_LABEL = "October 2026";
 function _initFreshness(){
   try{ const se=localStorage.getItem('csi-seen-edition');
     if(se===null){ localStorage.setItem('csi-seen-edition', EDITION_ID); state.newEdition=false; }
@@ -2460,7 +2458,7 @@ function init(){
   _initFreshness(); _checkNewWeek(); // new-edition / new-weekly indicator (best-effort)
   $("#btnTheme").onclick = toggleTheme; updateThemeIcon();
   const _mc=$("#missCopy"); if(_mc) _mc.onclick=()=>{ const arr=_getMisses(); if(!arr.length) return;
-    const text='Ask assistant — unanswered questions (September 2026 edition)\n'+arr.map(x=>`${x.t} — ${x.q}`).join('\n');
+    const text='Ask assistant — unanswered questions (October 2026 edition)\n'+arr.map(x=>`${x.t} — ${x.q}`).join('\n');
     if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(()=>{ _mc.textContent='Copied ✓'; setTimeout(()=>{ _mc.textContent='Copy list'; },1400); }).catch(()=>{}); } };
   const _mk=$("#missClear"); if(_mk) _mk.onclick=()=>{ try{ localStorage.removeItem('csi-misses'); }catch(e){} renderMisses(); };
   const _ms=$("#missSend"); if(_ms) _ms.onclick=async()=>{

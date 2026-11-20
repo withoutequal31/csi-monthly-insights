@@ -1,0 +1,2526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#F1EDE3">
+<script>(function(){try{var t=localStorage.getItem('csi-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon-192.png?v=4">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="CS&amp;I Insights">
+<title>September 2026 (Archive) — Conflict Studies &amp; Insights</title>
+<!-- Link-share preview (WhatsApp, etc.): show the publication name, not the monthly edition title. -->
+<meta property="og:title" content="Conflict Studies &amp; Insights">
+<meta property="og:site_name" content="Conflict Studies &amp; Insights">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://csi-monthly-insights.pages.dev/">
+<meta property="og:description" content="Weekly conflict briefs and a monthly operational-learning digest — tactical insights from active conflicts, distilled into units-ready learning packs.">
+<meta property="og:image" content="https://csi-monthly-insights.pages.dev/icon-512.png?v=3">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="CS&amp;I — Conflict Studies &amp; Insights logo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Conflict Studies &amp; Insights">
+<meta name="twitter:description" content="Weekly conflict briefs and a monthly operational-learning digest — tactical insights from active conflicts, distilled into units-ready learning packs.">
+<meta name="twitter:image" content="https://csi-monthly-insights.pages.dev/icon-512.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500;1,8..60,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F1EDE3; --surface:#FFFFFF; --surface-2:#F6F2E9; --raise:#FBFAF5;
+  --line:#E4DECF; --line-2:#D2CAB6;
+  --text:#1C1B17; --text-2:#5B574E; --text-3:#8C8678;
+  --red:#C23A30; --red-dim:#F2E1DE;
+  --green:#2E9E5B; --amber:#B7841F; --steel:#3E6E88;
+  --f-3div:#B0801C; --f-9div:#2E8B82; --f-armd:#A35F2E;
+  --gold:#B7841F;
+  --ink:#2A2823; --ink-strong:#1a1206;
+  --disp:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --body:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --topH:108px;
+  /* the visual viewport's offset and height (VisualViewport API, updated live).
+     The app shell is pinned to these, so when iOS pans or shrinks the viewport
+     for the keyboard, the shell follows exactly. */
+  --vvt:0px;
+  --vvh:100%;
+}
+:root[data-theme="dark"]{
+  --bg:#16150F; --surface:#211F17; --surface-2:#1B1A13; --raise:#272419;
+  --line:#302C22; --line-2:#453F31;
+  --text:#EEEADF; --text-2:#B6B0A0; --text-3:#8A8373;
+  --red:#DC5C51; --red-dim:#3A211E;
+  --green:#43B771; --amber:#D6A23E; --steel:#5F97B7;
+  --f-3div:#D0A63C; --f-9div:#4CB5AB; --f-armd:#C67E4A;
+  --gold:#D6A23E;
+  --ink:#DAD4C7; --ink-strong:#F1ECE0;
+  color-scheme:dark;
+}
+/* brighten the section accents on dark so the left-borders and dots read */
+:root[data-theme="dark"] .fs-opp .fcard{border-left-color:#43B771}
+:root[data-theme="dark"] .fs-cap .fcard{border-left-color:#5F97B7}
+:root[data-theme="dark"] .fs-opp .psec-title::before{background:#43B771}
+:root[data-theme="dark"] .fs-cap .psec-title::before{background:#5F97B7}
+:root[data-theme="dark"] .bottomnav{background:rgba(22,21,15,.94)}
+:root[data-theme="dark"] .ph-active{color:#E0A366;border-color:#5A4326;background:#2A2015}
+:root[data-theme="dark"] .ph-cease{color:#9FCA6A;border-color:#3F4A2A;background:#1C2415}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+html,body{height:100%;overflow:hidden;overscroll-behavior:none}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.45;font-size:15px;-webkit-font-smoothing:antialiased}
+/* App shell: a fixed column (header / content / nav) bound to the visual
+   viewport. The document itself never scrolls — content scrolls inside
+   main.scroll — so iOS can't shove the page around, the header can't slide
+   under the status bar, and the nav can't fall off the bottom. --vvb keeps the
+   shell above the on-screen keyboard. */
+.app{position:fixed;top:var(--vvt,0px);left:0;right:0;height:var(--vvh,100%);max-width:480px;margin:0 auto;background:var(--bg);display:flex;flex-direction:column;min-height:0}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+a{color:inherit}
+
+/* ============ TOP BAR ============ */
+.topbar{position:relative;flex:0 0 auto;padding-top:env(safe-area-inset-top,0px);z-index:60;background:var(--bg);border-bottom:1px solid var(--line)}
+.tb-main{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:12px 16px 10px;gap:8px}
+.tb-left{display:flex;align-items:center;gap:14px}
+.tb-right{display:flex;align-items:center;gap:16px;justify-self:end}
+.icn{width:24px;height:24px;display:grid;place-items:center;color:var(--text);position:relative;flex:0 0 auto}
+.icn svg{width:22px;height:22px}
+.icn.has-dot::after{content:"";position:absolute;top:-1px;right:-1px;width:8px;height:8px;background:var(--red);border-radius:50%;border:1.5px solid var(--bg)}
+.badge{position:absolute;top:-5px;right:-7px;min-width:15px;height:15px;padding:0 3px;background:var(--red);color:#fff;font-family:var(--mono);font-size:9px;font-weight:600;border-radius:8px;display:grid;place-items:center;border:1.5px solid var(--bg)}
+.logo{justify-self:center;display:flex;flex-direction:column;align-items:center;line-height:1;user-select:none}
+.logo .lk{display:flex;align-items:center;gap:6px}
+.logo .brand{width:20px;height:20px;border-radius:5px;display:block}
+.logo b{font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:.05em}
+.logo span{font-family:var(--mono);font-size:7.5px;letter-spacing:.22em;color:var(--text-3);margin-top:3px;text-transform:uppercase}
+
+/* tabs */
+.tabs-wrap{position:relative}
+.tabs{display:flex;gap:0;overflow-x:auto;scrollbar-width:none;padding:0 16px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;font-family:var(--disp);font-weight:700;font-size:17px;color:var(--text-2);padding:9px 0 11px;margin-right:22px;position:relative;white-space:nowrap;letter-spacing:.005em}
+.tab[aria-selected="true"]{color:var(--red)}
+.tab[aria-selected="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--red)}
+.tabs-fade{position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(90deg,transparent,var(--bg) 72%);pointer-events:none;display:flex;align-items:center;justify-content:flex-end;padding-right:3px}
+.tabs-fade svg{width:16px;height:16px;color:var(--text-2)}
+.tab.weektab::before{content:"▾";font-size:11px;margin-right:5px;position:relative;top:-1px}
+/* week picker popover (reuses .pop chrome) */
+.weekpop{position:fixed;top:100px;left:12px;right:auto;z-index:80;width:min(300px,calc(100vw - 24px));max-height:56vh;overflow-y:auto;padding:6px}
+.wk-row{display:block;width:100%;text-align:left;font-family:var(--disp);font-weight:600;font-size:14px;color:var(--text);padding:10px 10px;border-radius:8px;line-height:1.25}
+.wk-row:hover{background:var(--red-dim)}
+.wk-row[aria-selected="true"]{color:var(--red)}
+.wk-row .wk-cur{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:3px}
+/* monthly edition dropdown (current + archived editions) */
+.editionpop{position:fixed;z-index:80;width:min(240px,calc(100vw - 24px));max-height:56vh;overflow-y:auto;padding:6px}
+.ed-row{display:block;width:100%;text-align:left;font-family:var(--disp);font-weight:600;font-size:14px;color:var(--text);padding:10px 10px;border-radius:8px;line-height:1.25;text-decoration:none}
+.ed-row:hover{background:var(--red-dim)}
+.ed-row small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-top:2px}
+.ed-row .ed-cur{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:3px}
+.ed-toggle{font:inherit;letter-spacing:inherit;color:inherit;text-transform:inherit;background:none;border:0;padding:0;margin:0;cursor:pointer}
+.ed-toggle .edcar{font-size:.92em;opacity:.85}
+/* reflowed weekly brief — stripped brief markup inherits app typography */
+.weekly{padding:0 16px 24px}
+.weekly .wk-head{position:sticky;top:0;z-index:2;background:var(--bg);display:flex;align-items:center;gap:10px;padding:12px 16px 10px;border-bottom:1px solid var(--line);margin:0 -16px 14px}
+.weekly .wk-title{font-family:var(--disp);font-weight:700;font-size:19px;color:var(--text);flex:1;line-height:1.2}
+.weekly .wk-title small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:3px}
+.weekly .wk-change{flex:0 0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-2);border:1px solid var(--line-2);border-radius:8px;padding:7px 10px;white-space:nowrap}
+.weekly .wk-change:hover{color:var(--red);border-color:var(--red)}
+.weekly section{margin:0 0 26px}
+.weekly h2{font-family:var(--disp);font-weight:700;font-size:20px;color:var(--text);margin:0 0 10px;line-height:1.2}
+.weekly h3{font-family:var(--disp);font-weight:700;font-size:16px;color:var(--text);margin:16px 0 7px}
+.weekly h4{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin:12px 0 6px}
+.weekly p{font-family:var(--body);font-size:14.5px;line-height:1.6;color:var(--text-2);margin:0 0 10px}
+.weekly ul,.weekly ol{margin:0 0 12px;padding-left:18px}
+.weekly li{font-family:var(--body);font-size:14.5px;line-height:1.55;color:var(--text-2);margin-bottom:6px}
+.weekly a{color:var(--red);text-decoration:underline;text-underline-offset:2px}
+.weekly b,.weekly strong{color:var(--text)}
+/* Weekly tables (e.g. the conflict status chart) fit the phone width — fixed
+   layout so columns never overflow, first columns kept narrow so the last
+   text-heavy column takes the remaining space and wraps. No sideways scroll. */
+.weekly table{width:100%;max-width:100%;table-layout:fixed;border-collapse:collapse;font-family:var(--body);font-size:11px;margin:4px 0 12px}
+.weekly th,.weekly td{border:1px solid var(--line);padding:5px 6px;text-align:left;vertical-align:top;color:var(--text-2);overflow-wrap:break-word;hyphens:none}
+.weekly th:nth-child(1),.weekly td:nth-child(1){width:21%}
+.weekly th:nth-child(2),.weekly td:nth-child(2){width:22%}
+.weekly th:nth-child(3),.weekly td:nth-child(3){width:22%}
+.weekly th{font-family:var(--mono);font-size:8.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-3);background:var(--surface-2)}
+.weekly td .ph{white-space:normal;font-size:8px;padding:2px 5px;display:inline-block}
+.weekly td:nth-child(3),.weekly td:nth-child(3) .wk-strong,.weekly td:nth-child(3) b,.weekly td:nth-child(3) strong{font-weight:400;color:var(--text-2)}
+.weekly .bw-frame{display:block;width:calc(100% + 32px);margin:0 -16px;height:80vh;border:0;border-top:1px solid var(--line);background:#f7f6f2}
+.weekly .wk-open{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--bg);background:var(--red);padding:9px 12px;border-radius:8px}
+.weekly .bw-st{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:1px 7px;margin-right:7px;vertical-align:1px;color:var(--text-3)}
+.weekly .bw-st.bw-priority{color:var(--red);border-color:var(--red)}
+.weekly .bw-phase,.weekly .bw-cite,.weekly .bw-conf{font-size:12.5px;color:var(--text-3)}
+.weekly ol.bw-panels{padding-left:20px}
+.weekly .wk-src{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--text-3);margin:0 0 18px}
+.weekly .wk-src a{color:var(--text-3)}
+.weekly .wk-msg{padding:36px 8px;text-align:center}
+.weekly .wk-msg p{font-size:13.5px;color:var(--text-3)}
+/* preserved semantic structure from the source brief (mapped to app palette) */
+.weekly .sec-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);margin-right:8px;vertical-align:1px}
+.weekly h2{display:flex;align-items:center}
+.weekly .wk-bluf{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:10px;padding:14px 15px;margin:0 0 22px}
+.weekly .wk-bluf p{margin-bottom:9px;color:var(--text)}
+.weekly .wk-bluf p:last-child{margin-bottom:0}
+.weekly .wk-panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px 15px 8px;margin:0 0 22px}
+.weekly .wk-panel ul,.weekly .wk-panel ol{margin:0;padding-left:2px;list-style:none}
+.weekly .wk-panel li{padding:11px 0;border-bottom:1px solid var(--line)}
+.weekly .wk-panel li:last-child{border-bottom:none}
+.weekly .theatre-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px 15px 7px;margin:0 0 16px}
+.weekly .th-hdr{display:block;margin:0 0 13px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.weekly .th-badge{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);border:1px solid var(--line-2);border-radius:6px;padding:3px 8px;margin-bottom:9px}
+.weekly .th-name{font-family:var(--disp);font-weight:700;font-size:21px;line-height:1.14;color:var(--text);margin:0}
+.weekly .th-sub{font-family:var(--body);font-size:13px;color:var(--text-2);margin-top:4px;line-height:1.35}
+.weekly .wk-item{margin:0 0 20px}
+.weekly .wk-item:last-child{margin-bottom:10px}
+/* collapsible reader — section folds and per-development folds */
+.weekly .wk-sec-toggle{cursor:pointer;display:flex;align-items:center;gap:9px}
+.weekly .wk-sec-toggle .wk-caret{margin-left:auto;flex:0 0 auto;font-family:var(--mono);font-size:15px;font-weight:400;color:var(--text-3);line-height:1}
+.weekly .wk-sec.wk-collapsed .wk-sec-body{display:none}
+.weekly .wk-dev{border-top:1px solid var(--line);padding:13px 0}
+.weekly .theatre-card .th-hdr + .wk-dev{border-top:none;padding-top:4px}
+.weekly .wk-dev-cat .pill{margin-bottom:8px}
+.weekly .wk-dev-head{font-family:var(--disp);font-weight:700;font-size:15px;line-height:1.28;color:var(--text)}
+.weekly .wk-dev.wk-collapsed .wk-dev-body{display:none}
+.weekly .wk-dev-body{margin-top:10px}
+/* latest-brief preview mode: show a few clamped sentences, expand from a button below */
+.weekly .wk-dev.wk-preview .wk-dev-head{display:block}
+.weekly .wk-dev.wk-preview.wk-collapsed .wk-dev-body{display:block}
+.weekly .wk-dev.wk-preview.wk-collapsed .wk-dev-body>p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:0}
+.weekly .wk-dev.wk-preview.wk-collapsed .wk-dev-body>:not(p){display:none}
+/* preview reads as plain prose — no link styling until expanded (Theatre 1 look) */
+.weekly .wk-dev.wk-preview.wk-collapsed .wk-dev-body>p a{color:inherit;text-decoration:none;pointer-events:none}
+.weekly .wk-dev.wk-preview.wk-collapsed .wk-dev-body>p .src-group{display:none}
+.weekly .wk-dev-more,.weekly .wk-chart-more{display:inline-block;margin-top:9px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--red);background:none;border:0;padding:2px 0;cursor:pointer;-webkit-appearance:none}
+.weekly .wk-chart-more{margin:11px 0 2px}
+.weekly .wk-chart.wk-collapsed .wk-row-extra{display:none}
+.weekly .pill{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-2);background:var(--surface-2);border:1px solid var(--line-2);border-radius:20px;padding:4px 10px;margin:0 6px 9px 0}
+.weekly .wk-strong{color:var(--text);font-weight:700}
+.weekly .theatre-card .wk-strong,.weekly .wk-panel .wk-strong{display:block;font-family:var(--disp);font-size:15.5px;line-height:1.28;margin:1px 0 7px}
+.weekly .src-group{display:block;margin-top:9px;line-height:2.2}
+.weekly .src-pill{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:10px;letter-spacing:.02em;color:var(--text-3);background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:3px 9px;margin:0 6px 0 0;text-decoration:none}
+.weekly .src-pill:hover{color:var(--red);border-color:var(--red)}
+.weekly .src-pill svg{width:10px;height:10px;flex:0 0 auto}
+.weekly .ph{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.03em;text-transform:uppercase;border-radius:5px;padding:2px 6px;border:1px solid var(--line-2);color:var(--text-2);white-space:nowrap}
+.weekly .ph-active{color:#9a3412;border-color:#e6c39b;background:#faf1e6}
+.weekly .ph-cease{color:#3f6212;border-color:#cbdcac;background:#f3f7ea}
+
+/* search bar (toggled) */
+/* ===== ASK (grounded chat) ===== */
+.ask{display:none;position:fixed;inset:0;z-index:58;background:var(--bg);max-width:480px;margin:0 auto;flex-direction:column}
+.ask.on{display:flex}
+.ask-bar{flex:0 0 auto;display:flex;align-items:center;gap:11px;padding:12px 14px;border-bottom:1px solid var(--line);background:var(--bg)}
+.ask-bar .back{display:flex;align-items:center;gap:7px;font-family:var(--disp);font-weight:700;font-size:15px}
+.ask-bar .back svg{width:20px;height:20px}
+.ask-bar .at{font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;color:var(--text-3);text-transform:uppercase;margin-left:auto;display:flex;align-items:center;gap:5px}
+.ask-bar .at i{width:5px;height:5px;border-radius:50%;background:var(--green);display:block}
+.ask-thread{flex:1 1 auto;overflow-y:auto;padding:16px 14px 10px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:90%;font-size:14.5px;line-height:1.5}
+.msg.user{align-self:flex-end;background:var(--surface-2);border:1px solid var(--line-2);color:var(--text);padding:9px 13px;border-radius:14px 14px 4px 14px}
+.msg.bot{align-self:flex-start;color:var(--ink);width:100%;max-width:100%}
+.msg.bot .lead{margin-bottom:2px}
+.msg.bot .lead b{color:var(--text);font-weight:600}
+.msg.bot .msg-bluf{font-size:14px;line-height:1.56;color:var(--ink);border-left:2px solid var(--red);padding-left:12px;margin:9px 0 2px}
+.msg.bot .msg-bluf b{color:var(--text);font-weight:700}
+.msg.bot .pl-row{font-size:13.5px;color:var(--ink);margin-top:5px}
+.msg.bot .pl-row b{color:var(--text);font-weight:600}
+.ans-card{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);margin-top:8px;cursor:pointer;transition:border-color .13s}
+.wk-hit{padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);margin-top:8px;cursor:pointer;transition:border-color .13s}
+.wk-hit:hover{border-color:var(--red)}
+.wk-hit .wh-k{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:5px}
+.wk-hit p{font-family:var(--body);font-size:13px;line-height:1.5;color:var(--text-2);margin:0 0 7px}
+.wk-hit .wh-open{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--text-3)}
+.ans-card:hover{border-color:var(--line-2)}
+.ans-card .vd{flex:0 0 auto;width:8px;height:8px;border-radius:50%;margin-top:5px}
+.vd.success{background:var(--green)}.vd.failure{background:var(--red)}.vd.mixed{background:var(--amber)}.vd.threat{background:var(--steel)}
+.ans-card .ac-b{min-width:0}
+.ans-card .ac-t{font-family:var(--disp);font-weight:700;font-size:15.5px;line-height:1.16;color:var(--text)}
+.ans-card .ac-s{font-size:12.5px;color:var(--text-2);margin-top:4px;line-height:1.45}
+.ans-card .ac-m{font-family:var(--mono);font-size:9px;letter-spacing:.05em;color:var(--text-3);margin-top:6px;text-transform:uppercase}
+.ans-link{display:inline-flex;align-items:center;gap:5px;margin-top:11px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--steel);text-transform:uppercase;cursor:pointer}
+.msg.bot .closing{font-size:12px;color:var(--text-3);margin-top:11px}
+.typing{align-self:flex-start;display:flex;gap:5px;padding:8px 4px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--text-3);animation:bl 1s infinite}
+.typing i:nth-child(2){animation-delay:.18s}.typing i:nth-child(3){animation-delay:.36s}
+@keyframes bl{0%,65%,100%{opacity:.25}32%{opacity:1}}
+.ask-foot{flex:0 0 auto;border-top:1px solid var(--line);padding:9px 12px calc(10px + env(safe-area-inset-bottom));background:var(--bg)}
+.ask-sugg{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding-bottom:9px}
+.ask-sugg::-webkit-scrollbar{display:none}
+.sg{flex:0 0 auto;font-size:12px;color:var(--text);background:var(--surface-2);border:1px solid var(--line-2);border-radius:16px;padding:7px 12px;white-space:nowrap;cursor:pointer}
+.sg:hover{border-color:var(--steel)}
+.ask-in{display:flex;gap:8px;align-items:flex-end}
+.ask-in textarea{flex:1;background:var(--surface-2);border:1px solid var(--line-2);color:var(--text);font-family:var(--body);font-size:15px;padding:10px 14px;border-radius:20px;outline:none;resize:none;max-height:110px;line-height:1.35;height:42px}
+.ask-in textarea:focus{border-color:var(--line-2)}
+.ask-in textarea::placeholder{color:var(--text-3)}
+.ask-send{flex:0 0 auto;width:42px;height:42px;border-radius:50%;background:var(--red);display:grid;place-items:center;color:#fff}
+.ask-send svg{width:20px;height:20px}
+
+/* notif popover */
+.pop{position:absolute;top:54px;right:12px;z-index:70;width:268px;background:var(--surface-2);border:1px solid var(--line-2);border-radius:10px;box-shadow:0 14px 34px rgba(0,0,0,.16);padding:14px;display:none}
+.pop.on{display:block}
+.pop h4{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--red);text-transform:uppercase;margin-bottom:8px}
+.pop p{font-size:12.5px;color:var(--text-2);margin-bottom:7px}
+.pop p b{color:var(--text)}
+.bell-new{background:var(--red);color:#fff;border-radius:8px;padding:9px 11px;margin-bottom:11px;font-size:12.5px;line-height:1.4}
+.bell-new b{color:#fff}
+.notify-btn{width:100%;font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--text);background:var(--surface);border:1px solid var(--line-2);border-radius:8px;padding:10px;cursor:pointer}
+.notify-btn:hover{border-color:var(--red);color:var(--red)}
+.notify-btn[data-on="1"]{color:var(--green);border-color:var(--green)}
+.notify-btn:disabled{opacity:.55;cursor:default}
+.notify-hint{color:var(--text-3);font-size:11px;margin:8px 0 0}
+
+/* ============ SCROLL AREA ============ */
+.scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;position:relative;padding-bottom:24px}
+.edition-banner{display:flex;align-items:center;gap:13px;margin:16px 16px 6px;padding:14px 17px;background:#1C1B17;border-radius:13px}
+.edition-banner .eb-ic{width:26px;height:26px;color:var(--gold);flex:0 0 auto}
+.edition-banner .eb-txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.edition-banner .eb-main{font-family:var(--disp);font-weight:700;font-size:19px;color:var(--gold);letter-spacing:.005em;line-height:1.1}
+.edition-banner .eb-sub{font-family:var(--mono);font-size:8.5px;letter-spacing:.07em;text-transform:uppercase;color:#B7B1A2;line-height:1.3}
+.edition-banner .eb-date{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#EDE8DC;white-space:nowrap}
+.edition-banner .eb-date small{font-size:8.5px;letter-spacing:.12em;color:var(--gold);margin-top:2px}
+.section-title{font-family:var(--disp);font-weight:700;font-size:34px;text-align:center;padding:22px 16px 16px;letter-spacing:-.01em}
+.theatre-sub{text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--text-3);text-transform:uppercase;margin-top:-8px;padding-bottom:14px}
+
+/* ============ VISUAL PANELS (in place of photos) ============ */
+.panel{position:relative;overflow:hidden;background:var(--surface-2);display:block}
+.panel::after{content:"";position:absolute;inset:0;z-index:0;background-image:repeating-linear-gradient(0deg,transparent 0 21px,rgba(255,255,255,.028) 21px 22px),repeating-linear-gradient(90deg,transparent 0 21px,rgba(255,255,255,.028) 21px 22px);pointer-events:none}
+.panel .pimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;background:var(--surface-2)}
+.panel.has-img::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:none}
+.panel .pcode{position:absolute;z-index:0;font-family:var(--mono);font-weight:600;color:rgba(255,255,255,.10);letter-spacing:.04em;line-height:.85;white-space:nowrap}
+.panel .pkind{position:absolute;font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--text-2);text-transform:uppercase}
+.panel .vtag,.panel .pforms,.panel .vbar,.panel .pcredit{z-index:3}
+.pcredit{position:absolute;right:9px;bottom:8px;font-family:var(--mono);font-size:8px;letter-spacing:.06em;color:rgba(255,255,255,.62);text-transform:uppercase;text-shadow:0 1px 2px rgba(0,0,0,.7)}
+.t-rusukr{background:radial-gradient(130% 120% at 78% 12%,#1d3343,#0a1015 58%)}
+.t-isrlbn{background:radial-gradient(130% 120% at 78% 12%,#3a2f17,#120e08 58%)}
+.t-thakhm{background:radial-gradient(130% 120% at 78% 12%,#163021,#0a130d 58%)}
+.t-isrhms{background:radial-gradient(130% 120% at 78% 12%,#3a1c1a,#130a09 58%)}
+.t-usiirn{background:radial-gradient(130% 120% at 78% 12%,#2a2238,#0d0b12 58%)}
+.t-sdn{background:radial-gradient(130% 120% at 78% 12%,#3a3016,#14100a 58%)}
+.t-multi{background:radial-gradient(130% 120% at 78% 12%,#26282b,#0b0c0d 58%)}
+
+/* verdict tag */
+.vtag{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;display:inline-flex;align-items:center;gap:5px;border:1px solid}
+.vtag::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.vtag.success{color:var(--green);border-color:rgba(46,158,91,.4)}
+.vtag.failure{color:var(--red);border-color:rgba(194,58,48,.35)}
+.vtag.mixed{color:var(--amber);border-color:rgba(183,132,31,.4)}
+.vtag.threat{color:var(--steel);border-color:rgba(62,110,136,.4)}
+
+/* ============ HERO CARD ============ */
+.hero{cursor:pointer}
+.hero .panel{aspect-ratio:16/10;width:100%}
+.hero .panel .pcode{right:14px;top:10px;font-size:46px;text-align:right}
+.hero .panel .vtag{position:absolute;left:14px;top:14px;background:rgba(0,0,0,.35);backdrop-filter:blur(2px)}
+.hero .panel .pforms{position:absolute;left:14px;bottom:13px;display:flex;gap:5px}
+.hero-body{padding:15px 16px 8px}
+.hero h2{font-family:var(--disp);font-weight:700;font-size:25px;line-height:1.12;letter-spacing:-.012em}
+.meta-row{display:flex;align-items:center;gap:8px;padding:9px 16px 0;color:var(--text-2)}
+.meta-row .mtxt{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em}
+.meta-row .kebab{margin-left:auto;color:var(--text-3);font-size:20px;line-height:1;padding:2px 4px}
+.fpill{font-family:var(--mono);font-size:9px;letter-spacing:.05em;padding:2px 6px;border:1px solid;text-transform:uppercase;white-space:nowrap;background:rgba(0,0,0,.04)}
+.fpill.f3{color:var(--f-3div);border-color:rgba(176,128,28,.4)}
+.fpill.f9{color:var(--f-9div);border-color:rgba(46,139,130,.4)}
+.fpill.fa{color:var(--f-armd);border-color:rgba(163,95,46,.4)}
+
+.hr{height:1px;background:var(--line);margin:18px 16px}
+.hr.thick{height:6px;background:var(--surface);margin:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* ============ KEY JUDGEMENT INTERSTITIAL (ad-slot) ============ */
+.interstitial{margin:2px 16px 18px;padding:22px 20px;background:var(--surface);border:1px solid var(--line);border-radius:14px;text-align:center;cursor:pointer}
+.interstitial .lab{font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:13px}
+.interstitial .kj{display:block}
+.interstitial .kj p{font-family:var(--disp);font-style:italic;font-weight:500;font-size:19px;line-height:1.34;letter-spacing:-.003em;color:var(--text)}
+.interstitial .kj p em{font-style:normal;color:var(--red);font-weight:600}
+.interstitial .kjf{font-family:var(--mono);font-size:9px;color:var(--text-3);letter-spacing:.08em;margin-top:14px;text-transform:uppercase}
+
+/* ============ LIST CARD ============ */
+.lcard{display:grid;grid-template-columns:104px 1fr;gap:13px;padding:15px 16px;cursor:pointer;align-items:start}
+.lcard .panel{width:104px;height:104px}
+.lcard .panel .pcode{left:8px;top:7px;font-size:15px}
+.lcard .panel .vbar{position:absolute;left:0;right:0;bottom:0;height:4px}
+.lcard .vbar.success{background:var(--green)}.lcard .vbar.failure{background:var(--red)}.lcard .vbar.mixed{background:var(--amber)}.lcard .vbar.threat{background:var(--steel)}
+.lcard .lc-body{min-width:0}
+.lcard h3{font-family:var(--disp);font-weight:700;font-size:16.5px;line-height:1.16;letter-spacing:-.006em;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.lcard .lmeta{display:flex;align-items:center;gap:7px;margin-top:8px;color:var(--text-2)}
+.lcard .lmeta .mtxt{font-family:var(--mono);font-size:10px;letter-spacing:.03em}
+.lcard .lmeta .kebab{margin-left:auto;color:var(--text-3);font-size:18px;line-height:1;padding:0 2px}
+.lcard + .lcard{border-top:1px solid var(--line)}
+
+/* ===== editorial article cards (Line of Departure style) ===== */
+.acard{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0 16px 18px;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.acard.feat{box-shadow:0 3px 14px rgba(0,0,0,.08)}
+.acard-img{position:relative;width:100%;aspect-ratio:16/10;background:var(--surface-2);overflow:hidden}
+.acard-img .pimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.acard-img .pcode{display:none}
+.acard-img.no-img{background:radial-gradient(130% 120% at 78% 12%,#23262b,#0b0c0d 58%)}
+.acard-img.no-img .pcode{display:block;position:absolute;right:14px;top:10px;font-size:40px;text-align:right;z-index:0;color:rgba(255,255,255,.12)}
+.dpanel.no-img{background:radial-gradient(130% 120% at 78% 12%,#23262b,#0b0c0d 58%)}
+.dpanel.no-img .pcode{display:block;color:rgba(255,255,255,.12)}
+.serfilter{display:flex;gap:8px;overflow-x:auto;padding:2px 16px 14px}
+.serfilter::-webkit-scrollbar{display:none}
+.serchip{flex:0 0 auto;font-family:var(--mono);font-size:12px;letter-spacing:.02em;color:var(--text-2);background:var(--surface-2);border:1px solid var(--line-2);border-radius:16px;padding:7px 12px;white-space:nowrap;cursor:pointer}
+.serchip.on{color:#fff;background:var(--red);border-color:var(--red)}
+.serchip:disabled,.serchip.off{opacity:.4;cursor:not-allowed}
+.searchbar{padding:0 16px 12px}
+.searchbar input{width:100%;font-family:var(--body);font-size:15px;color:var(--text);background:var(--surface);border:1px solid var(--line-2);border-radius:12px;padding:12px 14px;outline:none;-webkit-appearance:none}
+.searchbar input::placeholder{color:var(--text-3)}
+.searchbar input:focus{border-color:var(--red)}
+.ask-note{padding:0 16px 10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--red)}
+.curs{display:inline-block;width:7px;height:12px;background:var(--red);margin-left:2px;vertical-align:-1px;animation:bl 1s infinite}
+.ask-examples{display:flex;flex-wrap:wrap;gap:8px;padding:2px 16px 12px}
+.serchip.ex{white-space:normal;font-family:var(--body);font-size:12.5px;letter-spacing:0}
+/* Ask pane as a chat container: it fills the shell's content area (between the
+   header and the nav), the message thread scrolls INSIDE it, and the input is
+   pinned at its bottom. The app shell tracks the visual viewport (--vvb), so
+   when the keyboard opens the whole shell — input included — rises above it. */
+#pane-search.on{display:flex;flex-direction:column;position:absolute;inset:0;background:var(--bg);z-index:40;overflow:hidden}
+#pane-search>.section-title,#pane-search>.theatre-sub,#pane-search>.ask-note,#pane-search>#askExamples{flex:0 0 auto}
+#pane-search>.theatre-sub{padding-left:18px;padding-right:18px}
+.ask-pane-thread{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;display:flex;flex-direction:column;gap:16px;padding:10px 16px 12px}
+.ask-pane-thread>*:first-child{margin-top:auto}
+/* input row, in-flow at the bottom of the chat container */
+.ask-dock{flex:0 0 auto;display:none;gap:8px;padding:9px 12px;background:var(--bg);border-top:1px solid var(--line)}
+.ask-dock.on{display:flex;align-items:center}
+/* 16px minimum: iOS zooms the whole page when focusing an input with a font
+   smaller than 16px, and the zoom lingers after the keyboard closes — the
+   pane then pans/wobbles in every direction. */
+.ask-dock input{flex:1 1 auto;min-width:0;font-family:var(--body);font-size:16px;color:var(--text);background:var(--surface);border:1px solid var(--line-2);border-radius:22px;padding:10px 16px;outline:none;-webkit-appearance:none}
+.ask-dock input::placeholder{color:var(--text-3)}
+.ask-dock input:focus{border-color:var(--red)}
+.ask-send{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center}
+.ask-send svg{width:19px;height:19px}
+.app.kbd .bottomnav{display:none}
+/* while typing the pane is only as tall as the space above the keyboard —
+   collapse the header rows so the conversation and the input keep it all */
+.app.kbd #pane-search>.section-title,.app.kbd #pane-search>.theatre-sub,.app.kbd #pane-search>.ask-note,.app.kbd #pane-search>#askExamples{display:none}
+.ask-pane-thread .msg.user{align-self:flex-end;max-width:85%;background:var(--red);color:#fff;font-size:14px;line-height:1.4;padding:9px 13px;border-radius:14px 14px 4px 14px}
+.ask-pane-thread .ans-prose{font-size:14px;line-height:1.6;color:var(--ink);margin:8px 0 2px}
+.ask-pane-thread .cite{font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--red);white-space:nowrap;vertical-align:1px}
+.ask-pane-thread .ans-so{font-size:13px;line-height:1.5;color:var(--ink);border-left:2px solid var(--line-2);padding-left:11px;margin-top:10px}
+.ask-pane-thread .ans-so b{color:var(--text);font-weight:700}
+/* formation-tailored line + field/counter rows + rehearsal blocks + list groups */
+.ans-for{font-size:13px;line-height:1.5;color:var(--ink);border-left:2px solid var(--steel);padding-left:11px;margin-top:10px}
+.ans-for b{color:var(--text);font-weight:700}
+.ans-frow{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-top:8px;cursor:pointer}
+.ans-frow .af-t{font-family:var(--disp);font-weight:700;font-size:14.5px;line-height:1.25;color:var(--text);margin-bottom:4px}
+.ans-frow p{font-size:13px;line-height:1.5;color:var(--ink);margin:0}
+.ans-ict{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:12px 14px;margin-top:8px;cursor:pointer}
+.ans-ict .ai-t{font-family:var(--disp);font-weight:700;font-size:15px;line-height:1.25;color:var(--text)}
+.ans-ict .ai-fmt{font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--gold);margin:5px 0 6px}
+.ans-ict .ai-set{font-size:13px;font-style:italic;color:var(--ink);line-height:1.5;margin:0 0 6px}
+.ans-ict ol{margin:0 0 8px 18px;font-size:13px;color:var(--ink);line-height:1.55}
+.ans-ict .ai-std{font-size:12.5px;color:var(--ink);line-height:1.45}
+.ans-ict .ai-std b{color:var(--text)}
+.ans-grp{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin:13px 0 2px}
+/* answer tools: copy + suggested follow-ups; source-count chip on cited cards */
+.ans-tools{margin-top:10px}
+.ans-copy{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);border:1px solid var(--line-2);border-radius:8px;padding:5px 10px;cursor:pointer}
+.ans-copy:hover{color:var(--red);border-color:var(--red)}
+.ans-next{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:11px}
+.an-l{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
+.serchip.sgg{font-family:var(--body);font-size:12px;letter-spacing:0;padding:6px 11px}
+.ac-cf{font-family:var(--mono);white-space:nowrap}
+.ac-cf.ok{color:var(--green)}
+.ac-cf.lone{color:var(--amber)}
+/* assistant-gaps list (About) */
+.miss-list{margin:10px 0 12px}
+.miss-row{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:13px;color:var(--ink);padding:7px 0;border-bottom:1px solid var(--line)}
+.miss-row small{font-family:var(--mono);font-size:9.5px;color:var(--text-3);flex:0 0 auto}
+.miss-row.none{color:var(--text-3);border-bottom:none}
+.miss-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.fb-form{display:flex;flex-direction:column;gap:9px;margin-top:4px}
+.fb-input{width:100%;max-width:100%;box-sizing:border-box;font-family:var(--body);font-size:16px;color:var(--text);background:var(--surface);border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;line-height:1.5;-webkit-appearance:none}
+.fb-input:focus{outline:none;border-color:var(--red)}
+textarea.fb-input{resize:vertical;min-height:64px}
+.fb-status{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--text-3)}
+.fb-status.ok{color:var(--green)}
+.fb-status.err{color:var(--red)}
+.facet-row{display:flex;gap:8px;overflow-x:auto;padding:0 16px 10px;align-items:center}
+.facet-row::-webkit-scrollbar{display:none}
+.facet-lbl{flex:0 0 auto;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-right:2px}
+.ser-group{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);padding:16px 16px 8px;border-top:1px solid var(--line);margin-top:4px}
+.cx{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px 15px 13px;margin:0 16px 12px}
+.cx-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:9px}
+.cx-top h3{font-family:var(--disp);font-weight:700;font-size:17px;line-height:1.2;margin:0;color:var(--text)}
+.cx-stage{flex:0 0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid}
+.cx-stage.emerging{color:var(--steel);border-color:var(--steel);background:rgba(62,110,136,.08)}
+.cx-stage.hot{color:var(--red);border-color:var(--red);background:var(--red-dim)}
+.cx-stage.superseded{color:var(--text-3);border-color:var(--line-2);background:var(--surface-2)}
+.cx-life{display:flex;align-items:center;gap:5px;margin-bottom:12px;flex-wrap:wrap}
+.cx-step{font-family:var(--mono);font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:var(--text-3);opacity:.5}
+.cx-step.past{opacity:.7;text-decoration:line-through}
+.cx-step.on{opacity:1;font-weight:600;padding:2px 7px;border-radius:999px}
+.cx-step.on.emerging{color:#fff;background:var(--steel)}
+.cx-step.on.hot{color:#fff;background:var(--red)}
+.cx-step.on.superseded{color:var(--text);background:var(--line-2)}
+.cx-arrow{color:var(--line-2);font-style:normal;font-size:11px}
+.cx-block{margin-bottom:9px}
+.cx-k{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:2px}
+.cx-block p{margin:0;font-size:14px;line-height:1.5;color:var(--text)}
+.cx-sig{border-top:1px solid var(--line);margin-top:11px;padding-top:10px;display:flex;flex-direction:column;gap:9px}
+.cx-sigrow{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:start}
+.cx-sl{font-family:var(--mono);font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:var(--text-3);padding-top:2px}
+.cx-sv{font-size:12.5px;line-height:1.45;color:var(--text-2)}
+.cx .lsrc{display:inline-block;margin-top:12px}
+.feat-tag{position:absolute;left:12px;top:12px;z-index:3;font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;background:rgba(28,27,23,.82);color:#F1EDE3;padding:5px 9px;border-radius:5px}
+.acard-body{padding:15px 17px 15px}
+.acard-rt{font-family:var(--body);font-size:12.5px;color:var(--text-3);margin-bottom:7px}
+.acard-title{font-family:var(--disp);font-weight:600;font-size:22px;line-height:1.22;letter-spacing:-.004em;color:var(--text)}
+.acard.feat .acard-title{font-size:26px}
+.acard-dek{font-size:14px;line-height:1.5;color:var(--text-2);margin-top:9px}
+.acard-meta{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-top:12px}
+.vdot{width:7px;height:7px;border-radius:50%;display:inline-block;flex:0 0 auto}
+.vdot.success{background:var(--green)}.vdot.failure{background:var(--red)}.vdot.mixed{background:var(--amber)}.vdot.threat{background:var(--steel)}
+.acard-foot{display:flex;align-items:center;margin-top:13px;padding-top:12px;border-top:1px solid var(--line)}
+.acard-foot .byline{font-family:var(--body);font-style:italic;font-size:12.5px;color:var(--text-3)}
+.acard-foot .acard-act{margin-left:auto;display:flex;align-items:center;color:var(--text-3)}
+.acard-foot .kebab{font-size:20px;line-height:1;padding:0 4px;color:var(--text-3)}
+
+/* ===== monthly pack ===== */
+.mode-toggle{display:flex;gap:6px;margin:14px 16px 2px;background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:4px}
+.mt-btn{flex:1;font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-2);background:none;border:none;padding:10px;border-radius:8px;cursor:pointer}
+.mt-btn.on{background:var(--surface);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.08);font-weight:600}
+.pack-head{padding:18px 18px 4px}
+.pack-kicker{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.pack-title{font-family:var(--disp);font-weight:700;font-size:27px;line-height:1.16;letter-spacing:-.01em;color:var(--text);margin-bottom:12px}
+.pack-lede{font-size:14.5px;line-height:1.55;color:var(--text-2)}
+.pack-lede b{color:var(--text);font-weight:700}
+.pack-cal{margin-top:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);line-height:1.5}
+/* per-serial sourcing confidence (detail view) */
+.conf{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-3);margin:11px 0 2px;line-height:1.45}
+.conf i{width:7px;height:7px;border-radius:50%;flex:0 0 auto}
+.conf.ok i{background:var(--green)}
+.conf.lone i{background:var(--amber)}
+.statcards{display:flex;gap:9px;margin-top:17px}
+.statcard{flex:1;background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:12px 11px}
+.sc-k{font-family:var(--mono);font-size:8px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-3);line-height:1.35;min-height:22px}
+.sc-n{font-family:var(--disp);font-weight:700;font-size:30px;color:var(--text);line-height:1;margin:4px 0 5px}
+.sc-s{font-family:var(--mono);font-size:7.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--text-3)}
+.psec{margin:20px 16px 0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:17px 16px}
+.psec-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:14px}
+.psec-title{font-family:var(--disp);font-weight:700;font-size:21px;color:var(--text);letter-spacing:-.005em}
+.psec-right{font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);text-align:right;flex:0 1 auto;min-width:0}
+/* three command sections (Opportunities / Vulnerabilities / Capability Development) */
+.psec.fs{background:none;border:none;padding:0;margin:24px 0 0}
+.psec.fs .psec-head{margin:0 16px 11px}
+.psec.fs .psec-title{display:flex;align-items:center;gap:9px}
+.psec.fs .psec-title::before{content:"";width:10px;height:10px;border-radius:50%;flex:0 0 auto;background:var(--line-2)}
+.fs-opp .psec-title::before{background:#3f7d54}
+.fs-vuln .psec-title::before{background:var(--red)}
+.fs-cap .psec-title::before{background:#3a6ea5}
+.fcard{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--line-2);border-radius:12px;padding:13px 15px 12px;margin:0 16px 9px}
+.fs-opp .fcard{border-left-color:#3f7d54}
+.fs-vuln .fcard{border-left-color:var(--red)}
+.fs-cap .fcard{border-left-color:#3a6ea5}
+.fc-t{font-family:var(--disp);font-weight:700;font-size:16px;line-height:1.25;color:var(--text);margin-bottom:5px}
+.fc-d{font-family:var(--body);font-size:13.5px;line-height:1.55;color:var(--text-2);margin:0 0 9px}
+.fc-src{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.03em;color:var(--text-3);background:none;border:none;padding:0;cursor:pointer;text-align:left;line-height:1.35}
+.fc-src .fc-lm{color:var(--red);font-weight:700}
+.fc-src:hover{color:var(--red)}
+.lens-card{font-size:14.5px;line-height:1.56;color:var(--text)}
+.wf-list{display:flex;flex-direction:column;gap:10px}
+.wf-item{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--raise)}
+.wf-t{font-family:var(--disp);font-weight:600;font-size:15.5px;line-height:1.26;color:var(--text)}
+.wf-n{font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-top:6px}
+.lcardx{border:1px solid var(--line);border-radius:12px;padding:15px;background:var(--raise);margin-bottom:13px}
+.lcardx:last-child{margin-bottom:0}
+.lcardx-tags{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:10px}
+.ltag{font-family:var(--mono);font-size:8.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-2);background:var(--surface-2);border:1px solid var(--line);padding:4px 8px;border-radius:5px}
+.lstatus{font-family:var(--mono);font-size:8.5px;letter-spacing:.05em;text-transform:uppercase;padding:4px 8px;border-radius:5px}
+.lstatus.st-high{color:var(--green);background:rgba(46,158,91,.1)}
+.lstatus.st-now{color:var(--red);background:rgba(194,58,48,.1)}
+.lstatus.st-watch{color:var(--amber);background:rgba(183,132,31,.12)}
+.lsrc{margin-left:auto;font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--steel);cursor:pointer;white-space:nowrap}
+.lcardx-title{font-family:var(--disp);font-weight:700;font-size:18px;line-height:1.22;color:var(--text)}
+.lcardx-body{font-size:13.5px;line-height:1.5;color:var(--text-2);margin-top:7px}
+.lblock{margin-top:12px;padding-top:11px;border-top:1px solid var(--line)}
+.lbl-h{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:5px}
+.lblock p{font-size:13.5px;line-height:1.48;color:var(--text)}
+.impl-row{padding:13px 0;border-bottom:1px solid var(--line)}
+.impl-row:last-child{border-bottom:none}.impl-row:first-child{padding-top:0}
+.impl-ech{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);margin-bottom:5px;font-weight:600}
+.impl-row p{font-size:14px;line-height:1.45;color:var(--text)}
+.contest{border:1px solid var(--line);border-radius:11px;padding:14px;background:var(--raise);margin-bottom:11px}
+.contest:last-child{margin-bottom:0}
+.contest-top{display:flex;align-items:center;justify-content:space-between;gap:9px;margin-bottom:10px}
+.contest-top h3{font-family:var(--disp);font-weight:700;font-size:16.5px;color:var(--text);line-height:1.2}
+.cstat{flex:0 0 auto;font-family:var(--mono);font-size:8.5px;letter-spacing:.04em;text-transform:uppercase;padding:4px 8px;border-radius:5px}
+.cstat.st-high{color:var(--green);background:rgba(46,158,91,.1)}
+.cstat.st-now{color:var(--red);background:rgba(194,58,48,.1)}
+.cstat.st-watch{color:var(--amber);background:rgba(183,132,31,.12)}
+.crow{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:6px 0;align-items:baseline}
+.crow .ck{font-family:var(--mono);font-size:8.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3)}
+.crow .cv{font-size:13px;line-height:1.45;color:var(--text)}
+.contest .lsrc{display:inline-block;margin-top:10px;margin-left:0}
+
+.empty{text-align:center;padding:60px 26px;color:var(--text-2)}
+.empty b{font-family:var(--disp);font-size:20px;display:block;color:var(--text);margin-bottom:8px}
+.empty p{font-size:13.5px;line-height:1.5}
+
+/* ============ DETAIL VIEW ============ */
+.detail{display:none}
+.detail.on{display:block;flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding-bottom:24px}
+.app.detail-open .topbar,.app.detail-open .scroll{display:none}
+.app.ask-open .topbar,.app.ask-open .scroll,.app.ask-open .bottomnav{display:none}
+.dt-bar{position:sticky;top:0;z-index:55;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) 14px 12px;gap:12px}
+.dt-bar .back{display:flex;align-items:center;gap:7px;font-family:var(--disp);font-weight:700;font-size:15px}
+.dt-bar .back svg{width:20px;height:20px}
+.dt-bar .dt-actions{margin-left:auto;display:flex;gap:16px}
+.dt-bar .dt-actions .icn svg{width:21px;height:21px}
+.icn.saved{color:var(--amber)}
+.dpanel{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;background:var(--surface-2)}
+.dpanel .pimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dpanel .pcode{right:16px;top:12px;font-size:50px;text-align:right}
+.dpanel .vtag{position:absolute;left:16px;top:14px;background:rgba(0,0,0,.35)}
+.dwrap{padding:18px 18px 40px}
+.dkicker{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--text-2);text-transform:uppercase;margin-bottom:9px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.dkicker .sid{color:var(--red)}
+.detail h1{font-family:var(--disp);font-weight:700;font-size:27px;line-height:1.1;letter-spacing:-.015em;margin-bottom:13px}
+.dforms{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.dforms .fpill{background:none}
+.block{margin-top:19px}
+.block .bl{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--red);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.block .bl::after{content:"";flex:1;height:1px;background:var(--line)}
+.block p{font-size:15.5px;line-height:1.58;color:var(--ink)}
+
+.appbox{margin-top:20px;border:1px solid var(--line-2);background:var(--surface);border-radius:8px;overflow:hidden}
+.appbox .ah{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--steel);padding:13px 15px 0;display:flex;align-items:center;gap:7px}
+.appbox .ah b{width:5px;height:5px;background:var(--steel);border-radius:50%}
+.appbox p{padding:7px 15px 15px;font-size:14.5px;line-height:1.56;color:var(--ink)}
+
+.ict{margin-top:16px;border-left:3px solid var(--amber);background:linear-gradient(100deg,rgba(224,163,62,.10),rgba(224,163,62,.01));padding:14px 15px 15px}
+.ict .ih{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.ict .ih b{font-family:var(--disp);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:14px;color:var(--amber)}
+.ict .ih .tab2{font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;color:var(--ink-strong);background:var(--amber);padding:3px 7px;text-transform:uppercase;margin-left:auto;font-weight:600}
+.ict p{font-size:14.5px;line-height:1.56;color:var(--ink)}
+.ict p strong{color:var(--amber);font-weight:600}
+.ict-fmt{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--amber);text-transform:uppercase;margin-bottom:9px;line-height:1.5}
+.ict-set{font-size:13.5px;line-height:1.5;color:var(--ink);font-style:italic;margin-bottom:13px;padding-bottom:13px;border-bottom:1px solid rgba(224,163,62,.18)}
+.ict-lbl{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(224,163,62,.85);margin-bottom:5px}
+.ict-run{margin-bottom:13px}
+.ict-run ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.ict-run li{font-size:13.5px;line-height:1.48;color:var(--ink);padding-left:3px}
+.ict-run li::marker{color:var(--amber);font-family:var(--mono);font-size:11px}
+.ict-dec{margin-bottom:13px}
+.ict-dec p{font-size:13.5px;line-height:1.5;color:var(--ink)}
+.ict-twist{margin-top:7px;font-size:12.5px;color:#6B6450;line-height:1.45}
+.ict-twist span{font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-strong);background:rgba(224,163,62,.85);padding:2px 6px;border-radius:3px;margin-right:6px}
+.ict-std p{font-size:13px;line-height:1.48;color:var(--ink)}
+
+.srcs{margin-top:22px;border-top:1px solid var(--line);padding-top:15px}
+.srcs .sh{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--red);margin-bottom:3px}
+.srcs .sh-sub{font-family:var(--body);font-size:12.5px;line-height:1.4;color:var(--text-3);margin-bottom:10px}
+.srcs a{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;color:var(--steel);text-decoration:none;padding:11px 0;border-bottom:1px solid var(--line);word-break:break-word}
+.srcs a .src-n{flex:0 0 auto;color:var(--text-3)}
+.srcs a .src-name{flex:1 1 auto}
+.srcs a .src-go{flex:0 0 auto;color:var(--red);font-size:13px}
+.srcs a:hover{color:var(--red)}
+.srcs a:hover .src-name{text-decoration:underline;text-underline-offset:2px}
+.srcs a:active{color:var(--text)}
+.dt-foot{margin-top:24px;text-align:center}
+.dt-foot button{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-2);border:1px solid var(--line-2);padding:11px 20px;border-radius:6px}
+
+/* ============ STATIC SECTIONS (brief/planning/units/about) ============ */
+.pane{display:none;padding:6px 16px 40px}
+.pane.on{display:block}
+.pane h2.ph{font-family:var(--disp);font-weight:700;font-size:30px;letter-spacing:-.01em;padding:18px 0 4px}
+.pane .pintro{color:var(--text-2);font-size:14px;line-height:1.5;margin-bottom:18px}
+
+.blufcard{border-left:3px solid var(--red);background:var(--surface);padding:16px 16px 18px;border-radius:0 8px 8px 0}
+.blufcard .bh{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:11px}
+.blufcard p{font-size:16px;line-height:1.62;color:var(--ink)}
+.blufcard p strong{color:var(--text);font-weight:700}
+.howto{margin-top:22px}
+.howto .hr2{font-family:var(--mono);font-size:10px;letter-spacing:.13em;color:var(--text-3);text-transform:uppercase;margin-bottom:10px}
+.howto .step{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.howto .step .n{font-family:var(--mono);font-size:13px;color:var(--red);font-weight:600;flex:0 0 auto}
+.howto .step p{font-size:13.5px;color:var(--text-2);line-height:1.5}
+.howto .step p b{color:var(--text);font-weight:600}
+
+.checklist{border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:4px}
+.cl-item{display:flex;gap:13px;padding:15px 14px;border-top:1px solid var(--line);cursor:pointer;align-items:flex-start}
+.cl-item:first-child{border-top:none}
+.cl-box{flex:0 0 auto;width:21px;height:21px;border:1.5px solid var(--line-2);border-radius:5px;display:grid;place-items:center;transition:.13s;margin-top:1px}
+.cl-item.done .cl-box{background:var(--green);border-color:var(--green)}
+.cl-box svg{width:12px;height:12px;color:#06140c;opacity:0}
+.cl-item.done .cl-box svg{opacity:1}
+.cl-txt b{font-family:var(--disp);font-weight:700;font-size:16px;display:block;line-height:1.18}
+.cl-txt p{font-size:13px;color:var(--text-2);margin-top:4px;line-height:1.45}
+.cl-item.done .cl-txt b{color:var(--text-2)}
+.cl-prog{display:flex;align-items:center;gap:11px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--text-2);text-transform:uppercase;margin-top:13px}
+.cl-bar{flex:1;height:5px;background:var(--surface-2);border-radius:3px;overflow:hidden}
+.cl-bar i{display:block;height:100%;background:var(--green);width:0;transition:width .25s}
+
+.ucard{border:1px solid var(--line);border-left-width:3px;border-radius:0 8px 8px 0;background:var(--surface);padding:15px;margin-top:13px}
+.ucard.f3{border-left-color:var(--f-3div)}.ucard.f9{border-left-color:var(--f-9div)}.ucard.fa{border-left-color:var(--f-armd)}
+.ucard .uh{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.ucard .uh b{font-family:var(--disp);font-weight:700;font-size:22px;letter-spacing:-.01em}
+.ucard.f3 .uh b{color:var(--f-3div)}.ucard.f9 .uh b{color:var(--f-9div)}.ucard.fa .uh b{color:var(--f-armd)}
+.ucard .uh em{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.05em;color:var(--text-3);text-transform:uppercase}
+.ucard .umotto{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:var(--text-3);margin:3px 0 9px;text-transform:uppercase}
+.ucard p{font-size:14px;line-height:1.52;color:var(--ink)}
+.ucard .ukit{margin-top:10px;display:flex;gap:5px;flex-wrap:wrap}
+.ucard .ukit span{font-family:var(--mono);font-size:9px;letter-spacing:.03em;color:var(--text-2);border:1px solid var(--line);padding:3px 7px;border-radius:3px}
+.enablers{margin-top:18px;border-top:1px dashed var(--line);padding-top:15px;font-size:13px;color:var(--text-2);line-height:1.55}
+.enablers b{color:var(--steel);font-family:var(--mono);font-size:10px;letter-spacing:.06em}
+.ugroup{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-family:var(--disp);font-weight:700;font-size:18px;letter-spacing:.01em;margin:30px 0 4px;padding-top:24px;border-top:1px solid var(--line)}
+.ugroup:first-of-type{border-top:none;padding-top:8px;margin-top:16px}
+.ugroup span{font-family:var(--mono);font-weight:400;font-size:9px;letter-spacing:.12em;color:var(--text-3);text-transform:uppercase}
+
+.about-block{margin-top:20px}
+.about-block .ab-h{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--red);margin-bottom:9px}
+.about-block p{font-size:13.5px;line-height:1.58;color:var(--text-2)}
+.about-block p b{color:var(--text)}
+.legend{display:grid;gap:8px;margin-top:6px}
+.legend .lg{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-2)}
+.legend .lg .vtag{flex:0 0 auto}
+.caveat-box{margin-top:20px;border:1px solid var(--red-dim);border-radius:8px;padding:14px;background:rgba(226,59,51,.05)}
+.caveat-box p{font-size:13px;line-height:1.55;color:#7A2C28}
+.caveat-box p b{color:var(--red)}
+/* ----- application: decision cards ----- */
+.appwrap{margin-top:20px}
+.appwrap .ah{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--steel);margin-bottom:10px}
+.appwrap .ah b{width:5px;height:5px;border-radius:50%;background:var(--steel);display:block}
+.appverdict{margin-bottom:10px}
+.vbadge{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:5px;border:1px solid var(--line-2)}
+.vbadge.vb-good{color:var(--green);border-color:rgba(55,179,108,.5);background:rgba(55,179,108,.08)}
+.vbadge.vb-adapt{color:var(--amber);border-color:rgba(224,163,62,.5);background:rgba(224,163,62,.08)}
+.vbadge.vb-warn{color:var(--red);border-color:rgba(226,59,51,.5);background:rgba(226,59,51,.08)}
+.vbadge.vb-threat{color:var(--steel);border-color:rgba(92,147,176,.5);background:rgba(92,147,176,.08)}
+.applead{font-size:14.5px;line-height:1.55;color:var(--ink);margin-bottom:14px}
+.dcard{border:1px solid var(--line);border-radius:9px;background:var(--surface);padding:13px 14px;margin-bottom:11px}
+.dcard.dc-division{border-left:3px solid var(--steel)}
+.dcard.dc-brigade{border-left:3px solid var(--f-armd)}
+.dc-ech{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:7px}
+.dc-division .dc-ech{color:var(--steel)}
+.dc-brigade .dc-ech{color:var(--f-armd)}
+.dc-dec{font-family:var(--disp);font-weight:600;font-size:15px;line-height:1.3;color:var(--text);margin-bottom:11px}
+.dc-rows{display:flex;flex-direction:column;gap:7px}
+.dc-row{display:grid;grid-template-columns:74px 1fr;gap:10px;align-items:baseline}
+.dc-k{font-family:var(--mono);font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);padding-top:1px}
+.dc-v{font-size:13px;line-height:1.45;color:#4A463D}
+.appnote{font-size:11.5px;line-height:1.5;color:var(--text-3);font-style:italic;margin-top:4px}
+/* ----- weekly→monthly linkage ----- */
+.signal{margin-top:18px;border-left:2px solid var(--steel);background:rgba(92,147,176,.07);padding:12px 14px;border-radius:0 7px 7px 0}
+.signal .sg-h{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--steel);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.signal .sg-h::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--steel);display:block}
+.signal p{font-size:13.5px;line-height:1.5;color:#43423C}
+.signal .sg-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--steel);text-decoration:none;text-transform:uppercase;border-bottom:1px solid transparent}
+.signal .sg-link:hover{border-bottom-color:var(--steel)}
+.feedfoot{margin:18px 16px 8px;padding:17px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);text-align:center}
+.feedfoot p{font-size:13px;color:var(--text-2);line-height:1.55}
+.feedfoot p b{color:var(--text);font-weight:600}
+.feedfoot a{display:inline-block;margin-top:11px;font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;color:var(--steel);text-decoration:none;text-transform:uppercase;border:1px solid var(--line-2);padding:9px 15px;border-radius:6px;cursor:pointer}
+.feedfoot a:hover{border-color:var(--steel)}
+.lineage{margin:16px 0 4px;border:1px solid var(--line);border-radius:10px;padding:14px;background:var(--surface)}
+.ln-tierrow{display:flex;gap:11px;align-items:flex-start;padding:10px 11px;border-radius:8px;border:1px solid var(--line)}
+.ln-tierrow + .ln-tierrow{margin-top:0}
+.ln-tierrow.on{border-color:var(--red);background:rgba(226,59,51,.06)}
+.ln-badge{flex:0 0 auto;font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:5px;background:var(--surface-2);color:var(--text-2);margin-top:1px;white-space:nowrap}
+.ln-tierrow.on .ln-badge{background:var(--red);color:#fff}
+.ln-desc{font-size:13px;line-height:1.46;color:#4A463D}
+.ln-desc b{color:var(--text);font-weight:600}
+.ln-arrow{text-align:center;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);padding:7px 0}
+.ln-link{display:block;margin-top:12px;text-align:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--steel);text-decoration:none;text-transform:uppercase;border:1px solid var(--line-2);padding:10px;border-radius:7px}
+.ln-link:hover{border-color:var(--steel)}
+.src-feed a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);color:var(--text);text-decoration:none;font-size:14px}
+.src-feed a:last-child{border-bottom:none}
+.src-feed a .arr{color:var(--steel);font-family:var(--mono);font-size:13px}
+.src-feed a small{display:block;color:var(--text-3);font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;margin-top:3px}
+
+/* ============ BOTTOM NAV ============ */
+.bottomnav{flex:0 0 auto;z-index:60;background:rgba(251,250,245,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;padding:8px 4px calc(8px + env(safe-area-inset-bottom,0px))}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:4px 0;color:var(--text-3)}
+.nav-item svg{width:23px;height:23px}
+.nav-item span{font-family:var(--disp);font-weight:600;font-size:10.5px;letter-spacing:.01em}
+.nav-item[aria-current="true"]{color:var(--red)}
+.nav-item[aria-current="true"] span{color:var(--red)}
+
+.scrim{position:fixed;inset:0;z-index:65;display:none}
+.scrim.on{display:block}
+
+@media (max-width:380px){
+  .section-title{font-size:29px}
+  .hero h2{font-size:22px}
+  .logo b{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app"><div style="flex:0 0 auto;background:#7f1d17;color:#fff;font:600 10.5px/1.5 var(--mono,ui-monospace,monospace);letter-spacing:.09em;text-transform:uppercase;text-align:center;padding:5px 12px">Archived edition · September 2026 · read-only — <a href="/" style="color:#fff;text-decoration:underline">latest ↗</a></div>
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar" id="topbar">
+    <div class="tb-main">
+      <div class="tb-left"></div>
+      <div class="logo" id="logoHome" role="button" tabindex="0" aria-label="Home">
+        <div class="lk"><img class="brand" src="/apple-touch-icon.png?v=4" alt="CS&amp;I"><b>CONFLICT&nbsp;STUDIES</b></div>
+        <span>&amp; Insights</span>
+      </div>
+      <div class="tb-right">
+        <button class="icn" id="btnBell" aria-label="Edition notice">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+        </button>
+        <button class="icn" id="btnSaved" aria-label="Saved serials">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v17l-6-4-6 4Z"/></svg>
+          <span class="badge" id="savedBadge" style="display:none">0</span>
+        </button>
+        <button class="icn" id="btnTheme" aria-label="Toggle light and dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="tabs-wrap" id="tabsWrap">
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <div class="tabs-fade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></div>
+    </div>
+
+  </header>
+
+  <!-- ============ FEED + STATIC PANES ============ -->
+  <main class="scroll" id="scroll">
+    <!-- FEED -->
+    <div class="pane on" id="pane-feed" style="padding:0">
+      <div id="feedContent"></div>
+    </div>
+
+    <!-- SERIALS (full library) -->
+    <div class="pane" id="pane-serials" style="padding:0">
+      <div id="serialsContent"></div>
+    </div>
+
+    <!-- ASK — on-device assistant -->
+    <div class="pane" id="pane-search" style="padding:0">
+      <h1 class="section-title" style="font-size:28px;padding:18px 16px 2px">Ask the digest</h1>
+      <div class="theatre-sub" style="padding-bottom:10px">Ask in plain English — I reason across the whole weekly-brief archive, distilled through June's 14 serials.</div>
+      <div class="ask-note">Online assistant — ask non-classified questions only</div>
+      <div id="askExamples" class="ask-examples"></div>
+      <div id="askPaneThread" class="ask-pane-thread"></div>
+      <form id="askDock" class="ask-dock" autocomplete="off">
+        <input id="searchInput" type="search" inputmode="search" enterkeyhint="send" autocomplete="off" placeholder="Ask about drones, Sudan, what worked…" aria-label="Ask the digest">
+        <button type="submit" class="ask-send" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="pane" id="pane-about">
+      <h2 class="ph">About</h2>
+      <p class="pintro">Conflict Studies &amp; Insights — the <b>monthly digest</b>. Edition Sep 2026 — three packages: Manoeuvre &amp; Expeditionary, Sense &amp; Strike, and CS &amp; CSS.</p>
+      <div class="about-block">
+        <div class="ab-h">Assistant gaps</div>
+        <p>Questions the Ask assistant couldn't answer. These are sent to the editors automatically (non-classified questions only) to shape the next edition, and listed here so you can review, copy or clear them.</p>
+        <div id="missList" class="miss-list"></div>
+        <div class="miss-actions"><button class="serchip" id="missSend">Send to editors</button><button class="serchip" id="missCopy">Copy list</button><button class="serchip" id="missClear">Clear</button></div>
+        <div id="missStatus" class="fb-status"></div>
+      </div>
+      <div class="about-block">
+        <div class="ab-h">Feedback to the editors</div>
+        <p>Tell the editors what's useful, what's missing, or what to cover next edition. Non-classified only — this goes straight to the editors.</p>
+        <form id="fbForm" class="fb-form" autocomplete="off">
+          <textarea id="fbMsg" class="fb-input" rows="3" maxlength="4000" placeholder="What worked, what's missing, what to add…" aria-label="Feedback to the editors"></textarea>
+          <input id="fbContact" class="fb-input" type="text" maxlength="200" placeholder="How to reach you (optional)" aria-label="Contact (optional)">
+          <div class="miss-actions"><button type="submit" class="serchip" id="fbSend">Send feedback</button><span id="fbStatus" class="fb-status"></span></div>
+        </form>
+      </div>
+      <div class="about-block">
+        <div class="ab-h">Source feed — the weekly brief</div>
+        <p>This digest is the formation-level distillation of the <b>Conflict Studies &amp; Insights weekly brief</b>, which tracks the signals across the five conflict theatres. The weekly answers "what's happening"; this monthly answers "so what — and what to rehearse".</p>
+        <div class="src-feed">
+          <a href="https://conflictstudiesandinsights.pages.dev/" target="_blank" rel="noopener"><span>Latest biweekly brief<small>conflictstudiesandinsights.pages.dev</small></span><span class="arr">↗</span></a>
+          <a href="https://conflictstudiesandinsights.pages.dev/" target="_blank" rel="noopener"><span>Previous editions &amp; archive<small>Weekly · by edition</small></span><span class="arr">↗</span></a>
+        </div>
+      </div>
+      <div class="about-block">
+        <div class="ab-h">Past monthly editions</div>
+        <p>Earlier editions stay available to read, exactly as published.</p>
+        <div class="src-feed">
+          <a href="/archive/2026-08/" target="_blank" rel="noopener"><span>August 2026 edition<small>Archived · read-only</small></span><span class="arr">↗</span></a>
+          <a href="/archive/2026-07/" target="_blank" rel="noopener"><span>July 2026 edition<small>Archived · read-only</small></span><span class="arr">↗</span></a>
+          <a href="/archive/2026-06/" target="_blank" rel="noopener"><span>June 2026 edition<small>Archived · read-only</small></span><span class="arr">↗</span></a>
+        </div>
+      </div>
+      <div class="about-block">
+        <div class="ab-h">Method</div>
+        <p><b>AI-distilled from open-source reporting.</b> Each serial turns recurring weekly signals into a rehearsable training prompt mapped to a formation across the three packages — Manoeuvre &amp; Expeditionary, Sense &amp; Strike and CS &amp; CSS. It is not cleared intelligence or doctrine.</p>
+      </div>
+      <div class="about-block">
+        <div class="ab-h">Verdict legend</div>
+        <div class="legend">
+          <div class="lg"><span class="vtag success">Success</span>Reported as effective for the actor in the frame</div>
+          <div class="lg"><span class="vtag failure">Failure</span>Reported as a costly / unsuccessful action</div>
+          <div class="lg"><span class="vtag mixed">Mixed</span>Partial effect; trade-offs unresolved</div>
+          <div class="lg"><span class="vtag threat">Threat</span>Capability-development item — a gap to close</div>
+        </div>
+      </div>
+      <div class="about-block">
+        <div class="ab-h">The five theatres</div>
+        <p>The weekly brief tracks <b>Russia–Ukraine</b>, <b>Israel–Lebanon</b>, <b>Israel–Gaza</b>, <b>Israel–US–Iran</b> and <b>Thailand–Cambodia</b>. This edition's serials, across all three packages, draw from Russia–Ukraine, Israel–Lebanon, Israel–Gaza, Thailand–Cambodia and Sudan; Israel–US–Iran is tracked weekly but yielded no serial this edition.</p>
+      </div>
+      <div class="caveat-box">
+        <p><b>Analyst review required before promulgation.</b> Outcome verdicts reflect open-source reporting at time of writing and may revise as events develop. Verify against current staff assessments and apply judgement before use.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ DETAIL VIEW ============ -->
+  <section class="detail" id="detail" aria-hidden="true">
+    <div class="dt-bar">
+      <button class="back" id="btnBack"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg><span id="backLabel">Feed</span></button>
+      <div class="dt-actions">
+        <button class="icn" id="btnBookmark" aria-label="Save serial">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12v17l-6-4-6 4Z"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="detailContent"></div>
+  </section>
+
+  <!-- ============ ASK (grounded chat) ============ -->
+  <section class="ask" id="ask" aria-hidden="true">
+    <div class="ask-bar">
+      <button class="back" id="askBack"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>Assistant</button>
+      <span class="at"><i></i>Grounded · on-device</span>
+    </div>
+    <div class="ask-thread" id="askThread"></div>
+    <div class="ask-foot">
+      <div class="ask-sugg" id="askSugg"></div>
+      <div class="ask-in">
+        <textarea id="askInput" rows="1" placeholder="Ask about the manoeuvre serials…" autocomplete="off"></textarea>
+        <button class="ask-send" id="askSend" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h13M12 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ BOTTOM NAV ============ -->
+  <nav class="bottomnav">
+    <button class="nav-item" data-sec="feed" aria-current="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="5"/><rect x="13" y="11" width="8" height="10"/><rect x="3" y="14" width="8" height="7"/></svg>
+      <span>Pack</span>
+    </button>
+    <button class="nav-item" data-sec="serials">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16M4 12h16M4 19h16"/><circle cx="4" cy="5" r="0.6" fill="currentColor"/></svg>
+      <span>Serials</span>
+    </button>
+    <button class="nav-item" data-sec="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3l1.7 4.6L18 9l-4.3 1.4L12 15l-1.7-4.6L6 9l4.3-1.4z"/><path d="M18.5 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg>
+      <span>Ask</span>
+    </button>
+    <button class="nav-item" data-sec="about">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5v.2"/></svg>
+      <span>About</span>
+    </button>
+  </nav>
+
+  <div class="scrim" id="scrim"></div>
+  <div class="pop weekpop" id="weekPop" role="listbox" aria-label="Select a week"></div>
+  <div class="pop editionpop" id="editionPop" role="listbox" aria-label="Select monthly edition"></div>
+  <!-- bell popover lives here (sibling of the scrim) so it stacks above it and its button is tappable -->
+  <div class="pop" id="bellPop">
+    <div id="bellNew" class="bell-new" style="display:none"></div>
+    <h4>Edition · Sep 2026</h4>
+    <p><b id="popCount">… serials</b> <span id="popScope">across all three packages.</span></p>
+    <p>Handling: <b>Open source · training use</b>.</p>
+    <p style="color:var(--text-3);margin-bottom:9px">AI-distilled — analyst review required before promulgation.</p>
+    <button id="notifyBtn" class="notify-btn" style="display:none"></button>
+    <p id="notifyHint" class="notify-hint" style="display:none">On iPhone, add the app to the Home Screen first, then open it from there.</p>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script>
+/* ===================== RENDER ===================== */
+let SERIALS, PACK, FRAME, PLANNING, KEY_JUDGEMENTS, FORMATIONS, BLUF_TEXT, SUGGESTIONS, _FMK;
+let SUMMARY={}, SIGNAL={}, APP={}, ICT={}, LEARN={}, FORMATIONS_ALL={}, ALL_SERIALS=[], PKG_OF={}, SUBPKG_OF={};
+function buildMerged(){
+  SUMMARY={}; SIGNAL={}; APP={}; ICT={}; LEARN={}; FORMATIONS_ALL={}; ALL_SERIALS=[]; PKG_OF={}; SUBPKG_OF={};
+  // Walk each display group's member bundles: PKG_OF is the group (tab/filter/
+  // serials grouping); SUBPKG_OF is the original bundle (echelons, per-serial).
+  PACKAGES.forEach(p=>{ (p.members||[p.k]).forEach(mk=>{ const d=PKG[mk]; if(!d) return;
+    Object.assign(SUMMARY,d.SUMMARY); Object.assign(SIGNAL,d.SIGNAL); Object.assign(APP,d.APP);
+    Object.assign(ICT,d.ICT); Object.assign(LEARN,d.LEARN||{}); Object.assign(FORMATIONS_ALL,d.FORMATIONS);
+    d.SERIALS.forEach(s=>{ ALL_SERIALS.push(s); PKG_OF[s.id]=p.k; SUBPKG_OF[s.id]=mk; }); }); });
+  buildIndexAll();
+}
+/* global search index across ALL_SERIALS (Search pane) */
+let _HAYALL = {}, _TITALL = {};
+function buildIndexAll(){
+  _HAYALL = {}; _TITALL = {};
+  ALL_SERIALS.forEach(s=>{
+    const a=APP[s.id]||{}, i=ICT[s.id]||{}, l=LEARN[s.id]||{};
+    const dcard=c=>c?[c.d,c.o,c.a,c.t,c.x,c.m].filter(Boolean).join(" "):"";
+    const at=[a.lead,dcard(a.div),dcard(a.bde)].filter(Boolean).join(" ");
+    const it=[i.fmt,i.set,i.run&&i.run.join(" "),i.dec,i.twist,i.std].filter(Boolean).join(" ");
+    const lt=[l.topic,l.why,l.worked,l.next].filter(Boolean).join(" ");
+    const fn=s.formations.map(f=>(FORMATIONS_ALL[f]||{n:f}).n).join(" ");
+    _HAYALL[s.id]=(s.id+" "+s.title+" "+(SUMMARY[s.id]||"")+" "+(SIGNAL[s.id]||"")+" "+s.theatre+" "
+      +(s.verdictLabel||s.verdict||"")+" "+(s.dates||"")+" "+(KIND_LABEL[s.kind]||"")+" "
+      +s.blocks.map(b=>b.t).join(" ")+" "+at+" "+it+" "+lt+" "+fn+" "+(s.sources||[]).map(x=>x.n).join(" ")).toLowerCase();
+    _TITALL[s.id]=(s.title+" "+(SUMMARY[s.id]||"")).toLowerCase();
+  });
+}
+function loadPackage(tab){
+  const d = PKG[tab] || PKG.MANEXP;
+  SERIALS=d.SERIALS;
+  PACK=d.PACK; FRAME=d.FRAME; PLANNING=d.PLANNING; KEY_JUDGEMENTS=d.KEY_JUDGEMENTS; FORMATIONS=d.FORMATIONS;
+  BLUF_TEXT=d.BLUF; SUGGESTIONS=d.SUGGESTIONS; _FMK=d.FMK;
+  buildIndex();
+}
+
+
+/* ===================== SEARCH INDEX (per active package) ===================== */
+let _HAY = {}, _TIT = {};
+function buildIndex(){
+_HAY = {}; _TIT = {};
+
+SERIALS.forEach(s=>{ const _a=APP[s.id]; const _i=ICT[s.id]; const _at=[_a.lead,_a.div.d,_a.div.a,_a.bde.d,_a.bde.a].join(" "); const _it=[_i.fmt,_i.set,_i.run.join(" "),_i.dec,_i.std].join(" "); _HAY[s.id]=(s.id+" "+s.title+" "+SUMMARY[s.id]+" "+s.theatre+" "+s.blocks.map(b=>b.t).join(" ")+" "+_at+" "+_it+" "+s.formations.map(f=>(FORMATIONS[f]||{n:f}).n).join(" ")).toLowerCase(); _TIT[s.id]=(s.title+" "+SUMMARY[s.id]).toLowerCase(); });
+}
+const esc = t => t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const strip = h => h.replace(/<[^>]+>/g,"");
+
+function _toks(q){ return q.toLowerCase().replace(/[^a-z0-9' ]/g," ").split(/\s+/).filter(w=>w.length>2 && !_STOP.has(w)); }
+/* token match tolerant of plurals: "judgements" also matches "judgement" */
+const _hasTok = (hay,t) => hay.includes(t) || (t.length>4 && t.endsWith('s') && hay.includes(t.slice(0,-1)));
+function _detect(qlc){
+  const f={outcome:null,theatre:null,formation:null,section:null};
+  for(const [k,a] of Object.entries(_SEC)) if(a.some(w=>qlc.includes(w))){f.section=k;break;}
+  for(const [k,a] of Object.entries(_OUT)) if(a.some(w=>qlc.includes(w))){f.outcome=k;break;}
+  for(const [k,a] of Object.entries(_THK)) if(a.some(w=>qlc.includes(w))){f.theatre=k;break;}
+  for(const [k,a] of Object.entries(_FMK)) if(a.some(w=>qlc.includes(w))){f.formation=k;break;}
+  return f;
+}
+function _rank(q,f){
+  const toks=_toks(q);
+  return SERIALS.map(s=>{
+    let sc=0;
+    toks.forEach(t=>{ if(_TIT[s.id].includes(t)) sc+=3; else if(_HAY[s.id].includes(t)) sc+=1; });
+    if(f.outcome){ const want=f.outcome==='threat'?(s.verdict==='threat'||s.kind==='capdev'):s.verdict===f.outcome; sc = want? sc+5 : sc*0.12; }
+    if(f.theatre){ sc = s.conflict===f.theatre? sc+4 : sc*0.18; }
+    if(f.formation){ sc = s.formations.includes(f.formation)? sc+4 : sc*0.4; }
+    return {s,sc};
+  }).filter(x=>x.sc>0.5).sort((a,b)=>b.sc-a.sc);
+}
+function answerFor(q){
+  const qlc=" "+q.toLowerCase().replace(/[^a-z0-9'\/ ]/g," ")+" ";
+  const f=_detect(qlc);
+  if(f.section==='bluf' && !f.theatre && !f.formation && !f.outcome) return {type:'bluf'};
+  if(f.section==='planning') return {type:'planning'};
+  const scored=_rank(q,f);
+  if(!scored.length) return {type:'none'};
+  return {type:'serials', f, mode: f.section==='ict'?'ict':'serials', items:scored.slice(0,5).map(x=>x.s)};
+}
+function _lead(f,mode,n){
+  if(mode==='ict') return `<b>What to rehearse</b>${f.formation?` for ${FORMATIONS[f.formation].n}`:''} — drawn from ${n} serial${n>1?'s':''}:`;
+  if(f.outcome==='success') return `Tactics assessed as <b>effective</b> this edition${f.theatre?` in ${THEATRE_NAME[f.theatre]}`:''}${f.formation?` for ${FORMATIONS[f.formation].n}`:''}:`;
+  if(f.outcome==='failure') return `Assessed as having <b>failed</b> — and the lesson to carry:`;
+  if(f.outcome==='threat') return `The <b>capability gap</b> this edition flags:`;
+  if(f.formation) return `Most relevant for <b>${FORMATIONS[f.formation].n}</b>:`;
+  if(f.theatre) return `From the <b>${THEATRE_NAME[f.theatre]}</b> theatre:`;
+  return `Here's what's most relevant:`;
+}
+function _ansCard(s,mode){
+  const line = mode==='ict'? ICT[s.id].dec : SUMMARY[s.id];
+  const cf = (s.sources||[]).length>=2 ? `<span class="ac-cf ok">● ${s.sources.length} src</span>` : `<span class="ac-cf lone">● 1 src</span>`;
+  return `<div class="ans-card" data-open="${s.id}"><span class="vd ${s.verdict}"></span><div class="ac-b"><div class="ac-t">${s.title}</div><div class="ac-s">${line}</div><div class="ac-m">SER ${s.id} · ${KIND_LABEL[s.kind]} · ${s.theatre}${s.dates?` · ${s.dates}`:''} ${cf}</div></div></div>`;
+}
+function renderAnswer(a){
+  if(a.type==='bluf') return `<div class="lead">Bottom line for the ${PACKAGES.find(x=>x.k===state.tab).label} package:</div><div class="msg-bluf">${BLUF_TEXT}</div><div class="ans-link" data-jump="brief">Open the Commander's Brief →</div>`;
+  if(a.type==='planning') return `<div class="lead">Planning inputs to fold into any offensive estimate:</div>`+PLANNING.map(p=>`<div class="pl-row">• <b>${p.b}</b></div>`).join('')+`<div class="ans-link" data-jump="planning">Open Planning (${PLANNING.length} inputs) →</div>`;
+  if(a.type==='none'){ const _th=[...new Set(SERIALS.map(s=>s.theatre))].join(', '); return `<div class="lead">I answer from this edition's ${PACKAGES.find(x=>x.k===state.tab).label} serials. Try asking about a <b>tactic</b>, an <b>outcome</b> (what worked / what failed), a <b>theatre</b> (${_th}), <b>drones / FPV</b>, or <b>what to rehearse in ICT</b>.</div>`; }
+  return `<div class="lead">${_lead(a.f,a.mode,a.items.length)}</div>`+a.items.map(s=>_ansCard(s,a.mode)).join('')+`<div class="closing">Tap any serial to open the full breakdown and its ICT serial.</div>`;
+}
+
+/* ----- chat plumbing ----- */
+const ASK = { thread: [] };
+function _scrollAsk(){ const t=$("#askThread"); if(t) requestAnimationFrame(()=>{ t.scrollTop=t.scrollHeight; }); }
+function _renderThread(){ $("#askThread").innerHTML = ASK.thread.map(m=> m.role==='user'?`<div class="msg user">${esc(m.text)}</div>`:`<div class="msg bot">${m.html}</div>`).join(''); _scrollAsk(); }
+function _pushUser(t){ ASK.thread.push({role:'user',text:t}); _renderThread(); }
+function _pushBot(h){ ASK.thread.push({role:'bot',html:h}); _renderThread(); }
+function _autosize(){ const e=$("#askInput"); if(!e) return; e.style.height='42px'; e.style.height=Math.min(e.scrollHeight,110)+'px'; }
+function openAsk(){
+  if(state.detailId) closeDetail();
+  closePop();
+  document.querySelector('.app').classList.add('ask-open');
+  $("#ask").classList.add('on'); $("#ask").setAttribute('aria-hidden','false');
+  if(!ASK.thread.length) _pushBot(`<div class="lead">Ask about this edition's ${PACKAGES.find(x=>x.k===state.tab).label} serials — I answer from the actual content and point you to the source serial. Nothing leaves the page.</div>`);
+  else _scrollAsk();
+  setTimeout(()=>$("#askInput") && $("#askInput").focus(), 60);
+}
+function closeAsk(){ document.querySelector('.app').classList.remove('ask-open'); $("#ask").classList.remove('on'); $("#ask").setAttribute('aria-hidden','true'); }
+function submitAsk(text){
+  const q=(text||'').trim(); if(!q) return;
+  _pushUser(q); $("#askInput").value=''; _autosize();
+  ASK.thread.push({role:'bot',html:'<div class="typing"><i></i><i></i><i></i></div>',temp:1}); _renderThread();
+  setTimeout(()=>{ ASK.thread=ASK.thread.filter(m=>!m.temp); _pushBot(renderAnswer(answerFor(q))); }, 300);
+}
+
+/* ===================== GLOBAL ASSISTANT (Ask pane, over ALL_SERIALS) ===================== */
+/* The per-package Ask engine above, promoted to the whole edition and made
+   synonym-aware: intent detection + concept expansion + prose synthesis, all
+   on-device. Nothing leaves the page. */
+const _FMKALL = Object.assign({}, _FMK_M, _FMK_S, _FMK_CSS, _FMK_EXP);
+const _SYNIDX = (()=>{ const m={}; SYN.forEach(cl=>cl.forEach(w=>{ (m[w]=m[w]||new Set()); cl.forEach(x=>m[w].add(x)); })); return m; })();
+function _expand(toks){ const out=new Set(toks); toks.forEach(t=>{ const c=_SYNIDX[t]; if(c) c.forEach(x=>out.add(x)); }); return [...out]; }
+/* Field intents: questions about a specific decision-card field answer from
+   that field, not the summary. Counter questions answer from the serial's
+   Countermeasure narrative. "List/all" returns the complete match set. */
+const _FLD = {
+  owner:["who owns","who's responsible","who is responsible","responsible for","who leads","who runs","who authorises","who authorizes"],
+  trigger:["trigger","threshold","when do we","when should","what initiates","under what condition"],
+  measure:["measure of success","how do we know","success criteria","metric","how would we know","how to measure","measure it"],
+  tradeoff:["trade-off","tradeoff","downside","what does it cost","at what cost","risk of adopting","what do we give up"]
+};
+const _CTR = ["counter","defeat","how do we stop","how to stop","defend against","defence against","defense against","protect against","mitigate"];
+const _AGG = ["list ","show all","show every"," all the ","how many","every serial","all serials"];
+function _detectAll(qlc){
+  const f={outcome:null,theatre:null,formation:null,section:null,field:null,counter:false,agg:false};
+  for(const [k,a] of Object.entries(_SEC)) if(a.some(w=>qlc.includes(w))){f.section=k;break;}
+  for(const [k,a] of Object.entries(_OUT)) if(a.some(w=>qlc.includes(w))){f.outcome=k;break;}
+  for(const [k,a] of Object.entries(_THK)) if(a.some(w=>qlc.includes(w))){f.theatre=k;break;}
+  for(const [k,a] of Object.entries(_FMKALL)) if(a.some(w=>qlc.includes(w))){f.formation=k;break;}
+  for(const [k,a] of Object.entries(_FLD)) if(a.some(w=>qlc.includes(w))){f.field=k;break;}
+  f.counter = _CTR.some(w=>qlc.includes(w));
+  f.agg = _AGG.some(w=>qlc.includes(w));
+  return f;
+}
+/* Ranking: keyword + synonym matching over title (×3) and full haystack (×1),
+   with intent boosts (outcome/theatre/formation) and the facet hard-filters. */
+function _rankAll(q,f){
+  const toks=_expand(_toks(q));
+  let pool=ALL_SERIALS.slice();
+  return pool.map(s=>{
+    let sc=0;
+    toks.forEach(t=>{ if(_hasTok(_TITALL[s.id],t)) sc+=3; else if(_hasTok(_HAYALL[s.id],t)) sc+=1; });
+    if(f.outcome){ const want=f.outcome==='threat'?(s.verdict==='threat'||s.kind==='capdev'):s.verdict===f.outcome; sc = want? sc+5 : sc*0.12; }
+    if(f.theatre){ sc = s.conflict===f.theatre? sc+4 : sc*0.18; }
+    if(f.formation){ sc = s.formations.includes(f.formation)? sc+4 : sc*0.4; }
+    return {s,sc};
+  }).filter(x=>x.sc>0.5).sort((a,b)=>b.sc-a.sc);
+}
+function answerForAll(q){
+  const qlc=" "+q.toLowerCase().replace(/[^a-z0-9'\/ ]/g," ")+" ";
+  const f=_detectAll(qlc);
+  const scored=_rankAll(q,f);
+  if((f.section==='bluf'||f.section==='planning') && !f.theatre && !f.formation && !f.outcome){
+    const pkg = scored.length? PKG_OF[scored[0].s.id] : state.tab;
+    return {type:f.section, pkg, f, items:scored.slice(0,3).map(x=>x.s)};
+  }
+  if(!scored.length) return {type:'none', f};
+  const mode = f.section==='ict' ? 'ict' : (f.field ? 'field' : (f.counter ? 'counter' : 'serials'));
+  const items = f.agg ? scored.map(x=>x.s) : scored.slice(0, mode==='ict'?2:5).map(x=>x.s);
+  return {type:'serials', f, mode, list:f.agg, items};
+}
+/* Pick the decision card matching the reader's formation: divisions get the
+   division card, units/brigades get the second-echelon card. */
+function _echCard(id){
+  const a=APP[id]||{}, ech=(PKG[SUBPKG_OF[id]]||{}).echelons||["Division","Brigade"];
+  return {card:a.div||{}, ech:ech[0]};
+}
+const _firstSent = (t,n)=>{ const parts=String(t||'').split('. '); const out=parts.slice(0,n).join('. '); return out + (parts.length>n && !out.endsWith('.') ? '.' : ''); };
+function _ictBlock(s){ const t=ICT[s.id]; if(!t) return '';
+  return `<div class="ans-ict" data-open="${s.id}"><div class="ai-t">${s.title}</div><div class="ai-fmt">${t.fmt}</div><p class="ai-set">${t.set}</p><ol>${t.run.map(r=>`<li>${r}</li>`).join('')}</ol><div class="ai-std"><b>Standard —</b> ${t.std}</div></div>`; }
+const _counterText = s => { const b=(s.blocks||[]).find(x=>/counter/i.test(x.l)); return b ? _firstSent(b.t,2) : (SUMMARY[s.id]||''); };
+function _leadAll(f,mode,n){
+  const fm = f.formation && (FORMATIONS_ALL[f.formation]||{}).n;
+  if(mode==='ict') return `<b>What to rehearse</b>${fm?` for ${fm}`:''} — drawn from ${n} serial${n>1?'s':''}:`;
+  if(f.outcome==='success') return `Tactics assessed as <b>effective</b> this edition${f.theatre?` in ${THEATRE_NAME[f.theatre]}`:''}${fm?` for ${fm}`:''}:`;
+  if(f.outcome==='failure') return `Assessed as having <b>fallen short</b> — and the lesson to carry:`;
+  if(f.outcome==='threat') return `The <b>capability gaps</b> this edition flags${f.theatre?` in ${THEATRE_NAME[f.theatre]}`:''}:`;
+  if(fm) return `Most relevant for <b>${fm}</b>:`;
+  if(f.theatre) return `From the <b>${THEATRE_NAME[f.theatre]}</b> theatre:`;
+  return `Here's what's most relevant across the three packages:`;
+}
+const _pkgLabel = k => { const p=PACKAGES.find(x=>x.k===k); return p?p.label:k; };
+function synthAll(a){
+  if(a.type==='none'){
+    const th=[...new Set(ALL_SERIALS.map(s=>THEATRE_NAME[s.conflict]||s.theatre))].join(', ');
+    return `<div class="lead">I answer mainly from the <b>weekly-brief archive</b>, distilled through June's <b>14 serials</b> and <b>pack overviews</b>. Try a <b>tactic</b> (drones, fibre-optic FPV, double-tap, saturation), an <b>outcome</b> (what worked / what to fix), a <b>theatre</b> (${th}), or ask <b>what to rehearse</b> or for the <b>bottom line</b>.</div>`;
+  }
+  if(a.type==='bluf'){
+    return `<div class="lead">Bottom line — <b>${_pkgLabel(a.pkg)}</b>, September 2026:</div><div class="msg-bluf">${PKG[a.pkg].BLUF}</div>`
+      + a.items.map(s=>_ansCard(s,'serials')).join('')
+      + `<div class="closing">Tap any serial for the full breakdown.</div>`;
+  }
+  if(a.type==='planning'){
+    const pl=PKG[a.pkg].PLANNING||[];
+    return `<div class="lead">Planning inputs to fold into the estimate — <b>${_pkgLabel(a.pkg)}</b>:</div>`
+      + pl.map(p=>`<div class="pl-row">• <b>${p.b}</b></div>`).join('')
+      + a.items.map(s=>_ansCard(s,'serials')).join('');
+  }
+  const items=a.items, n=items.length;
+  const fmName = null, forLine = ()=>'';
+  /* field answers: owner / trigger / measure / trade-off from the decision cards */
+  if(a.mode==='field'){
+    const key={owner:'o',trigger:'t',measure:'m',tradeoff:'x'}[a.f.field];
+    const label={owner:'Ownership',trigger:'Triggers',measure:'Measures of success',tradeoff:'Trade-offs'}[a.f.field];
+    const rows=items.slice(0,3).map(s=>{ const e=_echCard(s.id); const v=e.card[key]; if(!v) return '';
+      return `<div class="ans-frow" data-open="${s.id}"><div class="af-t">${s.title}</div><p>${v} <span class="cite">SER ${s.id} · ${e.ech}</span></p></div>`; }).join('');
+    return `<div class="lead"><b>${label}</b> — from the decision cards${fmName?` at ${fmName}'s echelon`:''}:</div>${rows}`
+      + `<div class="closing">Tap a serial for the full decision card — owner, trigger, trade-off and measure together.</div>`;
+  }
+  /* counter answers: from the serial's Countermeasure narrative */
+  if(a.mode==='counter'){
+    const rows=items.slice(0,3).map(s=>`<div class="ans-frow" data-open="${s.id}"><div class="af-t">${s.title}</div><p>${_counterText(s)} <span class="cite">SER ${s.id}</span></p></div>`).join('');
+    return `<div class="lead"><b>Counters observed</b> this edition:</div>${rows}${forLine()}`
+      + `<div class="closing">Tap a serial for the full narrative and decision cards.</div>`;
+  }
+  /* rehearse answers: the full ICT serial, ready to lift into a training plan */
+  if(a.mode==='ict'){
+    const blocks=items.slice(0,2).map(_ictBlock).join('');
+    return `<div class="lead">${_leadAll(a.f,'ict',Math.min(n,2))}</div>${blocks}`
+      + `<div class="closing">Rehearsal serials are first-cut designs — calibrate to the formation before running them.</div>`;
+  }
+  /* list answers: the complete match set, grouped by package */
+  if(a.list){
+    let h=`<div class="lead"><b>${n}</b> serial${n===1?'':'s'} match${fmName?` for ${fmName}`:''}:</div>`;
+    PACKAGES.forEach(p=>{ const g=items.filter(s=>PKG_OF[s.id]===p.k); if(!g.length) return;
+      h+=`<div class="ans-grp">${p.label} · ${g.length}</div>`+g.map(s=>_ansCard(s,'serials')).join(''); });
+    return h + `<div class="closing">Tap any serial for the full breakdown.</div>`;
+  }
+  const woven = items.slice(0,3).map(s=>`${SUMMARY[s.id]} <span class="cite">SER ${s.id}</span>`).join(' ');
+  const nx = LEARN[items[0].id] && LEARN[items[0].id].next;
+  const soWhat = nx ? `<div class="ans-so"><b>So what —</b> ${nx}</div>` : '';
+  return `<div class="lead">${_leadAll(a.f,a.mode,n)}</div><div class="ans-prose">${woven}</div>${soWhat}${forLine()}`
+    + items.map(s=>_ansCard(s,a.mode)).join('')
+    + `<div class="closing">Tap any serial to open the full breakdown.</div>`;
+}
+
+/* ===================== WEEKLY-BRIEF CORPUS FOR ASK =====================
+   The full weekly-brief archive, fetched once in the background when the Ask
+   pane first opens and chunked per theatre item + BLUF. Matching extracts are
+   sent to the online model alongside the serials, and the on-device fallback
+   surfaces them when no monthly serial covers the question. Best-effort:
+   offline or a blocked fetch just leaves Ask serial-only. */
+const WKC = { state:'off', chunks:[] }; // off | loading | ready | failed
+function _wkChunksFrom(htmlString, week){
+  if(/cx-strip|class="kcd"|id="monitor"/.test(htmlString)) return _bwChunks(htmlString, week);
+  const doc = new DOMParser().parseFromString(htmlString, 'text/html');
+  const out=[], clean=t=>(t||'').replace(/\s+/g,' ').trim();
+  doc.querySelectorAll('.theatre-card').forEach(card=>{
+    const th = clean((card.querySelector('.th-name')||{}).textContent) || 'Theatre';
+    Array.from(card.children).forEach(ch=>{
+      if(ch.classList && ch.classList.contains('th-hdr')) return;
+      Array.from(ch.children).forEach(it=>{
+        const txt = clean(it.textContent);
+        if(txt.length>60) out.push({week:week.label, url:week.url, theatre:th, text:txt.slice(0,650)});
+      });
+    });
+  });
+  doc.querySelectorAll('h2').forEach(h=>{
+    if(/BLUF/i.test(h.textContent||'')){ const d=h.nextElementSibling; const txt=clean(d&&d.textContent);
+      if(txt) out.push({week:week.label, url:week.url, theatre:'BLUF', text:txt.slice(0,900)}); }
+  });
+  return out;
+}
+async function loadWkCorpus(){
+  if(WKC.state==='loading'||WKC.state==='ready') return;
+  if(typeof navigator!=='undefined' && navigator.onLine===false){ WKC.state='failed'; return; }
+  WKC.state='loading';
+  try{
+    const weeks=(await loadWeekList()).slice(0,26); // whole archive, sane cap
+    const results=await Promise.all(weeks.map(w=>
+      fetchTimeout(WEEKLY_BASE + w.url, 8000).then(r=>r.ok?r.text():null).then(t=>t?_wkChunksFrom(t,w):[]).catch(()=>[])));
+    WKC.chunks=results.flat();
+    WKC.state=WKC.chunks.length?'ready':'failed';
+  }catch(e){ WKC.state='failed'; }
+}
+/* Top weekly chunks for a question — same expanded-token matching as the
+   serial ranker: any hit qualifies, ranked by hit count. Theatre AND the
+   week's date label score ×2, so "what happened in May" pulls May weeks
+   rather than whichever theatre match sits first in the corpus. */
+function _wkHits(q, n){
+  if(WKC.state!=='ready') return [];
+  const toks=_expand(_toks(q));
+  if(!toks.length) return [];
+  return WKC.chunks.map(c=>{
+    const th=c.theatre.toLowerCase(), wl=c.week.toLowerCase(), tx=c.text.toLowerCase();
+    let sc=0; toks.forEach(t=>{ if(_hasTok(th,t)) sc+=2; else if(_hasTok(wl,t)) sc+=2; else if(_hasTok(tx,t)) sc+=1; });
+    return {c,sc};
+  }).filter(x=>x.sc>=1).sort((a,b)=>b.sc-a.sc).slice(0,n||3).map(x=>x.c);
+}
+/* The WHOLE weekly archive, relevance-ranked (matches first, then the rest in
+   archive order). Full-context models read all of it; the small-window
+   fallback slices the top. */
+function _wkRankedAll(q){
+  if(WKC.state!=='ready') return [];
+  const toks=_expand(_toks(q));
+  return WKC.chunks.map((c,i)=>{
+    const th=c.theatre.toLowerCase(), wl=c.week.toLowerCase(), tx=c.text.toLowerCase();
+    let sc=0; toks.forEach(t=>{ if(_hasTok(th,t)) sc+=2; else if(_hasTok(wl,t)) sc+=2; else if(_hasTok(tx,t)) sc+=1; });
+    return {c,sc,i};
+  }).sort((a,b)=> b.sc-a.sc || a.i-b.i).map(x=>({week:x.c.week, theatre:x.c.theatre, text:x.c.text}));
+}
+/* ===================== PACKAGE-ANALYSIS CORPUS FOR ASK =====================
+   The pack overviews' own analysis — FRAME opportunities/vulnerabilities/
+   capability development, key judgements, planning inputs, command lens,
+   contests, worked/failed, SOP reviews — as searchable chunks, so Ask covers
+   the whole app, not just the serials. Built once from the static PKG data. */
+let PKC=null;
+const _stripTags = t => String(t||'').replace(/<[^>]+>/g,'');
+function _buildPackCorpus(){
+  PKC=[];
+  const push=(pkg,label,kind,text,id)=>{ const tx=_stripTags(text).replace(/\s+/g,' ').trim();
+    if(tx.length>40) PKC.push({pkg,label,kind,text:tx.slice(0,700),id:id||null}); };
+  PACKAGES.forEach(p=>{
+    const d=PKG[p.k]; if(!d) return; const L=p.label;
+    push(p.k,L,'Bottom line', d.BLUF);
+    const fr=d.FRAME||{};
+    push(p.k,L,'What changed', fr.bluf);
+    (fr.opportunities||[]).forEach(o=>push(p.k,L,'Opportunity', o.t+'. '+o.d, o.id));
+    (fr.vulnerabilities||[]).forEach(o=>push(p.k,L,'Vulnerability', o.t+'. '+o.d, o.id));
+    (fr.capdev||[]).forEach(o=>push(p.k,L,'Capability development', o.t+'. '+o.d, o.id));
+    (d.KEY_JUDGEMENTS||[]).forEach(t=>push(p.k,L,'Key judgement', t));
+    (d.PLANNING||[]).forEach(x=>push(p.k,L,'Planning input', x.b+'. '+x.p));
+    const pk=d.PACK||{};
+    push(p.k,L,'Command lens', pk.commandLens);
+    push(p.k,L,'Brigade BLUF', pk.brigadeBluf);
+    (pk.divPriorities||[]).forEach(t=>push(p.k,L,'Division priority', t));
+    (pk.implications||[]).forEach(x=>push(p.k,L,'Implication — '+(x.ech||''), x.t));
+    (pk.worked||[]).forEach(t=>push(p.k,L,'What worked', t));
+    (pk.failed||[]).forEach(t=>push(p.k,L,'What failed', t));
+    (pk.contests||[]).forEach(c=>push(p.k,L,'Capability contest', (c.cap||'')+'. '+(c.what||'')+' Counter: '+(c.counter||'')
+      +(c.tempo?' Tempo: '+c.tempo:'')+(c.diffusion?' Where: '+c.diffusion:'')+(c.supersession?' Supersedes: '+c.supersession:''), c.id));
+    (pk.sopReview||[]).forEach(t=>push(p.k,L,'SOP review', t));
+    (pk.testICT||[]).forEach(t=>push(p.k,L,'Test in ICT', t));
+    // The overview can exceed the 700-char chunk clip (notably the merged
+    // Manoeuvre & Expeditionary one) — split it on sentence boundaries so the
+    // tail isn't silently truncated out of the Ask corpus. No lookbehind (Safari).
+    { const ov=_stripTags(pk.changed||'').replace(/\s+/g,' ').trim();
+      const parts=[]; let buf='';
+      (ov.match(/[^.]*\.(?:\s+|$)|[^.]+$/g)||[]).forEach(sn=>{ if(buf && (buf+sn).length>650){ parts.push(buf); buf=sn; } else buf+=sn; });
+      if(buf.trim()) parts.push(buf);
+      parts.forEach(t=>push(p.k,L,'Month overview', t)); }
+  });
+  PKC.push({pkg:'ABOUT', label:'Digest', kind:'About',
+    text:'AI-distilled from open-source reporting. Each serial turns recurring weekly signals into a rehearsable training prompt mapped to a formation across the three packages — Manoeuvre & Expeditionary, Sense & Strike and CS & CSS. It is not cleared intelligence or doctrine. First-cut analysis — formations calibrate the learnings themselves.', id:null});
+  PKC.push({pkg:'ABOUT', label:'Digest', kind:'About',
+    text:'This monthly digest is the formation-level distillation of the Conflict Studies & Insights weekly brief, which tracks signals across the conflict theatres. The weekly answers what is happening; the monthly answers so what — and what to rehearse.', id:null});
+}
+function _pkHits(q,n){
+  if(!PKC) _buildPackCorpus();
+  const toks=_expand(_toks(q));
+  if(!toks.length) return [];
+  return PKC.map(c=>{
+    const kd=(c.kind+' '+c.label).toLowerCase(), tx=c.text.toLowerCase();
+    let sc=0; toks.forEach(t=>{ if(_hasTok(kd,t)) sc+=2; else if(_hasTok(tx,t)) sc+=1; });
+    return {c,sc};
+  }).filter(x=>x.sc>=1).sort((a,b)=>b.sc-a.sc).slice(0,n||3).map(x=>x.c);
+}
+/* All pack chunks, relevance-ranked (matches first). */
+function _pkRankedAll(q){
+  if(!PKC) _buildPackCorpus();
+  const toks=_expand(_toks(q));
+  return PKC.map((c,i)=>{
+    const kd=(c.kind+' '+c.label).toLowerCase(), tx=c.text.toLowerCase();
+    let sc=0; toks.forEach(t=>{ if(_hasTok(kd,t)) sc+=2; else if(_hasTok(tx,t)) sc+=1; });
+    return {c,sc,i};
+  }).sort((a,b)=> b.sc-a.sc || a.i-b.i).map(x=>({pkg:x.c.label, kind:x.c.kind, text:x.c.text}));
+}
+/* All 14 serials, relevance-ranked (matches first, then the rest). */
+function _serialsRankedAll(q){
+  const f=_detectAll(" "+q.toLowerCase().replace(/[^a-z0-9'\/ ]/g," ")+" ");
+  const ranked=_rankAll(q,f).map(x=>x.s);
+  const seen=new Set(ranked.map(s=>s.id));
+  return ranked.concat(ALL_SERIALS.filter(s=>!seen.has(s.id)));
+}
+
+/* ----- Ask pane thread ----- */
+const ASK_EXAMPLES = ["How do we counter fibre-optic drones?","Who owns the casualty-evacuation change?","What should be rehearsed in ICT?","List all threats this month"];
+const ASKP = { thread: [], seeded:false };
+function _renderPaneThread(){ const t=$("#askPaneThread"); if(!t) return;
+  t.innerHTML = ASKP.thread.map((m,i)=> m.role==='user'
+    ? `<div class="msg user">${esc(m.text)}</div>`
+    : `<div class="msg bot">${m.html}${m.ans?`<div class="ans-tools"><button class="ans-copy" data-copyans="${i}">Copy answer</button></div>`:''}</div>`).join(''); }
+/* plain-text export of an answer, for pasting into notes and message threads */
+function copyAnswer(i, btn){
+  const m=ASKP.thread[i]; if(!m) return;
+  const el=btn.closest('.msg.bot'); if(!el) return;
+  const clone=el.cloneNode(true);
+  clone.querySelectorAll('.ans-tools,.ans-next').forEach(x=>x.remove());
+  document.body.appendChild(clone); const body=clone.innerText.trim(); clone.remove();
+  const text=(m.q?`Q: ${m.q}\n\n`:'')+body+`\n\n— Conflict Studies & Insights · September 2026 digest · first-cut analysis from open sources, calibrate before adoption`;
+  const done=()=>{ const t=btn.textContent; btn.textContent='Copied ✓'; setTimeout(()=>{ btn.textContent=t; },1400); };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done).catch(()=>{}); }
+  else { const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); done(); }catch(e){} ta.remove(); }
+}
+/* suggested follow-ups under a standard answer, anchored to its top serial */
+function _nextChips(a){
+  if(!a || a.type!=='serials' || a.mode!=='serials' || !a.items || !a.items.length || a.list) return '';
+  const s=a.items[0];
+  return `<div class="ans-next"><span class="an-l">Next</span>`
+    + `<button class="serchip sgg" data-sid="${s.id}" data-sq="rehearse">How to rehearse this</button>`
+    + `<button class="serchip sgg" data-sid="${s.id}" data-sq="owner">Who owns it</button>`
+    + `<button class="serchip sgg" data-sid="${s.id}" data-sq="sources">Sources</button></div>`;
+}
+/* focused answers for the follow-up chips — the serial is known, no retrieval */
+function askAbout(sid, kind){
+  const s=ALL_SERIALS.find(x=>x.id===sid); if(!s) return;
+  const label={rehearse:'How do we rehearse this?',owner:'Who owns this change?',sources:'Show the sources'}[kind]||kind;
+  ASKP.thread.push({role:'user',text:label});
+  let html='';
+  if(kind==='rehearse'){
+    html=`<div class="lead"><b>Rehearsal serial</b> — ${s.title}:</div>${_ictBlock(s)}<div class="closing">First-cut design — calibrate to the formation before running it.</div>`;
+  } else if(kind==='owner'){
+    const e=_echCard(sid);
+    html=`<div class="lead"><b>Ownership</b> — ${s.title}:</div><div class="ans-frow" data-open="${sid}"><p>${e.card.o||''} <span class="cite">SER ${sid} · ${e.ech}</span></p><p style="margin-top:6px">${e.card.d||''}</p></div>`;
+  } else {
+    html=`<div class="lead"><b>Sources</b> — ${s.title} (${s.dates||'Sep 2026'}):</div>`
+      + s.sources.map((x,i)=>`<div class="pl-row">• <a href="${x.u}" target="_blank" rel="noopener">[${i+1}] ${x.n}</a></div>`).join('')
+      + `<div class="closing">Open-source reporting — calibrate before adoption.</div>`;
+  }
+  ASKP.thread.push({role:'bot',html,ans:true,q:`${label} (${s.title})`});
+  _renderPaneThread(); _scrollAskPane();
+}
+/* questions the assistant couldn't answer — listed on-device AND auto-sent to
+   the editors (once per new question per device; the local dedup below also
+   guards the send, so re-asking never re-sends). */
+function _recordMiss(q){
+  // Storage failure (private mode, quota) must not swallow the editor report —
+  // dedup via localStorage when available, but always attempt the auto-send.
+  try{
+    const key='csi-misses'; const arr=JSON.parse(localStorage.getItem(key)||'[]');
+    const ql=q.toLowerCase(); if(arr.some(x=>x.q.toLowerCase()===ql)) return; // already recorded + sent
+    arr.push({q, t:new Date().toISOString().slice(0,10)});
+    try{ localStorage.setItem(key, JSON.stringify(arr.slice(-50))); }catch(e){}
+  }catch(e){ /* storage unreadable — report without dedup */ }
+  _autoSendGap(q);
+}
+/* fire-and-forget: report a single new gap so the editors are informed without
+   anyone tapping "Send". Offline gaps stay local until sent manually. */
+function _autoSendGap(q){
+  if(navigator.onLine===false) return;
+  try{ _postFeedback({ kind:'gaps', message:q, meta:{ edition:EDITION_ID, auto:true } }).catch(()=>{}); }catch(e){}
+}
+/* Heuristic: did the online assistant decline (question not covered)? Declines
+   are brief (the grounded prompt forbids tangential padding), so a short answer
+   carrying "not covered"-type language is treated as a gap. Substring matching
+   (no lookbehind) for Safari safety. */
+const _DECLINE_MARKERS = ["isn't covered","is not covered","not covered","don't cover","doesn't cover","does not cover","no coverage","not addressed","outside the scope","outside the material","outside the corpus","no serial","not in the material","not in the corpus","can't answer","cannot answer","don't have information","no information on","not discussed","isn't addressed","falls outside"];
+function _looksDeclined(t){
+  const s=(t||'').toLowerCase(); if(!s || t.length>700) return false;
+  // A cited serial or weekly extract means the material DID answer — a short
+  // "no serial covers this directly, but the weekly brief reports…" is an
+  // answer, not a gap. Genuine declines cite nothing.
+  if(/\bser\s+[a-z]{1,3}-\d{2}\b/.test(s) || s.includes('(weekly brief')) return false;
+  return _DECLINE_MARKERS.some(m=>s.includes(m));
+}
+function _getMisses(){ try{ return JSON.parse(localStorage.getItem('csi-misses')||'[]'); }catch(e){ return []; } }
+function renderMisses(){
+  const el=$("#missList"); if(!el) return;
+  const arr=_getMisses();
+  el.innerHTML = arr.length
+    ? arr.slice().reverse().map(x=>`<div class="miss-row"><span>${esc(x.q)}</span><small>${x.t}</small></div>`).join('')
+    : `<div class="miss-row none">None yet — unanswered questions will collect here.</div>`;
+  const c=$("#missCopy"), k=$("#missClear"), s=$("#missSend");
+  if(c) c.style.display = arr.length? '':'none';
+  if(k) k.style.display = arr.length? '':'none';
+  if(s) s.style.display = arr.length? '':'none';
+}
+/* POST feedback / gap reports to the editor's KV store (functions/api/feedback.js) */
+async function _postFeedback(payload){
+  const res = await fetch('/api/feedback', { method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify(payload) });
+  if(!res.ok) throw new Error('HTTP '+res.status);
+  return res.json();
+}
+function renderAskPane(){
+  const ex=$("#askExamples"); if(ex) ex.innerHTML=ASK_EXAMPLES.map(x=>`<button class="serchip ex" data-ask="${esc(x)}">${x}</button>`).join('');
+  _renderPaneThread();
+}
+function initAsk(){
+  if(!ASKP.seeded){ ASKP.seeded=true;
+    ASKP.thread.push({role:'bot', html:`<div class="lead">Ask in plain English — I reason across the whole <b>weekly-brief archive</b>, distilled through June's <b>14 serials</b>, citing each one. Tap an example, or type your own.</div>`}); }
+  renderAskPane();
+  _scrollAskPane(); // re-render resets the thread's scroll; pin back to the newest message
+  loadWkCorpus(); // lazy, best-effort; Ask stays serial-only if it can't load
+}
+/* The thread scrolls inside the fixed chat container — just keep it pinned to
+   the newest message at the bottom. */
+function _scrollAskPane(){ const t=$("#askPaneThread"); if(t) requestAnimationFrame(()=>{ t.scrollTop=t.scrollHeight; }); }
+/* ===================== ONLINE ASSISTANT (Workers AI) =====================
+   Retrieval stays on-device; when the device is online, the matching
+   serials are sent as context to /api/ask (a Cloudflare Pages Function on
+   this same deployment) and a language model writes the answer, streamed
+   into the thread. ANY failure — offline, 503 (binding not set up),
+   timeout, empty stream — falls back to the deterministic on-device answer. */
+/* Full record for each matched serial — every authored field, so the model
+   answers from the complete serial, not a slice. The server clips to the
+   context budget. */
+function _ctxSerials(items, n){
+  const card=c=>c?{d:c.d||'',o:c.o||'',a:c.a||'',t:c.t||'',x:c.x||'',m:c.m||''}:null;
+  return items.slice(0, n||items.length).map(s=>{ const a=APP[s.id]||{}, t=ICT[s.id]||{}, l=LEARN[s.id]||{};
+    return { id:s.id, title:s.title, kind:KIND_LABEL[s.kind]||'', dates:s.dates||'', theatre:s.theatre,
+      verdict:s.verdictLabel||s.verdict, summary:SUMMARY[s.id]||'', signal:SIGNAL[s.id]||'',
+      blocks:(s.blocks||[]).map(b=>b.l+': '+b.t),
+      lead:a.lead||'', div:card(a.div), bde:card(a.bde),
+      ict:(t.fmt||t.dec)?{fmt:t.fmt||'',set:t.set||'',run:(t.run||[]),dec:t.dec||'',twist:t.twist||'',std:t.std||''}:null,
+      learn:(l.topic||l.why||l.worked||l.next)?{topic:l.topic||'',status:l.status||'',why:l.why||'',worked:l.worked||'',next:l.next||''}:null,
+      sources:(s.sources||[]).map(x=>x.n).filter(Boolean) }; });
+}
+const _linkifySer = t => esc(t).replace(/\(?\bSER\s+([A-Z]{1,3}-\d{2})\)?/g,'<span class="cite" data-open="$1">SER $1</span>');
+async function _askEnhanced(effQ, rawQ){
+  const a = answerForAll(effQ);
+  const scoped = !!(a.items && a.items.length);
+  const history = ASKP.thread.filter(m=>!m.temp && (m.role==='user' || m.ans)).slice(-5,-1)
+    .map(m=>({role:m.role==='user'?'user':'assistant', text: m.role==='user'? m.text : strip(m.html).slice(0,500)}));
+  // Full-context: send the whole corpus, relevance-ranked (matches first) so a
+  // long-context model reasons over everything and a small-window fallback
+  // still gets the top slice. Weekly briefs are the primary layer. Cap each
+  // corpus at a generous top-N (still spans every week) to keep the payload
+  // and Gemini prefill small enough for a fast first token.
+  const wk = _wkRankedAll(effQ).slice(0, 60);
+  const pk = _pkRankedAll(effQ).slice(0, 60);
+  const sr = _ctxSerials(_serialsRankedAll(effQ));
+  const ctl=new AbortController(); const to=setTimeout(()=>ctl.abort(), 20000);
+  let res;
+  try{
+    res = await fetch('/api/ask',{ method:'POST', headers:{'content-type':'application/json'},
+      body:JSON.stringify({question:rawQ, history, serials:sr, pack:pk, weekly:wk}), signal:ctl.signal });
+  }catch(e){ clearTimeout(to); return false; }
+  if(!res.ok || !res.body){ clearTimeout(to); return false; }
+  ASKP.thread=ASKP.thread.filter(m=>!m.temp);
+  const msg={role:'bot',html:'<div class="ans-prose"></div>',ans:true,q:rawQ};
+  ASKP.thread.push(msg);
+  let acc='';
+  const paint=()=>{ msg.html='<div class="ans-prose">'+_linkifySer(acc)+'<span class="curs"></span></div>'; _renderPaneThread(); _scrollAskPane(); };
+  try{
+    const reader=res.body.getReader(); const dec=new TextDecoder(); let buf='';
+    while(true){ const {done,value}=await reader.read(); clearTimeout(to); if(done) break;
+      buf+=dec.decode(value,{stream:true});
+      const lines=buf.split('\n'); buf=lines.pop();
+      let grew=false;
+      for(const ln of lines){ const s=ln.trim(); if(!s.startsWith('data:')) continue; const d=s.slice(5).trim(); if(!d || d==='[DONE]') continue;
+        try{ const j=JSON.parse(d); if(j.response){ acc+=j.response; grew=true; } }catch(e){} }
+      if(grew) paint();
+    }
+  }catch(e){ /* keep whatever streamed */ }
+  clearTimeout(to);
+  if(!acc.trim()){ ASKP.thread=ASKP.thread.filter(m=>m!==msg); return false; }
+  if(_looksDeclined(acc)) _recordMiss(rawQ); // online gap → list it + auto-send
+  // Show related serials as optional further reading — not as "what the answer
+  // is based on" (answers may rest entirely on the weekly briefs).
+  const cited = /\bSER\s+[A-Z]{1,3}-\d{2}\b/.test(acc);
+  msg.html = '<div class="ans-prose">'+_linkifySer(acc.trim())+'</div>'
+    + (scoped ? a.items.slice(0,4).map(s=>_ansCard(s,'serials')).join('')
+        + `<div class="closing">${cited?'Tap a cited serial above to open it, or browse related serials.':'Related serials — tap to open the full breakdown.'}</div>`
+      : '<div class="closing">Tap any cited serial to open it.</div>');
+  _renderPaneThread(); _scrollAskPane();
+  return true;
+}
+
+/* short follow-ups ("what about for artillery?") inherit the previous topic */
+const _FOLLOW = ["what about","how about","and for","what of","same for","and with","what if"];
+/* On-device answer card for a weekly-brief extract — tap opens that week */
+function _wkAnswer(wk){
+  return `<div class="lead">The monthly serials don't cover that directly — the briefs do:</div>`
+    + wk.map(c=>`<div class="wk-hit" data-openwk="${esc(c.url)}" data-wklabel="${esc(c.week)}"><div class="wh-k">${esc(c.week)} · ${esc(c.theatre)}</div><p>${esc(c.text.slice(0,300))}${c.text.length>300?'…':''}</p><span class="wh-open">Open this brief →</span></div>`).join('')
+    + `<div class="closing">From the briefs — tap an extract to read the full brief.</div>`;
+}
+/* Pack-analysis extracts as answer cards — tap opens the serial (when the
+   extract is tied to one) or that package's pack view. */
+function _pkAnswer(pk){
+  return `<div class="lead">From the pack analysis:</div>`
+    + pk.map(c=>`<div class="wk-hit" ${c.id?`data-open="${esc(c.id)}"`:(c.pkg==='ABOUT'?`data-openabout="1"`:`data-openpk="${esc(c.pkg)}"`)}><div class="wh-k">${esc(c.label)} · ${esc(c.kind)}</div><p>${esc(c.text.slice(0,300))}${c.text.length>300?'…':''}</p><span class="wh-open">${c.id?'Open the serial →':(c.pkg==='ABOUT'?'Open About →':'Open the pack →')}</span></div>`).join('')
+    + `<div class="closing">From the monthly pack overviews — tap an extract for the full context.</div>`;
+}
+function _answerHTML(q, rawQ){
+  const a = answerForAll(q);
+  if(a.type==='none'){
+    // weekly briefs are the primary source — surface them before pack analysis
+    const wk = _wkHits(q, 3);
+    if(wk.length) return _wkAnswer(wk);
+    const pk = _pkHits(q, 2);
+    if(pk.length) return _pkAnswer(pk);
+    if(_toks(rawQ||q).length) _recordMiss(rawQ||q);
+  }
+  return synthAll(a) + _nextChips(a);
+}
+async function askAll(text){
+  const q=(text||'').trim(); if(!q) return;
+  const qlc=' '+q.toLowerCase()+' ';
+  const isFollow = state.lastTopic && _FOLLOW.some(w=>qlc.includes(w));
+  const effQ = isFollow ? state.lastTopic+' '+q : q;
+  if(!isFollow) state.lastTopic = q;
+  ASKP.thread.push({role:'user',text:q});
+  ASKP.thread.push({role:'bot',html:'<div class="typing"><i></i><i></i><i></i></div>',temp:1});
+  _renderPaneThread(); _scrollAskPane();
+  if(navigator.onLine!==false){
+    const ok = await _askEnhanced(effQ, q).catch(()=>false);
+    if(ok){ setTimeout(_scrollAskPane, 320); return; }
+  }
+  await new Promise(r=>setTimeout(r,220)); // keep the typing beat when answering instantly
+  ASKP.thread=ASKP.thread.filter(m=>!m.temp);
+  ASKP.thread.push({role:'bot',html:_answerHTML(effQ, q),ans:true,q});
+  _renderPaneThread(); _scrollAskPane();
+  setTimeout(_scrollAskPane, 320); // re-position once the mobile keyboard has finished closing
+}
+
+/* ===================== STATE ===================== */
+const state = { section:"feed", serialFilter:"ALL", tab:"MANEXP", mode:"division", search:"", savedOnly:false, saved:new Set(), detailId:null, prevSection:"feed", weekOpen:true, weekUrl:null, weekLabel:null, weekList:null, q:"", lastTopic:null, newEdition:false, newWeek:null };
+
+/* ===================== HELPERS ===================== */
+const $ = s => document.querySelector(s);
+const tClass = s => s.multi ? "t-multi" : (CONFLICT_CLASS[s.conflict]||"t-multi");
+const tCode = s => s.multi ? "MULTI" : (CONFLICT_CODE[s.conflict]||"—");
+const panelCls = s => tClass(s) + (s.image ? " has-img" : "");
+const imgTag = s => s.image ? `<img class="pimg" src="${s.image}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="var p=this.closest('.panel');if(p)p.classList.remove('has-img');this.remove()">` : "";
+const creditTag = s => s.image && s.imageCredit ? `<span class="pcredit">${s.imageCredit}</span>` : "";
+
+function filtered(){
+  const _t = PACKAGES.find(x=>x.k===state.tab); if(!_t || !_t.live) return [];
+  let list = SERIALS.slice();
+  if(state.savedOnly) list = list.filter(s=>state.saved.has(s.id));
+  return list;
+}
+
+/* ===================== TABS ===================== */
+function buildTabs(){
+  $("#tabs").innerHTML = `<button class="tab weektab" role="tab" data-week="1" aria-selected="${state.weekOpen}">Biweekly Brief</button>`
+    + PACKAGES.map(t=>
+    `<button class="tab" role="tab" data-k="${t.k}" aria-selected="${!state.weekOpen && t.k===state.tab}">${t.label}</button>`
+  ).join('');
+  $("#tabs").querySelectorAll('.tab').forEach(btn=>{
+    if(btn.dataset.week){
+      btn.onclick = ()=>{
+        state.weekOpen = true;
+        $("#tabs").querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected', b===btn?'true':'false'));
+        if(state.section!=="feed") showSection('feed');
+        // renders the latest brief, then drops the week picker off the tab so
+        // users can jump to an older week (same picker as the header's "Change week ▾")
+        renderFeed();
+        scrollHome();
+        toggleWeekPop(true);
+      };
+      return;
+    }
+    btn.onclick = ()=>{
+      state.weekOpen = false; closeWeekPop();
+      state.tab = btn.dataset.k; state.savedOnly=false; updateSavedIcon();
+      loadPackage(state.tab);
+      if($("#askSugg")) $("#askSugg").innerHTML = SUGGESTIONS.map(x=>'<button class="sg">'+x+'</button>').join('');
+      try{ ASK.thread=[]; }catch(e){}
+      $("#tabs").querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected', b===btn?'true':'false'));
+      renderFeed(); renderSerials();
+      scrollHome();
+    };
+  });
+}
+
+/* ===================== FEED ===================== */
+function readMin(s){
+  const a=APP[s.id], i=ICT[s.id];
+  const w=(s.title+" "+SUMMARY[s.id]+" "+s.blocks.map(b=>b.t).join(" ")+" "+(a.lead||"")+" "+a.div.d+a.div.a+a.div.t+a.bde.d+a.bde.a+" "+i.set+i.run.join(" ")+i.dec+i.std).split(/\s+/).length;
+  return Math.max(5, Math.round(w/135));
+}
+function feedCard(s, featured){
+  return `<article class="acard${featured?' feat':''}" data-id="${s.id}">
+    <div class="acard-img${s.image?'':' no-img'}">${imgTag(s)}<div class="pcode">${tCode(s)}</div>${creditTag(s)}${featured?'<span class="feat-tag">Lead serial</span>':''}</div>
+    <div class="acard-body">
+      <div class="acard-rt">Read time: ${readMin(s)} min</div>
+      <h2 class="acard-title">${s.title}</h2>
+      <p class="acard-dek">${SUMMARY[s.id]}</p>
+      <div class="acard-meta"><span class="vdot ${s.verdict}"></span><span>${s.verdictLabel} · ${KIND_LABEL[s.kind]} · ${s.theatre}</span></div>
+      <div class="acard-foot"><span class="byline">Conflict Studies &amp; Insights</span><span class="acard-act"><span class="kebab" data-bm="${s.id}" role="button" aria-label="Save">⋮</span></span></div>
+    </div>
+  </article>`;
+}
+function interstitialHTML(){
+  const kj = KEY_JUDGEMENTS[Math.floor(Math.random()*KEY_JUDGEMENTS.length)];
+  return `<div class="interstitial"><div class="lab">Key Judgement</div>
+    <div class="kj"><p>${kj}</p></div></div>`;
+}
+function renderFeed(){
+  if(state.weekOpen){ renderWeekly(); return; }
+  const t = PACKAGES.find(x=>x.k===state.tab);
+  const c = $("#feedContent");
+  if(!t.live){ c.innerHTML = `<div class="empty"><b>${t.title}</b><p>This package is in development. ${t.title} insights will be distilled into a learning pack in a later edition — the Manoeuvre package is live now.</p></div>`; return; }
+  c.innerHTML = packHTML();
+}
+function serialsFilterBar(){
+  const f = state.serialFilter || 'ALL';
+  const chips = `<button class="serchip${f==='ALL'?' on':''}" data-filter="ALL">All</button>`
+    + PACKAGES.map(p=>`<button class="serchip${f===p.k?' on':''}${p.live?'':' off'}" data-filter="${p.k}"${p.live?'':' disabled'}>${p.label}</button>`).join('');
+  return `<div class="serfilter">${chips}</div>`;
+}
+function renderSerials(){
+  const c = $("#serialsContent");
+  const f = state.serialFilter || 'ALL';
+  let list = ALL_SERIALS.slice();
+  if(f!=='ALL') list = list.filter(s=>PKG_OF[s.id]===f);
+  if(state.savedOnly) list = list.filter(s=>state.saved.has(s.id));
+  const title = state.savedOnly ? 'Saved' : 'Serials';
+  const _edtog = `<button type="button" class="ed-toggle" data-edpop aria-haspopup="listbox">${CUR_EDITION.label} <span class="edcar">▾</span></button>`;
+  const sub = state.savedOnly
+    ? `${list.length} serial${list.length===1?'':'s'} saved`
+    : (f==='ALL'
+        ? `All ${list.length} serial${list.length===1?'':'s'} · ${_edtog}`
+        : `${list.length} ${(PACKAGES.find(x=>x.k===f)||{}).label} serial${list.length===1?'':'s'} · ${_edtog}`);
+  let html = `<h1 class="section-title" style="font-size:28px;padding:18px 16px 2px">${title}</h1>`
+    + `<div class="theatre-sub" style="padding-bottom:8px">${sub}</div>`
+    + serialsFilterBar();
+  if(!list.length){
+    html += `<div class="empty"><b>${state.savedOnly?'No saved serials':'No serials match'}</b><p>${state.savedOnly?'Tap the bookmark on any serial to save it here for your O-group.':'No serials this edition for that combination — clear a filter to widen the view.'}</p></div>`;
+    c.innerHTML = html; return;
+  }
+  PACKAGES.forEach(p=>{
+    const g = list.filter(s=>PKG_OF[s.id]===p.k);
+    if(!g.length) return;
+    if(f==='ALL') html += `<div class="ser-group">${p.label} · ${g.length}</div>`;
+    html += g.map(s=>feedCard(s)).join('');
+  });
+  html += `<div class="feedfoot"><p>Each serial is a full source packet behind the monthly pack — distilled from the <b>Conflict Studies &amp; Insights</b> weekly briefs.</p><a data-openweek="1" role="button" tabindex="0">Read the biweekly brief →</a></div>`;
+  c.innerHTML = html;
+}
+
+/* ===================== SEARCH / EXPLORE ===================== */
+const VERDICT_FACETS = [{k:"success",l:"Success"},{k:"mixed",l:"Mixed"},{k:"threat",l:"Threat"}];
+const statusClass = st => { const x=st.toLowerCase(); if(x.includes("action")||x.includes("strain")||x.includes("now")) return "st-now"; if(x.includes("watch")||x.includes("weak")) return "st-watch"; return "st-high"; };
+function secOpen(title, right){ return `<section class="psec"><div class="psec-head"><h2 class="psec-title">${title}</h2><span class="psec-right">${right}</span></div>`; }
+function statCardsHTML(){ return `<div class="statcards">${PACK.stats.map(s=>`<div class="statcard"><div class="sc-k">${s.k}</div><div class="sc-n">${s.n}</div><div class="sc-s">${s.s}</div></div>`).join('')}</div>`; }
+function learnCardHTML(id, showWorked){
+  const s = SERIALS.find(x=>x.id===id)||ALL_SERIALS.find(x=>x.id===id), L = LEARN[id];
+  return `<div class="lcardx">
+    <div class="lcardx-tags"><span class="ltag">${L.topic}</span><span class="lstatus ${statusClass(L.status)}">${L.status}</span><span class="lsrc" data-id="${id}" role="button">Source packet →</span></div>
+    <h3 class="lcardx-title">${s.title}</h3>
+    <p class="lcardx-body">${SUMMARY[id]}</p>
+    <div class="lblock"><div class="lbl-h">Why it matters</div><p>${L.why}</p></div>
+    ${showWorked?`<div class="lblock"><div class="lbl-h">What worked</div><p>${L.worked}</p></div>`:''}
+    <div class="lblock"><div class="lbl-h">What to do next</div><p>${L.next}</p></div>
+  </div>`;
+}
+function implMatrixHTML(){ return PACK.implications.map(r=>`<div class="impl-row"><div class="impl-ech">${r.ech}</div><p>${r.t}</p></div>`).join(''); }
+function lifeTrack(stage){
+  const steps=[["emerging","Emerging"],["hot","Hot"],["superseded","Superseded"]];
+  const idx=steps.findIndex(s=>s[0]===stage);
+  return `<div class="cx-life">`+steps.map((s,i)=>`<span class="cx-step${i===idx?' on '+s[0]:''}${i<idx?' past':''}">${s[1]}</span>`).join('<i class="cx-arrow">→</i>')+`</div>`;
+}
+function contestsHTML(){
+  return PACK.contests.map(c=>`<div class="cx">
+    <div class="cx-top"><h3>${c.cap}</h3><span class="cx-stage ${c.stage}">${c.stage}</span></div>
+    ${lifeTrack(c.stage)}
+    <div class="cx-block"><span class="cx-k">Capability</span><p>${c.what}</p></div>
+    <div class="cx-block"><span class="cx-k">Countermeasure</span><p>${c.counter}</p></div>
+    <div class="cx-sig">
+      <div class="cx-sigrow"><span class="cx-sl">Adaptation tempo</span><span class="cx-sv">${c.tempo}</span></div>
+      <div class="cx-sigrow"><span class="cx-sl">Proliferation</span><span class="cx-sv">${c.diffusion}</span></div>
+      <div class="cx-sigrow"><span class="cx-sl">Supersession</span><span class="cx-sv">${c.supersession||'None observed yet'}</span></div>
+    </div>
+    <span class="lsrc" data-id="${c.id}" role="button">Source packet →</span>
+  </div>`).join('');
+}
+function noteListHTML(items, note){ return `<div class="wf-list">${items.map(t=>`<div class="wf-item"><div class="wf-t">${t}</div><div class="wf-n">${note}</div></div>`).join('')}</div>`; }
+/* The three command sections. Each item links to its source serial, where the
+   full breakdown (decision cards, ICT, sources) lives — keeping the overview
+   scannable. */
+function frameCardHTML(item){
+  const s = ALL_SERIALS.find(x=>x.id===item.id);
+  const src = s ? `<button class="fc-src" data-id="${item.id}"><span class="fc-lm">Learn more:</span> ${s.title} →</button>` : '';
+  return `<div class="fcard"><div class="fc-t">${item.t}</div><p class="fc-d">${item.d}</p>${src}</div>`;
+}
+function frameSectionHTML(cls, title, sub, items){
+  if(!items || !items.length) return '';
+  return `<section class="psec fs fs-${cls}"><div class="psec-head"><h2 class="psec-title">${title}</h2><span class="psec-right">${sub}</span></div>${items.map(frameCardHTML).join('')}</section>`;
+}
+function packHTML(){
+  const F = FRAME || {};
+  let h = `<div class="pack-head">
+    <button type="button" class="pack-kicker ed-toggle" data-edpop aria-haspopup="listbox">${PACK.kicker} <span class="edcar">▾</span></button>
+    <h1 class="pack-title">What changed this month ${PACK.titleLine||'for the formation'}</h1>
+    <p class="pack-lede">${F.bluf || PACK.commandLens}</p>
+    <p class="pack-cal">First-cut analysis from open-source reporting — divisions and brigades calibrate and validate before adoption.</p>
+  </div>`;
+  h += frameSectionHTML('opp','Opportunities','Developments to exploit', F.opportunities);
+  h += frameSectionHTML('vuln','Vulnerabilities','Where formations are exposed', F.vulnerabilities);
+  h += frameSectionHTML('cap','Capability Development','What to develop — doctrine, training, equipment', F.capdev);
+  h += `<div class="feedfoot"><p>This pack distils the <b>Conflict Studies &amp; Insights</b> weekly briefs into a formation-ready monthly learning pack. Open any serial for its full breakdown, decision cards and ICT.</p><a data-openweek="1" role="button" tabindex="0">Read the biweekly brief →</a></div>`;
+  return h;
+}
+
+/* ===================== DETAIL ===================== */
+function verdictClass(v){ const x=v.toLowerCase(); if(x.includes("with changes")) return "vb-adapt"; if(x.includes("warning")) return "vb-warn"; if(x.includes("gap")) return "vb-threat"; if(x.includes("use it")) return "vb-good"; return "vb-adapt"; }
+function ictHTML(id){
+  const t = ICT[id];
+  return `<div class="ict"><div class="ih"><b>ICT Serial</b><span class="tab2">Rehearse</span></div>
+    <div class="ict-fmt">${t.fmt}</div>
+    <div class="ict-set">${t.set}</div>
+    <div class="ict-run"><div class="ict-lbl">Run it</div><ol>${t.run.map(s=>`<li>${s}</li>`).join('')}</ol></div>
+    <div class="ict-dec"><div class="ict-lbl">Decision forced</div><p>${t.dec}</p><p class="ict-twist"><span>Free-play</span> ${t.twist}</p></div>
+    <div class="ict-std"><div class="ict-lbl">Standard</div><p>${t.std}</p></div>
+  </div>`;
+}
+function decisionCard(ech, c, cls){
+  return `<div class="dcard dc-${cls||ech.toLowerCase()}">
+    <div class="dc-ech">${ech}</div>
+    <div class="dc-dec">${c.d}</div>
+    <div class="dc-rows">
+      <div class="dc-row"><span class="dc-k">Owner</span><span class="dc-v">${c.o}</span></div>
+      <div class="dc-row"><span class="dc-k">Changes</span><span class="dc-v">${c.a}</span></div>
+      <div class="dc-row"><span class="dc-k">Trigger</span><span class="dc-v">${c.t}</span></div>
+      <div class="dc-row"><span class="dc-k">Trade-off</span><span class="dc-v">${c.x}</span></div>
+      <div class="dc-row"><span class="dc-k">Measure</span><span class="dc-v">${c.m}</span></div>
+    </div>
+  </div>`;
+}
+function detailHTML(s){
+  const ech = (PKG[SUBPKG_OF[s.id]]||{}).echelons || ["Division","Brigade"];
+  const blocks = s.blocks.map(b=>`<div class="block"><div class="bl">${b.l}</div><p>${b.t}</p></div>`).join('');
+  const srcs = s.sources.length ? `<div class="srcs"><div class="sh">Learn more</div><div class="sh-sub">${s.sources.length} source${s.sources.length===1?'':'s'} — tap to read the original reporting ↗</div>${
+      s.sources.map((x,i)=>`<a href="${x.u}" target="_blank" rel="noopener"><span class="src-n">[${i+1}]</span><span class="src-name">${x.n}</span><span class="src-go">↗</span></a>`).join('')}</div>` : '';
+  return `<div class="dpanel${s.image?'':' no-img'}">${imgTag(s)}${s.image?'':'<div class="pcode">'+tCode(s)+'</div>'}${creditTag(s)}</div>
+    <div class="dwrap">
+      <div class="dkicker"><span class="vdot ${s.verdict}"></span><span class="sid">SER ${s.id}</span><span>${KIND_LABEL[s.kind]}</span><span>·</span><span>${s.theatre}${s.multi?" · multi-theatre":""}</span>${s.dates?`<span>·</span><span>${s.dates}</span>`:''}</div>
+      <h1>${s.title}</h1>
+      <div class="conf ${s.sources.length>=2?'ok':'lone'}"><i></i>${s.sources.length>=2?`Corroborated · ${s.sources.length} open sources`:'Single open source'} · first-cut analysis — calibrate before adoption</div>
+      ${blocks}
+      <div class="appwrap">
+        <div class="ah"><b></b>What this means for ${ech[0].toLowerCase()} and ${ech[1].toLowerCase()}</div>
+        <div class="appverdict"><span class="vbadge ${verdictClass(APP[s.id].verdict)}">${APP[s.id].verdict}</span></div>
+        ${APP[s.id].lead ? `<p class="applead">${APP[s.id].lead}</p>` : ""}
+        ${decisionCard(ech[0], APP[s.id].div, 'division')}
+        ${decisionCard(ech[1], APP[s.id].bde, 'brigade')}
+        <p class="appnote">The trigger numbers (X, %, hrs) are samples — your staff set the real ones from your own ISR, supply and force figures.</p>
+      </div>
+      ${ictHTML(s.id)}
+      ${srcs}
+      <div class="dt-foot"><button id="footBack">↑ Back to feed</button></div>
+    </div>`;
+}
+function openDetail(id){
+  const s = ALL_SERIALS.find(x=>x.id===id) || SERIALS.find(x=>x.id===id); if(!s) return;
+  state.detailId = id; state.prevSection = state.section;
+  $("#detailContent").innerHTML = detailHTML(s);
+  $("#detail").classList.add('on'); $("#detail").setAttribute('aria-hidden','false');
+  document.querySelector('.app').classList.add('detail-open');
+  $("#askDock") && $("#askDock").classList.remove('on');
+  const _backTo = state.fromAsk||state.section==='search' ? "Assistant" : (state.section==='serials'?"Serials":"Feed");
+  $("#backLabel").textContent = _backTo;
+  $("#footBack").textContent = "↑ Back to " + _backTo.toLowerCase();
+  updateBookmarkIcon();
+  closePop();
+  $("#detail").scrollTop = 0;
+  $("#footBack").onclick = closeDetail;
+}
+function closeDetail(){
+  state.detailId=null;
+  $("#detail").classList.remove('on'); $("#detail").setAttribute('aria-hidden','true');
+  document.querySelector('.app').classList.remove('detail-open');
+  if(state.fromAsk){ state.fromAsk=false; openAsk(); return; }
+  $("#askDock") && $("#askDock").classList.toggle('on', state.section==='search');
+}
+
+/* ===================== BOOKMARKS ===================== */
+function toggleSave(id){
+  if(state.saved.has(id)) state.saved.delete(id); else state.saved.add(id);
+  updateSavedIcon(); updateBookmarkIcon();
+  if(state.savedOnly && state.section==="serials") renderSerials();
+}
+function updateSavedIcon(){
+  const b=$("#savedBadge"); const n=state.saved.size;
+  b.style.display = n? "grid":"none"; b.textContent=n;
+  $("#btnSaved").classList.toggle('saved', state.savedOnly);
+}
+function updateBookmarkIcon(){
+  const on = state.detailId && state.saved.has(state.detailId);
+  $("#btnBookmark").classList.toggle('saved', !!on);
+  $("#btnBookmark").querySelector('svg').setAttribute('fill', on? 'currentColor':'none');
+}
+
+/* ===================== SECTIONS / NAV ===================== */
+/* ===================== THEME (light / dark) ===================== */
+const _SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>';
+const _MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>';
+function currentTheme(){ return document.documentElement.getAttribute('data-theme')==='dark' ? 'dark' : 'light'; }
+function updateThemeIcon(){ const b=$("#btnTheme"); if(!b) return; const dark=currentTheme()==='dark'; b.innerHTML = dark ? _SUN : _MOON; b.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode'); }
+function applyTheme(t){ document.documentElement.setAttribute('data-theme', t); try{ localStorage.setItem('csi-theme', t); }catch(e){} const mc=document.querySelector('meta[name="theme-color"]'); if(mc) mc.setAttribute('content', t==='dark' ? '#16150F' : '#F1EDE3'); updateThemeIcon(); }
+function toggleTheme(){ applyTheme(currentTheme()==='dark' ? 'light' : 'dark'); }
+
+function showSection(sec){
+  if(!document.getElementById('pane-'+sec)) return; // unknown target — don't blank the app
+  state.section=sec; closeDetail(); closeAsk();
+  document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on', p.id==="pane-"+sec));
+  document.querySelectorAll('.nav-item').forEach(n=>n.setAttribute('aria-current', n.dataset.sec===sec?'true':'false'));
+  $("#tabsWrap").style.display = sec==="feed"? "block":"none";
+  $("#askDock") && $("#askDock").classList.toggle('on', sec==='search');
+  if(sec==='about') renderMisses();
+  if(sec!=="feed"){ state.savedOnly=false; updateSavedIcon(); }
+  scrollHome();
+}
+
+/* ===================== NEW-CONTENT INDICATOR =====================
+   Lights the bell dot when there is a new monthly edition or a new weekly
+   brief the user has not yet acknowledged. No push, no server, no
+   permission — a freshness signal that shows when the app is opened.
+   Bump EDITION_ID with each monthly edition to notify installed users. */
+const EDITION_ID = "2026-09";
+/* Monthly editions for the edition dropdown. When publishing a new edition:
+   drop the `current` flag from the outgoing one and give it its archive `url`
+   (/archive/<yyyy-mm>/), then prepend the new edition with `current:true`. */
+const EDITIONS = [
+  { label:"September 2026", current:true },
+  { label:"August 2026", url:"/archive/2026-08/" },
+  { label:"July 2026", url:"/archive/2026-07/" },
+  { label:"June 2026", url:"/archive/2026-06/" }
+];
+const CUR_EDITION = EDITIONS.find(e=>e.current) || EDITIONS[0];
+const EDITION_LABEL = "September 2026";
+function _initFreshness(){
+  try{ const se=localStorage.getItem('csi-seen-edition');
+    if(se===null){ localStorage.setItem('csi-seen-edition', EDITION_ID); state.newEdition=false; }
+    else state.newEdition = se!==EDITION_ID;
+  }catch(e){ state.newEdition=false; }
+  _updateBellDot();
+}
+async function _checkNewWeek(){
+  try{
+    const weeks = await loadWeekList();
+    if(!weeks || !weeks.length) return;
+    const latest = weeks[0].label || weeks[0].url;
+    const sw = localStorage.getItem('csi-seen-week');
+    if(sw===null){ localStorage.setItem('csi-seen-week', latest); state.newWeek=null; }
+    else state.newWeek = (sw!==latest) ? latest : null;
+  }catch(e){}
+  _updateBellDot();
+}
+function _updateBellDot(){ const b=$("#btnBell"); if(b) b.classList.toggle('has-dot', !!(state.newEdition || state.newWeek)); }
+
+/* ---- Web Push opt-in (option: notify me of new briefs) ---- */
+const VAPID_PUBLIC = 'BG1CmTnY25ujCrZxcWLIlHYqre6M1RXk-C3alm7yVv5lsxCLyscVcJwdfYZtTX_-8SEgJFZj47GfZ7z7FAfQeUE';
+function _urlB64ToU8(b){ const pad='='.repeat((4-b.length%4)%4); const s=(b+pad).replace(/-/g,'+').replace(/_/g,'/'); const raw=atob(s); return Uint8Array.from([...raw].map(c=>c.charCodeAt(0))); }
+const _pushOK = ()=> ('serviceWorker' in navigator) && ('PushManager' in window) && ('Notification' in window);
+async function _notifyState(){
+  const btn=$("#notifyBtn"), hint=$("#notifyHint"); if(!btn) return;
+  if(!_pushOK()){ btn.style.display='none'; if(hint) hint.style.display=''; return; }
+  btn.style.display='';
+  try{
+    if(Notification.permission==='denied'){ btn.textContent='Notifications blocked in settings'; btn.disabled=true; btn.dataset.on='0'; if(hint) hint.style.display='none'; return; }
+    const reg=await navigator.serviceWorker.ready;
+    const sub=await reg.pushManager.getSubscription();
+    btn.disabled=false;
+    btn.dataset.on = sub ? '1':'0';
+    btn.textContent = sub ? 'Notifications on — tap to turn off' : 'Notify me of new briefs';
+    if(hint) hint.style.display = sub ? 'none' : '';
+  }catch(e){ btn.style.display='none'; }
+}
+async function _toggleNotify(){
+  const btn=$("#notifyBtn"); if(btn){ btn.disabled=true; btn.textContent='…'; }
+  try{
+    const reg=await navigator.serviceWorker.ready;
+    let sub=await reg.pushManager.getSubscription();
+    if(sub){
+      try{ await fetch('/api/subscribe',{method:'DELETE',headers:{'content-type':'application/json'},body:JSON.stringify(sub)}); }catch(e){}
+      await sub.unsubscribe();
+    } else {
+      const perm=await Notification.requestPermission();
+      if(perm==='granted'){
+        sub=await reg.pushManager.subscribe({userVisibleOnly:true, applicationServerKey:_urlB64ToU8(VAPID_PUBLIC)});
+        await fetch('/api/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(sub)});
+      }
+    }
+  }catch(e){}
+  _notifyState();
+}
+function _ackFreshness(){
+  try{ localStorage.setItem('csi-seen-edition', EDITION_ID);
+    if(state.newWeek) localStorage.setItem('csi-seen-week', state.newWeek);
+  }catch(e){}
+  state.newEdition=false; state.newWeek=null; _updateBellDot();
+}
+
+/* ===================== POP ===================== */
+function closePop(){ $("#bellPop").classList.remove('on'); closeWeekPop(); $("#editionPop").classList.remove('on'); $("#scrim").classList.remove('on'); const nw=$("#bellNew"); if(nw) nw.style.display='none'; }
+/* Monthly-edition dropdown: current edition (this view) + archived editions. */
+function closeEditionPop(){ $("#editionPop").classList.remove('on'); if(!$("#bellPop").classList.contains('on') && !$("#weekPop").classList.contains('on')) $("#scrim").classList.remove('on'); }
+function toggleEditionPop(anchor, force){
+  const pop=$("#editionPop");
+  const open = force===undefined ? !pop.classList.contains('on') : force;
+  if(!open){ closeEditionPop(); return; }
+  $("#bellPop").classList.remove('on'); closeWeekPop();
+  pop.innerHTML = EDITIONS.map(e=> e.current
+    ? `<div class="ed-row" role="option" aria-selected="true"><span class="ed-cur">Current edition</span>${esc(e.label)}</div>`
+    : `<a class="ed-row" role="option" href="${e.url}" target="_blank" rel="noopener">${esc(e.label)}<small>Archived · read-only ↗</small></a>`).join('');
+  pop.classList.add('on'); $("#scrim").classList.add('on');
+  const r = anchor.getBoundingClientRect();
+  pop.style.top = Math.round(r.bottom + 6) + 'px';
+  pop.style.left = Math.round(Math.min(Math.max(12, r.left), window.innerWidth - pop.offsetWidth - 12)) + 'px';
+}
+function togglePop(){
+  closeWeekPop();
+  const pop=$("#bellPop");
+  const opening = !pop.classList.contains('on');
+  if(opening){
+    const nw=$("#bellNew");
+    if(nw){
+      if(state.newEdition || state.newWeek){
+        nw.style.display='';
+        nw.innerHTML = (state.newEdition?`<b>New edition</b> — ${EDITION_LABEL} is now live.`:'')
+          + ((state.newEdition&&state.newWeek)?'<br>':'')
+          + (state.newWeek?`<b>New brief</b> — ${esc(state.newWeek)}.`:'');
+      } else nw.style.display='none';
+    }
+    _ackFreshness(); // acknowledge: clear the dot; the notice stays visible until closed
+    _notifyState();  // refresh the notify button each time the popover opens
+  }
+  const on=pop.classList.toggle('on'); $("#scrim").classList.toggle('on', on);
+  if(!on){ const nw=$("#bellNew"); if(nw) nw.style.display='none'; }
+}
+
+/* ===================== WEEKLY BRIEFS ===================== */
+/* fetch with a timeout so offline/blocked requests fall back fast */
+function fetchTimeout(url, ms){
+  const ctl = new AbortController();
+  const id = setTimeout(()=>ctl.abort(), ms);
+  return fetch(url, {credentials:"omit", signal:ctl.signal}).finally(()=>clearTimeout(id));
+}
+/* Fetch + parse the archive from the weekly site; fall back to the baked-in
+   list if the request fails (offline / blocked). Cached on state.weekList. */
+async function loadWeekList(){
+  if(state.weekList) return state.weekList;
+  try{
+    const res = await fetchTimeout(WEEKLY_BASE + "/", 6000);
+    if(!res.ok) throw new Error("HTTP "+res.status);
+    const doc = new DOMParser().parseFromString(await res.text(), "text/html");
+    const seen = new Set(), list = [];
+    const curLabel = (doc.title||"").replace(/^.*?—\s*/, "").trim() || "Latest week";
+    list.push({url:"/", label:curLabel}); seen.add("/");
+    doc.querySelectorAll('a[href]').forEach(a=>{
+      const href = a.getAttribute('href')||"";
+      if(!/^\/[0-9].*-20\d\d\.html$/i.test(href) || seen.has(href)) return;
+      let label = (a.textContent||"").replace(/\s+/g,' ').trim();
+      if(label && a.closest('.ft-biweekly')) label += ' · Biweekly';
+      if(label){ seen.add(href); list.push({url:href, label}); }
+    });
+    if(list.length>1){ state.weekList = list; return state.weekList; }
+  }catch(e){}
+  // Don't cache the baked-in fallback — a transient blip on first open would
+  // otherwise pin a stale archive for the whole session; retry next call.
+  return WEEKLY_WEEKS_FALLBACK;
+}
+function closeWeekPop(){ $("#weekPop").classList.remove('on'); if(!$("#bellPop").classList.contains('on')) $("#scrim").classList.remove('on'); }
+async function toggleWeekPop(force){
+  const pop = $("#weekPop");
+  const open = force===undefined ? !pop.classList.contains('on') : force;
+  if(!open){ closeWeekPop(); return; }
+  $("#bellPop").classList.remove('on');
+  const r = $("#tabsWrap").getBoundingClientRect();
+  pop.style.top = Math.round(r.bottom + 4) + "px";
+  pop.style.left = Math.round(r.left + 12) + "px";
+  pop.innerHTML = `<div class="wk-row" aria-disabled="true">Loading weeks…</div>`;
+  pop.classList.add('on'); $("#scrim").classList.add('on');
+  const weeks = await loadWeekList();
+  renderWeekPop(weeks);
+}
+function renderWeekPop(weeks){
+  const pop = $("#weekPop");
+  pop.innerHTML = weeks.map((w,i)=>
+    `<button class="wk-row" role="option" data-wk="${i}" aria-selected="${w.url===state.weekUrl}">${i===0?'<span class="wk-cur">Latest edition</span>':''}${esc(w.label)}</button>`
+  ).join('');
+  pop.querySelectorAll('.wk-row').forEach(row=>{
+    row.onclick = ()=>{ const w = weeks[+row.dataset.wk]; closeWeekPop(); selectWeek(w); };
+  });
+}
+let _wkSeq = 0;
+async function selectWeek(w){
+  if(!w) return;
+  const seq = ++_wkSeq; // stale-response guard: only the latest selection may render
+  state.weekUrl = w.url; state.weekLabel = w.label; state.weekKind = '';
+  const c = $("#feedContent");
+  c.innerHTML = `<div class="weekly">${weekHeadHTML()}<div class="wk-msg"><p>Loading brief…</p></div></div>`;
+  bindWeekHead(); // "Change week ▾" stays usable while the brief loads
+  scrollHome();
+  try{
+    const res = await fetchTimeout(WEEKLY_BASE + w.url, 9000);
+    if(seq !== _wkSeq) return; // a newer selection superseded this fetch
+    if(!res.ok) throw new Error("HTTP "+res.status);
+    const html = await res.text();
+    if(seq !== _wkSeq) return;
+    const bw = /cx-strip|class="kcd"|id="monitor"|<title>[^<]*Biweekly/i.test(html);
+    state.weekKind = bw ? 'Biweekly Brief' : 'Weekly Brief';
+    c.innerHTML = `<div class="weekly">${weekHeadHTML()}${bw ? biweeklyEmbed(html, w) : reflowBrief(html)}</div>`;
+    if(bw) _bwWatch(seq);
+  }catch(e){
+    if(seq !== _wkSeq) return;
+    const full = WEEKLY_BASE + (w.url==="/" ? "/" : w.url);
+    c.innerHTML = `<div class="weekly">${weekHeadHTML()}<div class="wk-msg"><p>Couldn't load this brief. <a href="${full}" target="_blank" rel="noopener">Open on the web ↗</a></p></div></div>`;
+  }
+  bindWeekHead();
+  scrollHome();
+}
+function weekHeadHTML(){
+  return `<div class="wk-head"><div class="wk-title"><small>${esc(state.weekKind||'Brief')}</small>${state.weekLabel?esc(state.weekLabel):'Select an edition'}</div><button class="wk-change" id="wkChange">Change edition ▾</button></div>`;
+}
+function bindWeekHead(){ const b=$("#wkChange"); if(b) b.onclick=(e)=>{ e.stopPropagation(); toggleWeekPop(true); }; }
+/* Reflow the fetched brief into the app's own styling. The source carries a
+   clear semantic structure — theatre cards (.th-hdr/.th-badge/.th-name/.th-sub),
+   category tags (.pill), source chips (.src-pill), status chips (.ph*) and a BLUF
+   panel — that a blanket class-strip flattens into a run-on wall of text. So we
+   PRESERVE that whitelist of structural classes (re-styled in the app palette via
+   the .weekly rules), map bold headline utilities to .wk-strong, and strip only
+   the presentational noise (utility classes, inline dark-theme styles, ids). */
+const _WK_KEEP = new Set(['theatre-card','th-hdr','th-badge','th-name','th-sub','pill','src-group','src-pill','sec-dot','ph','ph-active','ph-cease','wk-body','wk-item','wk-bluf','wk-panel','wk-strong','wk-dev','wk-dev-cat','wk-dev-head','wk-dev-body','wk-dev-more','wk-caret','wk-sec','wk-sec-body','wk-sec-toggle','wk-collapsed','wk-preview','wk-chart','wk-chart-more','wk-row-extra']);
+/* Rebuild each theatre card into preview developments: a headline + category
+   pill and a few clamped sentences, with a "Read more" button below that reveals
+   the full paragraph and implication. Atoms are read in document order so the
+   varied source nesting (some devs wrapped, some flat) groups the same way.
+   Only TOP-LEVEL atoms count — an atom nested inside another collected atom
+   (e.g. the <p> inside an implication div.pl-4, as in some weeks) travels with
+   its container's clone; collecting it separately duplicated the paragraph and
+   could fabricate phantom developments. Content before the first headline is
+   kept as an un-folded lead-in rather than silently dropped. Runs pre-strip. */
+function _wkCollapseDevs(wrap, doc){
+  wrap.querySelectorAll('.theatre-card').forEach(card=>{
+    const hdr = card.querySelector('.th-hdr');
+    const all = Array.from(card.querySelectorAll('span.pill, div.font-semibold, p, ul, ol, table, blockquote, div.pl-4'));
+    const set = new Set(all);
+    const atoms = all.filter(a=>{
+      if(a.closest('.th-hdr')) return false;
+      let n=a.parentElement;
+      while(n && n!==card){ if(set.has(n)) return false; n=n.parentElement; }
+      return true;
+    });
+    const units=[], pre=[]; let cur=null, pend=null;
+    atoms.forEach(a=>{
+      if(a.matches('div.font-semibold')){ cur={pill:pend, head:a, body:[]}; pend=null; units.push(cur); }
+      // a pill normally precedes its headline; if one instead sits right after a
+      // headline (before any body), attach it to that dev rather than the next.
+      else if(a.matches('span.pill')){ if(cur && !cur.pill && !cur.body.length) cur.pill=a; else pend=a; }
+      else if(cur){ cur.body.push(a); }
+      else { pre.push(a); }
+    });
+    if(!units.length) return;
+    // Safety: only rebuild if nothing would be lost. If the card carries a
+    // top-level node we don't collect (a stray image, sub-heading or bare-text
+    // block), leave the card intact and un-folded rather than dropping content.
+    const kept = new Set([hdr, ...atoms]);
+    const wouldDrop = Array.from(card.children).some(ch=>{
+      if(ch===hdr || (ch.classList && ch.classList.contains('th-hdr'))) return false;
+      if(kept.has(ch) || atoms.some(a=>ch.contains(a))) return false;
+      return (ch.textContent||'').trim().length>0 || !!ch.querySelector('img,figure,svg');
+    });
+    if(wouldDrop) return;
+    card.innerHTML=''; if(hdr) card.appendChild(hdr);
+    pre.forEach(n=>card.appendChild(n.cloneNode(true)));
+    units.forEach(u=>{
+      const dev=doc.createElement('div'); dev.className='wk-dev wk-preview wk-collapsed';
+      if(u.pill){ const cat=doc.createElement('div'); cat.className='wk-dev-cat'; cat.appendChild(u.pill.cloneNode(true)); dev.appendChild(cat); }
+      const hd=doc.createElement('div'); hd.className='wk-dev-head'; hd.innerHTML=u.head.innerHTML; dev.appendChild(hd);
+      const body=doc.createElement('div'); body.className='wk-dev-body';
+      u.body.forEach(n=>body.appendChild(n.cloneNode(true)));
+      dev.appendChild(body);
+      const more=doc.createElement('button'); more.type='button'; more.className='wk-dev-more'; more.textContent='Read more +';
+      dev.appendChild(more);
+      card.appendChild(dev);
+    });
+  });
+}
+/* Preview the Conflict Status Chart: keep the header + the first two theatre
+   rows visible, hide the rest behind a "Show all theatres" button. Scoped to
+   the section's FIRST table — spanning row indices across multiple tables
+   would hide the wrong rows and miscount the button. */
+function _wkPreviewChart(sec, doc){
+  sec.classList.add('wk-chart');
+  const tbl=sec.querySelector('table'); if(!tbl) return;
+  const rows = Array.from(tbl.querySelectorAll('tbody tr'));
+  if(rows.length<=2) return;
+  rows.forEach((r,i)=>{ if(i>1) r.classList.add('wk-row-extra'); });
+  sec.classList.add('wk-collapsed');
+  const more=doc.createElement('button'); more.type='button'; more.className='wk-chart-more';
+  more.setAttribute('data-n', String(rows.length));
+  more.textContent=`Show all ${rows.length} theatres +`;
+  (tbl.parentNode || sec).appendChild(more);
+}
+/* Fold each section behind its heading. BLUF and Key Developments stay open by
+   default (so all five theatres and their development headlines are visible);
+   Watch Areas is never folded; the Conflict Status Chart previews its first two
+   theatres; everything else starts collapsed. BLUF is checked before the chart
+   so a heading carrying both phrases stays an open text section. The fold walks
+   siblings of the h2's outermost wrapper inside the section, so a wrapped
+   heading still folds the whole body. */
+function _wkCollapseSections(wrap, doc){
+  wrap.querySelectorAll('section').forEach(sec=>{
+    const h=sec.querySelector('h2'); if(!h) return;
+    const t=h.textContent||'';
+    if(/watch area/i.test(t)) return; // always shown — no toggle
+    const open=/BLUF/i.test(t) || /key development/i.test(t);
+    if(!open && /conflict status/i.test(t)){ _wkPreviewChart(sec, doc); return; }
+    let top=h; while(top.parentElement && top.parentElement!==sec) top=top.parentElement;
+    const body=doc.createElement('div'); body.className='wk-sec-body';
+    let n=top.nextSibling; while(n){ const nx=n.nextSibling; body.appendChild(n); n=nx; }
+    sec.appendChild(body);
+    sec.classList.add('wk-sec'); if(!open) sec.classList.add('wk-collapsed');
+    h.classList.add('wk-sec-toggle');
+    const car=doc.createElement('span'); car.className='wk-caret'; car.textContent=open?'–':'+'; h.appendChild(car);
+  });
+}
+/* ===================== BIWEEKLY BRIEF =====================
+   From 15–28 Sep 2026 the brief site publishes "CSI Biweekly Conflict
+   Insights": an interactive map (script-driven) and inline-SVG comic strips.
+   The generic reflow strips scripts, ids and classes, which leaves the map
+   inert and the strips without figures — so biweekly pages are detected and
+   rebuilt from their text instead, with a link out to the full page. */
+function _isBiweekly(doc){
+  return !!(doc.querySelector('.cx-strip, .kcd, #monitor') || /Biweekly/i.test(doc.title||''));
+}
+function _bwStr(raw){ try{ return JSON.parse('"'+raw+'"'); }catch(e){ return raw; } }
+function _bwParse(htmlString){
+  const doc = new DOMParser().parseFromString(htmlString, 'text/html');
+  const clean = t=>(t||'').replace(/\s+/g,' ').trim();
+  const out = { doc, period: clean((doc.querySelector('.period')||{}).textContent), conflicts:[], kcd:[], topics:[] };
+  // Map data lives in the page script: { code:'X', name:'…', status:'…', … phase:"…", latest:"…", sub:{ title:'…', text:"…" } }
+  const STR = '"((?:[^"\\\\]|\\\\.)*)"';
+  const re = /\{ code: '([A-Z-]+)', name: '([^']+)', status: '([a-z]+)'/g;
+  const starts = []; let m;
+  while((m = re.exec(htmlString))) starts.push({i:m.index, code:m[1], name:m[2], status:m[3]});
+  starts.forEach((st,k)=>{
+    const chunk = htmlString.slice(st.i, k+1<starts.length ? starts[k+1].i : st.i+6000);
+    const g = (key)=>{ const r = chunk.match(new RegExp(key+': '+STR)); return r ? _bwStr(r[1]) : ''; };
+    const sub = chunk.match(new RegExp("sub: \\{ title: '([^']+)', text: "+STR));
+    out.conflicts.push({ code:st.code, name:st.name, status:st.status, phase:g('phase'), latest:g('latest'),
+      sub: sub ? {title:sub[1], text:_bwStr(sub[2])} : null });
+  });
+  const rank = {priority:0, active:1, watch:2, archive:3};
+  out.conflicts.sort((a,b)=>(rank[a.status]??9)-(rank[b.status]??9));
+  doc.querySelectorAll('.kcd').forEach(el=>{
+    const links = Array.from(el.querySelectorAll('.cite a')).map(a=>({href:a.getAttribute('href')||'', label:clean(a.textContent)}));
+    const tx = el.querySelector('.kcd-text'); const copy = tx ? tx.cloneNode(true) : null;
+    if(copy) copy.querySelectorAll('.cite').forEach(c=>c.remove());
+    out.kcd.push({ name: clean((el.querySelector('.kcd-name')||{}).textContent), text: clean(copy&&copy.textContent), links });
+  });
+  doc.querySelectorAll('.topic').forEach(el=>{
+    const take = Array.from(el.querySelectorAll('.cx-take p')).map(p=>{
+      const lab = p.querySelector('.label'); const l = clean(lab&&lab.textContent);
+      return { label:l, text: clean(p.textContent).slice(l.length).trim() };
+    });
+    out.topics.push({
+      fn: clean((el.querySelector('.fn')||{}).textContent),
+      title: clean((el.querySelector('h3')||{}).textContent),
+      tag: clean((el.querySelector('.cx-tag')||{}).textContent),
+      conf: (()=>{ const all=clean((el.querySelector('.cx-conf')||{}).textContent), chip=clean((el.querySelector('.cx-chip')||{}).textContent);
+        return chip && all.startsWith(chip) ? chip+' — '+all.slice(chip.length).trim() : all; })(),
+      panels: Array.from(el.querySelectorAll('.cx-panel figcaption')).map(f=>clean(f.textContent).replace(/^\d+\s*/,'')),
+      take
+    });
+  });
+  return out;
+}
+function _bwChunks(htmlString, week){
+  const d = _bwParse(htmlString), out = [];
+  d.conflicts.forEach(c=>{
+    const t = [c.phase && ('Phase: '+c.phase), c.latest, c.sub && (c.sub.title+': '+c.sub.text)].filter(Boolean).join(' ');
+    if(t) out.push({week:week.label, url:week.url, theatre:c.name, text:t.slice(0,900)});
+  });
+  d.kcd.forEach(k=>{ if(k.text) out.push({week:week.label, url:week.url, theatre:k.name, text:('Key development: '+k.text).slice(0,900)}); });
+  d.topics.forEach(t=>{
+    const txt = [t.title, t.conf, t.panels.join(' '), t.take.map(x=>x.label+': '+x.text).join(' ')].filter(Boolean).join(' ');
+    if(txt) out.push({week:week.label, url:week.url, theatre:'Learning topic — '+(t.fn||'General'), text:txt.slice(0,900)});
+  });
+  return out;
+}
+/* Full interactive brief in a frame. The brief page (conflictstudiesandinsights)
+   detects it is embedded, hides its own masthead/archive and posts its height;
+   until that arrives the frame has a sensible default height. If no message
+   arrives (blocked/offline frame), the text view below takes over. */
+const WEEKLY_ORIGIN = WEEKLY_BASE ? new URL(WEEKLY_BASE).origin : location.origin;
+function biweeklyEmbed(htmlString, w){
+  const full = WEEKLY_BASE + (w.url==='/' ? '/' : w.url);
+  return `<div class="wk-src">Source: <a href="${esc(full)}" target="_blank" rel="noopener">conflictstudiesandinsights.pages.dev ↗</a></div>`
+    + `<iframe class="bw-frame" src="${esc(full)}" title="Biweekly brief, ${esc(w.label||'')}" scrolling="no" referrerpolicy="no-referrer"></iframe>`
+    + `<div class="bw-fallback" hidden>${biweeklyView(htmlString, true)}</div>`;
+}
+let _bwLoaded = false;
+function _bwWatch(seq){
+  _bwLoaded = false;
+  setTimeout(()=>{
+    if(seq !== _wkSeq || _bwLoaded) return;
+    const f = document.querySelector('.bw-frame'), fb = document.querySelector('.bw-fallback');
+    if(f) f.remove(); if(fb) fb.hidden = false;
+  }, 12000);
+}
+window.addEventListener('message', e=>{
+  if(e.origin !== WEEKLY_ORIGIN || !e.data || typeof e.data !== 'object') return;
+  const f = document.querySelector('.bw-frame');
+  if(!f || e.source !== f.contentWindow) return;
+  if(e.data.type === 'csi-brief-height'){
+    const h = Math.round(+e.data.height);
+    if(h > 200 && h < 60000){ f.style.height = h + 'px'; _bwLoaded = true; }
+  } else if(e.data.type === 'csi-brief-scroll'){
+    const sc = document.querySelector('main.scroll') || document.scrollingElement;
+    const top = +e.data.top || 0;
+    const y = f.getBoundingClientRect().top - (sc.getBoundingClientRect ? sc.getBoundingClientRect().top : 0) + sc.scrollTop + top - 70;
+    sc.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+  }
+});
+function biweeklyView(htmlString, asFallback){
+  const d = _bwParse(htmlString);
+  const full = WEEKLY_BASE + (state.weekUrl==='/' ? '/' : state.weekUrl);
+  const safe = h=>/^https:\/\//i.test(h||'') ? esc(h) : '';
+  const ST = {priority:'Priority', active:'Active', watch:'Watch', archive:'Archive'};
+  const sec = (title, body, open)=>`<section class="wk-sec${open?'':' wk-collapsed'}"><h2 class="wk-sec-toggle"><span class="sec-dot"></span>${esc(title)}<span class="wk-caret">${open?'–':'+'}</span></h2><div class="wk-sec-body">${body}</div></section>`;
+  let h = asFallback ? '' : `<div class="wk-src">Source: <a href="${esc(full)}" target="_blank" rel="noopener">conflictstudiesandinsights.pages.dev ↗</a></div>`;
+  h += `<div class="wk-bluf"><p>${asFallback ? 'The interactive brief could not load here. The text from every section is below.' : 'This edition includes an interactive conflict map and comic strips that work only on the full page. The text from every section is below.'}</p><p><a class="wk-open" href="${esc(full)}" target="_blank" rel="noopener">Open the full brief ↗</a></p></div>`;
+  if(d.conflicts.length){
+    h += sec(`Conflicts monitored (${d.conflicts.length})`, `<div class="wk-panel"><ul>${d.conflicts.map(c=>
+      `<li><span class="bw-st bw-${esc(c.status)}">${esc(ST[c.status]||c.status)}</span><b>${esc(c.name)}</b>`+
+      (c.phase?`<br><span class="bw-phase">Phase: ${esc(c.phase)}</span>`:'')+
+      (c.latest?`<br>${esc(c.latest)}`:'')+
+      (c.sub?`<br><b>${esc(c.sub.title)}:</b> ${esc(c.sub.text)}`:'')+`</li>`).join('')}</ul></div>`, true);
+  }
+  if(d.kcd.length){
+    h += sec('Key conflict developments', d.kcd.map(k=>
+      `<div class="wk-item"><h3>${esc(k.name)}</h3><p>${esc(k.text)}</p>`+
+      (k.links.length?`<p class="bw-cite">Source: ${k.links.filter(l=>safe(l.href)).map(l=>`<a href="${safe(l.href)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join(' · ')}</p>`:'')+`</div>`).join(''), true);
+  }
+  if(d.topics.length){
+    h += sec('Key learning topics', d.topics.map(t=>
+      `<div class="wk-item"><h4>${esc(t.fn)}</h4><h3>${esc(t.title)}</h3>`+
+      (t.conf?`<p class="bw-conf">${esc(t.conf)}</p>`:'')+
+      (t.panels.length?`<ol class="bw-panels">${t.panels.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>`:'')+
+      t.take.map(x=>`<p><b>${esc(x.label)}:</b> ${esc(x.text)}</p>`).join('')+
+      `<p><a href="${esc(full)}" target="_blank" rel="noopener">See the comic strip and full analysis ↗</a></p></div>`).join(''), false);
+  }
+  return h;
+}
+function reflowBrief(htmlString){
+  const doc = new DOMParser().parseFromString(htmlString, "text/html");
+  let sections = Array.from(doc.querySelectorAll('section'));
+  if(!sections.length){ const m=doc.querySelector('main,article'); if(m) sections=[m]; }
+  if(!sections.length) return `<div class="wk-src">Source: <a href="${WEEKLY_BASE}${state.weekUrl==='/'?'/':state.weekUrl}" target="_blank" rel="noopener">conflictstudiesandinsights.pages.dev ↗</a></div><div class="wk-msg"><p>No readable content found.</p></div>`;
+  const wrap = doc.createElement('div');
+  sections.forEach(sec=>wrap.appendChild(sec.cloneNode(true)));
+  // drop the weekly site's own feedback form — the app collects feedback in About;
+  // also drop the "Watch Areas — Next 7 Days" section when it is just the empty
+  // placeholder ("not published in this edition"), so it never shows as a blank
+  // box. A real Watch Areas section in a future week (any other body text) stays.
+  wrap.querySelectorAll('section').forEach(sec=>{
+    const txt = sec.textContent||'';
+    if(sec.querySelector('a[href*="form.gov"]') || /feedback\s*&?\s*reflection|share your (feedback|thoughts)/i.test(txt)) { sec.remove(); return; }
+    if(/watch area/i.test(txt) && /not published in this edition/i.test(txt)) sec.remove();
+  });
+  // sectionless fallback (a week reflowed via <main>/<article>): kill the form
+  // CTA's enclosing block so the external form never renders in-app
+  wrap.querySelectorAll('a[href*="form.gov"]').forEach(a=>{ (a.closest('section')||a.closest('div')||a).remove(); });
+  // structural tagging (needs original classes, so do it before the strip pass)
+  wrap.querySelectorAll('h2').forEach(h=>{ if(/BLUF/i.test(h.textContent||'')){ const d=h.nextElementSibling; if(d) d.classList.add('wk-bluf'); } });
+  wrap.querySelectorAll('[class*="bg-panel"]').forEach(d=>d.classList.add('wk-panel'));
+  _wkCollapseDevs(wrap, doc);      // per-development preview cards
+  _wkCollapseSections(wrap, doc);  // per-section folds + chart preview
+  // strip pass: keep only whitelisted structure, drop utilities/styles/ids and
+  // inline event handlers (fetched markup must never execute in the app origin)
+  wrap.querySelectorAll('*').forEach(el=>{
+    const orig = (el.getAttribute('class')||'').split(/\s+/).filter(Boolean);
+    const keep = orig.filter(c=>_WK_KEEP.has(c));
+    if(orig.includes('font-semibold')||orig.includes('font-bold')) keep.push('wk-strong');
+    el.removeAttribute('style'); el.removeAttribute('id');
+    Array.from(el.attributes).forEach(at=>{ if(/^on/i.test(at.name)) el.removeAttribute(at.name); });
+    if(keep.length) el.setAttribute('class', keep.join(' ')); else el.removeAttribute('class');
+    if(el.tagName==='A'){
+      const href = el.getAttribute('href');
+      if(href && href.startsWith('#')){ /* in-page anchor — leave in-app, no new tab */ }
+      else {
+        if(href && !/^https?:|^mailto:/i.test(href)) el.setAttribute('href', WEEKLY_BASE + (href.startsWith('/')?href:'/'+href));
+        el.setAttribute('target','_blank'); el.setAttribute('rel','noopener');
+      }
+    }
+    if(el.tagName==='IMG'){ const s=el.getAttribute('src'); if(s && !/^https?:|^data:/i.test(s)) el.setAttribute('src', WEEKLY_BASE + (s.startsWith('/')?s:'/'+s)); }
+    if(el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='LINK') el.remove();
+  });
+  const src = `<div class="wk-src">Source: <a href="${WEEKLY_BASE}${state.weekUrl==='/'?'/':state.weekUrl}" target="_blank" rel="noopener">conflictstudiesandinsights.pages.dev ↗</a></div>`;
+  return src + wrap.innerHTML;
+}
+/* Jump to the in-app Weekly Briefs section (the latest brief). Used by the
+   "Read the weekly brief →" CTAs in the pack/serials footers — keeps readers in
+   the app rather than sending them to the external weekly site. */
+function goWeekly(){
+  state.weekOpen = true;
+  const wt = $("#tabs .tab.weektab");
+  if(wt) $("#tabs").querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected', b===wt?'true':'false'));
+  if(state.section!=="feed") showSection('feed');
+  renderFeed(); scrollHome();
+}
+async function renderWeekly(){
+  const c = $("#feedContent");
+  if(state.weekUrl){ selectWeek({url:state.weekUrl, label:state.weekLabel}); return; }
+  // First open: default to the latest brief so the reader shows content
+  // immediately — no need to pick a week from the menu.
+  c.innerHTML = `<div class="weekly">${weekHeadHTML()}<div class="wk-msg"><p>Loading the latest brief…</p></div></div>`;
+  bindWeekHead();
+  const weeks = await loadWeekList();
+  if(weeks && weeks.length){ selectWeek(weeks[0]); }
+  else { c.innerHTML = `<div class="weekly">${weekHeadHTML()}<div class="wk-msg"><p>Pick an edition from the <b>Change edition ▾</b> menu to read it here.</p></div></div>`; bindWeekHead(); }
+}
+
+/* ===================== CHECKLIST ===================== */
+function buildChecklist(){
+  $("#checklist").innerHTML = PLANNING.map((p,i)=>
+    `<div class="cl-item" data-i="${i}"><div class="cl-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></div><div class="cl-txt"><b>${p.b}</b><p>${p.p}</p></div></div>`
+  ).join('');
+  const cl=new Array(PLANNING.length).fill(false);
+  const upd=()=>{const d=cl.filter(Boolean).length;$("#clCount").textContent=`${d} / ${PLANNING.length} adopted`;$("#clBar").style.width=(d/PLANNING.length*100)+"%";};
+  $("#checklist").querySelectorAll('.cl-item').forEach(it=>{
+    it.onclick=()=>{const i=+it.dataset.i;cl[i]=!cl[i];it.classList.toggle('done',cl[i]);upd();};
+  });
+  upd();
+}
+
+/* ===================== WIRING ===================== */
+/* Pin the app shell to the visual viewport. iOS both SHRINKS the viewport for
+   the keyboard and PANS it (offsetTop) to reveal the focused field — tracking
+   offset + height means the shell always exactly fills what's visible: header
+   at the top of the screen, input right above the keyboard. */
+function _vvUpd(){ const vv=window.visualViewport; if(!vv) return;
+  const r=document.documentElement.style;
+  r.setProperty('--vvt', Math.max(0, vv.offsetTop)+'px');
+  r.setProperty('--vvh', vv.height+'px');
+  if(document.querySelector('.app').classList.contains('kbd')) _scrollAskPane(); }
+/* Reset the app's scroll containers (the document itself never scrolls). */
+function scrollHome(){ const m=$("#scroll"); if(m) m.scrollTop=0; const d=$("#detail"); if(d) d.scrollTop=0; }
+/* "my formation": set once (either filter), remembered on-device, and used to
+   scope Serials, Ask answers and the tailored decision line. */
+function init(){
+  buildMerged();
+  loadPackage(state.tab);
+  buildTabs(); renderFeed(); renderSerials();
+  if(window.visualViewport){ visualViewport.addEventListener('resize', _vvUpd); visualViewport.addEventListener('scroll', _vvUpd); _vvUpd(); }
+  window.addEventListener('resize', _vvUpd);
+  window.addEventListener('orientationchange', ()=>setTimeout(_vvUpd,250));
+  { const th = new Set(ALL_SERIALS.map(s=>s.theatre)).size;
+    $("#popCount").textContent = ALL_SERIALS.length + " serials";
+    $("#popScope").textContent = `across all three packages — Manoeuvre & Expeditionary, Sense & Strike, and CS & CSS — spanning ${th} reporting theatre${th===1?'':'s'}.`; }
+
+  // feed taps (delegation)
+  $("#feedContent").addEventListener('click', e=>{
+    const st = e.target.closest('.wk-sec-toggle');
+    if(st){ const sec=st.closest('.wk-sec'); if(sec){ const col=sec.classList.toggle('wk-collapsed'); const c=st.querySelector('.wk-caret'); if(c) c.textContent=col?'+':'–'; } return; }
+    const dm = e.target.closest('.wk-dev-more');
+    if(dm){ const dev=dm.closest('.wk-dev'); if(dev){ const col=dev.classList.toggle('wk-collapsed'); dm.textContent=col?'Read more +':'Show less –'; } return; }
+    const cm = e.target.closest('.wk-chart-more');
+    if(cm){ const sec=cm.closest('.wk-chart'); if(sec){ const col=sec.classList.toggle('wk-collapsed'); cm.textContent=col?('Show all '+(cm.getAttribute('data-n')||'')+' theatres +'):'Show fewer –'; } return; }
+    const ow = e.target.closest('[data-openweek]');
+    if(ow){ e.preventDefault(); goWeekly(); return; }
+    const bm = e.target.closest('[data-bm]');
+    if(bm){ e.stopPropagation(); toggleSave(bm.dataset.bm); flashSaved(bm); return; }
+    const jump = e.target.closest('[data-sec-jump]');
+    if(jump){ showSection(jump.dataset.secJump); return; }
+    const card = e.target.closest('[data-id]');
+    if(card) openDetail(card.dataset.id);
+  });
+
+  // bottom nav
+  document.querySelectorAll('.nav-item').forEach(n=> n.onclick=()=>{ state.savedOnly=false; updateSavedIcon(); showSection(n.dataset.sec); if(n.dataset.sec==='feed') renderFeed(); if(n.dataset.sec==='serials') renderSerials(); if(n.dataset.sec==='search') initAsk(); });
+  const _si=$("#searchInput"); const _askForm=$("#askDock");
+  if(_askForm) _askForm.addEventListener('submit', e=>{ e.preventDefault(); const v=_si.value; _si.value=''; _si.blur(); askAll(v); });
+  if(_si){ const _app=document.querySelector('.app');
+    // The shell tracks the keyboard via --vvb; here we just hide the nav while
+    // typing and undo iOS's needless focus auto-scroll of the (unscrollable) page.
+    _si.addEventListener('focus', ()=>{ _app.classList.add('kbd'); _vvUpd();
+      setTimeout(()=>window.scrollTo(0,0), 60); setTimeout(()=>window.scrollTo(0,0), 260); });
+    _si.addEventListener('blur', ()=>{ _app.classList.remove('kbd'); _vvUpd();
+      // land the thread on the newest message once the keyboard has fully closed
+      setTimeout(()=>{ window.scrollTo(0,0); _vvUpd(); _scrollAskPane(); }, 60);
+      setTimeout(()=>{ _vvUpd(); _scrollAskPane(); }, 450); });
+  }
+  $("#pane-search").addEventListener('click', e=>{
+    const cp=e.target.closest('[data-copyans]');
+    if(cp){ e.stopPropagation(); copyAnswer(+cp.dataset.copyans, cp); return; }
+    const sg=e.target.closest('[data-sq]');
+    if(sg){ e.stopPropagation(); askAbout(sg.dataset.sid, sg.dataset.sq); return; }
+    const ex=e.target.closest('[data-ask]');
+    if(ex){ if(_si){ _si.value=''; _si.blur(); } askAll(ex.dataset.ask); return; }
+    const op=e.target.closest('[data-open]');
+    if(op){ openDetail(op.dataset.open); return; }
+    const wk=e.target.closest('[data-openwk]');
+    if(wk){ state.weekOpen=true; state.weekUrl=wk.dataset.openwk; state.weekLabel=wk.dataset.wklabel;
+      buildTabs(); showSection('feed'); renderFeed(); scrollHome(); return; }
+    const pkb=e.target.closest('[data-openpk]');
+    if(pkb){ state.weekOpen=false; state.tab=pkb.dataset.openpk; loadPackage(state.tab);
+      buildTabs(); showSection('feed'); renderFeed(); scrollHome(); return; }
+    const ab=e.target.closest('[data-openabout]');
+    if(ab){ showSection('about'); return; }
+  });
+
+  // serials taps (delegation) — same behaviour as the pack
+  $("#serialsContent").addEventListener('click', e=>{
+    const ow = e.target.closest('[data-openweek]');
+    if(ow){ e.preventDefault(); goWeekly(); return; }
+    const fl = e.target.closest('[data-filter]');
+    if(fl && !fl.disabled){ state.serialFilter = fl.dataset.filter; renderSerials(); scrollHome(); return; }
+    const bm = e.target.closest('[data-bm]');
+    if(bm){ e.stopPropagation(); toggleSave(bm.dataset.bm); flashSaved(bm); return; }
+    const card = e.target.closest('[data-id]');
+    if(card) openDetail(card.dataset.id);
+  });
+  // keyboard access for the hrefless "Read the weekly brief" CTA
+  document.addEventListener('keydown', e=>{ if(e.repeat) return; if(e.key==='Enter'||e.key===' '){ const ow=e.target && e.target.closest && e.target.closest('[data-openweek]'); if(ow){ e.preventDefault(); goWeekly(); } } });
+
+  // top bar
+  $("#btnBell").onclick = (e)=>{ e.stopPropagation(); togglePop(); };
+  { const nb=$("#notifyBtn"); if(nb) nb.onclick=(e)=>{ e.stopPropagation(); _toggleNotify(); }; }
+  _initFreshness(); _checkNewWeek(); // new-edition / new-weekly indicator (best-effort)
+  $("#btnTheme").onclick = toggleTheme; updateThemeIcon();
+  const _mc=$("#missCopy"); if(_mc) _mc.onclick=()=>{ const arr=_getMisses(); if(!arr.length) return;
+    const text='Ask assistant — unanswered questions (September 2026 edition)\n'+arr.map(x=>`${x.t} — ${x.q}`).join('\n');
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(()=>{ _mc.textContent='Copied ✓'; setTimeout(()=>{ _mc.textContent='Copy list'; },1400); }).catch(()=>{}); } };
+  const _mk=$("#missClear"); if(_mk) _mk.onclick=()=>{ try{ localStorage.removeItem('csi-misses'); }catch(e){} renderMisses(); };
+  const _ms=$("#missSend"); if(_ms) _ms.onclick=async()=>{
+    const arr=_getMisses(); if(!arr.length) return;
+    const st=$("#missStatus"); _ms.disabled=true; if(st){ st.textContent='Sending…'; st.className='fb-status'; }
+    try{
+      await _postFeedback({ kind:'gaps', message: arr.map(x=>`- ${x.q} (${x.t})`).join('\n'), meta:{ edition: EDITION_ID, count: arr.length } });
+      if(st){ st.textContent='Sent to the editors — thanks.'; st.className='fb-status ok'; }
+    }catch(e){ if(st){ st.textContent="Couldn't send — check your connection and retry."; st.className='fb-status err'; } }
+    finally{ _ms.disabled=false; }
+  };
+  const _fb=$("#fbForm"); if(_fb) _fb.onsubmit=async(e)=>{
+    e.preventDefault();
+    const msg=($("#fbMsg").value||'').trim(), st=$("#fbStatus"), btn=$("#fbSend");
+    if(!msg){ if(st){ st.textContent='Type something first.'; st.className='fb-status err'; } return; }
+    const contact=($("#fbContact").value||'').trim();
+    if(btn) btn.disabled=true; if(st){ st.textContent='Sending…'; st.className='fb-status'; }
+    try{
+      await _postFeedback({ kind:'feedback', message: msg, contact, meta:{ edition: EDITION_ID } });
+      $("#fbMsg").value=''; $("#fbContact").value='';
+      if(st){ st.textContent='Thanks — sent to the editors.'; st.className='fb-status ok'; }
+    }catch(err){ if(st){ st.textContent="Couldn't send — check your connection and retry."; st.className='fb-status err'; } }
+    finally{ if(btn) btn.disabled=false; }
+  };
+  // The feedback fields live in the scroller (not docked like the Ask box), so
+  // iOS won't lift them above the keyboard on its own. On focus: hide the nav,
+  // pin the shell to the visual viewport, and scroll the field into the visible
+  // band above the keyboard (re-run as the keyboard finishes animating).
+  ['#fbMsg','#fbContact'].forEach(sel=>{ const el=$(sel); if(!el) return; const _app=document.querySelector('.app');
+    const bring=()=>{ try{ el.scrollIntoView({block:'center'}); }catch(e){ try{ el.scrollIntoView(); }catch(_){} } };
+    el.addEventListener('focus', ()=>{ _app.classList.add('kbd'); _vvUpd(); setTimeout(bring,150); setTimeout(bring,420); });
+    el.addEventListener('blur', ()=>{ _app.classList.remove('kbd'); _vvUpd(); });
+  });
+  $("#btnSaved").onclick = ()=>{ if(state.section!=="serials") showSection("serials"); state.savedOnly=!state.savedOnly; updateSavedIcon(); renderSerials(); scrollHome(); };
+  $("#logoHome").onclick = ()=>{ state.savedOnly=false; updateSavedIcon(); showSection('feed'); renderFeed(); };
+  $("#logoHome").onkeydown = (e)=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault(); $("#logoHome").click();} };
+  $("#scrim").onclick = closePop;
+  // edition dropdown — the pack kicker and serials edition label open it
+  document.addEventListener('click', e=>{ const t=e.target.closest('[data-edpop]'); if(t){ e.preventDefault(); e.stopPropagation(); toggleEditionPop(t); } });
+
+  // ask (chat)
+  $("#askBack").onclick = closeAsk;
+  $("#askSend").onclick = ()=> submitAsk($("#askInput").value);
+  $("#askInput").addEventListener('input', _autosize);
+  $("#askInput").addEventListener('keydown', e=>{ if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); submitAsk($("#askInput").value); } });
+  $("#askSugg").innerHTML = SUGGESTIONS.map(s=>`<button class="sg">${s}</button>`).join('');
+  $("#askSugg").addEventListener('click', e=>{ const b=e.target.closest('.sg'); if(b) submitAsk(b.textContent); });
+  $("#askThread").addEventListener('click', e=>{
+    const op=e.target.closest('[data-open]'); if(op){ state.fromAsk=true; closeAsk(); openDetail(op.dataset.open); return; }
+    const jp=e.target.closest('[data-jump]'); if(jp){ closeAsk(); showSection(jp.dataset.jump); }
+  });
+
+  // detail
+  $("#btnBack").onclick = closeDetail;
+  $("#btnBookmark").onclick = ()=>{ if(state.detailId) toggleSave(state.detailId); };
+}
+function flashSaved(el){ el.style.color = state.saved.has(el.dataset.bm)? "var(--amber)":"var(--text-3)"; }
+
+init();
+</script>
+
+</body>
+</html>
