@@ -149,6 +149,7 @@ a{color:inherit}
 .weekly td .ph{white-space:normal;font-size:8px;padding:2px 5px;display:inline-block}
 .weekly td:nth-child(3),.weekly td:nth-child(3) .wk-strong,.weekly td:nth-child(3) b,.weekly td:nth-child(3) strong{font-weight:400;color:var(--text-2)}
 .weekly .bw-frame{display:block;width:calc(100% + 32px);margin:0 -16px;height:80vh;border:0;border-top:1px solid var(--line);background:#f7f6f2}
+:root[data-theme="dark"] .weekly .bw-frame{background:#16150f}
 .weekly .wk-open{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--bg);background:var(--red);padding:9px 12px;border-radius:8px}
 .weekly .bw-st{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:1px 7px;margin-right:7px;vertical-align:1px;color:var(--text-3)}
 .weekly .bw-st.bw-priority{color:var(--red);border-color:var(--red)}
@@ -1831,7 +1832,9 @@ const _SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wi
 const _MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>';
 function currentTheme(){ return document.documentElement.getAttribute('data-theme')==='dark' ? 'dark' : 'light'; }
 function updateThemeIcon(){ const b=$("#btnTheme"); if(!b) return; const dark=currentTheme()==='dark'; b.innerHTML = dark ? _SUN : _MOON; b.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode'); }
-function applyTheme(t){ document.documentElement.setAttribute('data-theme', t); try{ localStorage.setItem('csi-theme', t); }catch(e){} const mc=document.querySelector('meta[name="theme-color"]'); if(mc) mc.setAttribute('content', t==='dark' ? '#16150F' : '#F1EDE3'); updateThemeIcon(); }
+function applyTheme(t){ document.documentElement.setAttribute('data-theme', t); try{ localStorage.setItem('csi-theme', t); }catch(e){} const mc=document.querySelector('meta[name="theme-color"]'); if(mc) mc.setAttribute('content', t==='dark' ? '#16150F' : '#F1EDE3'); updateThemeIcon(); _bwTheme(t); }
+/* tell an embedded biweekly brief to follow the theme (WEEKLY_ORIGIN is defined later, so guard the first call) */
+function _bwTheme(t){ try{ const f=document.querySelector('.bw-frame'); if(f && f.contentWindow) f.contentWindow.postMessage({type:'csi-theme', theme:t}, WEEKLY_ORIGIN); }catch(e){} }
 function toggleTheme(){ applyTheme(currentTheme()==='dark' ? 'light' : 'dark'); }
 
 function showSection(sec){
@@ -2223,8 +2226,10 @@ function _bwChunks(htmlString, week){
 const WEEKLY_ORIGIN = WEEKLY_BASE ? new URL(WEEKLY_BASE).origin : location.origin;
 function biweeklyEmbed(htmlString, w){
   const full = WEEKLY_BASE + (w.url==='/' ? '/' : w.url);
+  // the brief page follows the app theme: ?theme= on load, csi-theme messages on toggle (applyTheme)
+  const framed = full + (currentTheme()==='dark' ? '?theme=dark' : '');
   return `<div class="wk-src">Source: <a href="${esc(full)}" target="_blank" rel="noopener">conflictstudiesandinsights.pages.dev ↗</a></div>`
-    + `<iframe class="bw-frame" src="${esc(full)}" title="Biweekly brief, ${esc(w.label||'')}" scrolling="no" referrerpolicy="no-referrer"></iframe>`
+    + `<iframe class="bw-frame" src="${esc(framed)}" title="Biweekly brief, ${esc(w.label||'')}" scrolling="no" referrerpolicy="no-referrer"></iframe>`
     + `<div class="bw-fallback" hidden>${biweeklyView(htmlString, true)}</div>`;
 }
 let _bwLoaded = false;
