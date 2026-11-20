@@ -667,6 +667,8 @@ const SERIALS_CSS = [
   "dates": "Oct 2026 (updates to 26–29 Oct)",
   "formations": [],
   "multi": false,
+  "image": "/img/2026-10/CS-02.jpg",
+  "imageCredit": "OCHA",
   "blocks": [
    {
     "l": "What happened",
