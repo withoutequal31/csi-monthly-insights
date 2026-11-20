@@ -17,6 +17,8 @@ const SERIALS_M = [
   "dates": "Reported early Oct 2026",
   "formations": [],
   "multi": false,
+  "image": "/img/2026-10/M-01.jpg",
+  "imageCredit": "Militarnyi",
   "blocks": [
    {
     "l": "What happened",
@@ -57,6 +59,8 @@ const SERIALS_M = [
   "dates": "7 Oct 2026",
   "formations": [],
   "multi": false,
+  "image": "/img/2026-10/M-02.jpg",
+  "imageCredit": "This Is Beirut",
   "blocks": [
    {
     "l": "What happened",
@@ -355,6 +359,8 @@ const SERIALS_S = [
   "dates": "Reported 8 Oct 2026",
   "formations": [],
   "multi": false,
+  "image": "/img/2026-10/S-01.jpg",
+  "imageCredit": "Hromadske",
   "blocks": [
    {
     "l": "What happened",
@@ -395,6 +401,8 @@ const SERIALS_S = [
   "dates": "Reported 15 Oct 2026",
   "formations": [],
   "multi": false,
+  "image": "/img/2026-10/S-02.jpg",
+  "imageCredit": "CNN / Getty Images",
   "blocks": [
    {
     "l": "What happened",
@@ -623,6 +631,8 @@ const SERIALS_CSS = [
   "dates": "14–20 Oct 2026",
   "formations": [],
   "multi": false,
+  "image": "/img/2026-10/CS-01.jpg",
+  "imageCredit": "ABC News",
   "blocks": [
    {
     "l": "What happened",
